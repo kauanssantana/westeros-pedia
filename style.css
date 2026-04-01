@@ -1,0 +1,396 @@
+/* =========================================
+   VARIÁVEIS GLOBAIS (Padrão: Patrulha da Noite)
+   ========================================= */
+:root {
+    --gold: #d4af37;
+    --dark-bg: #03060a;
+    --text-light: #e0e0e0;
+}
+
+/* =========================================
+   RESET BÁSICO E PROTEÇÃO DE TELA
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; 
+}
+
+/* =========================================
+   CORPO E FUNDO
+   ========================================= */
+body {
+    font-family: 'Cinzel', serif;
+    color: var(--text-light);
+    background-color: var(--dark-bg);
+    background-image: radial-gradient(ellipse at top center, #142236 0%, #070b12 40%, #000000 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--gold);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.5s ease;
+}
+
+.header-logo-img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* =========================================
+   BOTÃO DE TEMAS (DROPDOWN)
+   ========================================= */
+.theme-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.theme-btn {
+    background-color: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 15px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover, .theme-btn.pressionado {
+    background-color: var(--gold);
+    color: #000;
+}
+
+.theme-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.95);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+    z-index: 100;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+}
+
+.theme-dropdown-content.mostrar {
+    display: block;
+}
+
+.theme-dropdown-content button {
+    color: var(--text-light);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s;
+}
+
+.theme-dropdown-content button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--gold);
+}
+
+/* =========================================
+   SEÇÃO HERO
+   ========================================= */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    
+    /* AUMENTE ESTE VALOR (estava 40px, tente 60px): */
+    margin-bottom: 60px; 
+}
+
+.btn-explorar {
+    display: inline-block;
+    background-color: var(--gold);
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 4px;
+    transition: 0.3s;
+    margin-top: 30px; /* Aumentamos o espaço aqui */
+}
+
+.btn-explorar:hover {
+    background-color: #f3c74b;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   DIVISOR DAS CASAS
+   ========================================= */
+.divisor-casas {
+    text-align: center;
+    margin: 30px auto 50px auto;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.divisor-casas img {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 10px 0;
+    filter: grayscale(100%) brightness(0.5); 
+    transition: 0.5s; 
+}
+
+.divisor-casas img:hover {
+    filter: grayscale(0%) brightness(1); 
+}
+
+/* =========================================
+   CARDS DA CIDADELA
+   ========================================= */
+.guia-abas-section {
+    padding: 20px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guia-titulo {
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.guia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.guia-card {
+    background-color: rgba(10, 10, 10, 0.7);
+    border: 1px solid var(--gold);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.guia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.guia-card h3 { color: var(--gold); margin-bottom: 15px; }
+
+/* =========================================
+   CARROSSEL ÉPICO (LAYOUT HORIZONTAL)
+   ========================================= */
+.carrossel-secao {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.4); 
+    margin-top: 40px; 
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.carrossel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; 
+    border-radius: 12px;
+    overflow: hidden; 
+    border: 1px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.carrossel-slides {
+    display: flex; 
+    transition: transform 0.6s ease-in-out; 
+    height: 550px; 
+}
+
+.carrossel-slide {
+    min-width: 100%; 
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel-fundo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+/* Película escura na esquerda para leitura */
+.carrossel-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    z-index: 2;
+}
+
+.carrossel-conteudo-box {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%) translateX(-20px);
+    max-width: 500px;
+    z-index: 3;
+    text-align: left;
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+.carrossel-slide.active .carrossel-conteudo-box {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.carrossel-conteudo-box .destaque-titulo {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrossel-btn.next { right: 15px; }
+.carrossel-btn.prev { left: 15px; }
+
+.carrossel-indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carrossel-ponto {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carrossel-ponto.active { background: var(--gold); }
+
+/* =========================================
+   RODAPÉ (FOOTER)
+   ========================================= */
+.westeros-footer {
+    width: 100%; 
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid var(--gold);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   TEMAS DAS CASAS (STARK, LANNISTER, ETC)
+   ========================================= */
+body.tema-stark {
+    --dark-bg: #f3f4f6; --text-light: #111827;
+    background-image: radial-gradient(ellipse at top center, #ffffff 0%, #e5e7eb 50%, #9ca3af 100%);
+}
+body.tema-stark .guia-card, body.tema-stark .header, body.tema-stark .westeros-footer {
+    background-color: rgba(255, 255, 255, 0.85); border-color: #d1d5db;
+}
+
+body.tema-targaryen { --dark-bg: #0a0000; --gold: #dc2626; background-image: radial-gradient(ellipse at top center, #3a0000 0%, #0a0000 40%, #000000 100%); }
+body.tema-lannister { --dark-bg: #2b0a0a; --gold: #ffd700; background-image: radial-gradient(ellipse at top center, #5c1616 0%, #2b0a0a 40%, #000000 100%); }
+body.tema-greyjoy { --dark-bg: #0f1115; --gold: #d4a373; background-image: radial-gradient(ellipse at top center, #232830 0%, #0f1115 50%, #000000 100%); }
+body.tema-tully { --dark-bg: #0f1b29; --gold: #b91c1c; background-image: radial-gradient(ellipse at top center, #1e3a5f 0%, #0f1b29 50%, #000000 100%); }
+body.tema-arryn { --dark-bg: #f0f8ff; --gold: #1d4ed8; --text-light: #0f172a; background-image: radial-gradient(ellipse at top center, #ffffff 0%, #e0f2fe 50%, #bae6fd 100%); }
+body.tema-baratheon { --dark-bg: #111111; --gold: #facc15; background-image: radial-gradient(ellipse at top center, #333333 0%, #111111 40%, #000000 100%); }
+body.tema-tyrell { --dark-bg: #061f0e; --gold: #fbbf24; background-image: radial-gradient(ellipse at top center, #144521 0%, #061f0e 50%, #000000 100%); }
+body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radial-gradient(ellipse at top center, #7c2d12 0%, #3b1404 50%, #1a0800 100%); }
+
+/* Correção de Menu em Temas Claros */
+body.tema-stark .theme-dropdown-content, body.tema-arryn .theme-dropdown-content { background-color: white; }
+body.tema-stark .theme-dropdown-content button, body.tema-arryn .theme-dropdown-content button { color: #111827; }

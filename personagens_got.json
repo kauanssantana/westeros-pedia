@@ -1,0 +1,373 @@
+[
+    {
+        "id": 0,
+        "nome": "Daenerys Targaryen",
+        "casa": "House Targaryen",
+        "titulo": "Mother of Dragons",
+        "imagem": "https://thronesapi.com/assets/images/daenerys.jpg"
+    },
+    {
+        "id": 1,
+        "nome": "Samwell Tarly",
+        "casa": "House Tarly",
+        "titulo": "Maester",
+        "imagem": "https://thronesapi.com/assets/images/sam.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Jon Snow",
+        "casa": "House Stark",
+        "titulo": "King of the North",
+        "imagem": "https://thronesapi.com/assets/images/jon-snow.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Arya Stark",
+        "casa": "House Stark",
+        "titulo": "No One",
+        "imagem": "https://thronesapi.com/assets/images/arya-stark.jpg"
+    },
+    {
+        "id": 4,
+        "nome": "Sansa Stark",
+        "casa": "House Stark",
+        "titulo": "Lady of Winterfell",
+        "imagem": "https://thronesapi.com/assets/images/sansa-stark.jpeg"
+    },
+    {
+        "id": 5,
+        "nome": "Brandon Stark",
+        "casa": "House Stark",
+        "titulo": "Lord of Winterfell",
+        "imagem": "https://thronesapi.com/assets/images/bran-stark.jpg"
+    },
+    {
+        "id": 6,
+        "nome": "Ned Stark",
+        "casa": "House Stark",
+        "titulo": "Lord of Winterfell",
+        "imagem": "https://thronesapi.com/assets/images/ned-stark.jpg"
+    },
+    {
+        "id": 7,
+        "nome": "Robert Baratheon",
+        "casa": "House Baratheon",
+        "titulo": "Lord of the Seven Kingdoms",
+        "imagem": "https://thronesapi.com/assets/images/robert-baratheon.jpeg"
+    },
+    {
+        "id": 8,
+        "nome": "Jamie Lannister",
+        "casa": "House Lannister",
+        "titulo": "Lord Commander of the Kingsguard",
+        "imagem": "https://thronesapi.com/assets/images/jaime-lannister.jpg"
+    },
+    {
+        "id": 9,
+        "nome": "Cersei Lannister",
+        "casa": "House Lannister",
+        "titulo": "Lady of Casterly Rock",
+        "imagem": "https://thronesapi.com/assets/images/cersei.jpg"
+    },
+    {
+        "id": 10,
+        "nome": "Catelyn Stark",
+        "casa": "House Stark",
+        "titulo": "Lady of Winterfell",
+        "imagem": "https://thronesapi.com/assets/images/catelyn-stark.jpg"
+    },
+    {
+        "id": 11,
+        "nome": "Rob Stark",
+        "casa": "House Stark",
+        "titulo": "Lord of Winterfell",
+        "imagem": "https://thronesapi.com/assets/images/robb-stark.jpg"
+    },
+    {
+        "id": 12,
+        "nome": "Theon Greyjoy",
+        "casa": "House Greyjoy",
+        "titulo": "Captain of Sea Bitch",
+        "imagem": "https://thronesapi.com/assets/images/theon.jpg"
+    },
+    {
+        "id": 13,
+        "nome": "Joffrey Baratheon",
+        "casa": "House Lanister",
+        "titulo": "Lord of the Seven Kingdoms, Protector of the Realm",
+        "imagem": "https://thronesapi.com/assets/images/joffrey.jpg"
+    },
+    {
+        "id": 14,
+        "nome": "Tyrion Lannister",
+        "casa": "House Lanister",
+        "titulo": "Hand of the Queen",
+        "imagem": "https://thronesapi.com/assets/images/tyrion-lannister.jpg"
+    },
+    {
+        "id": 15,
+        "nome": "The Hound",
+        "casa": "House Clegane",
+        "titulo": "The Hound",
+        "imagem": "https://thronesapi.com/assets/images/the-hound.jpg"
+    },
+    {
+        "id": 16,
+        "nome": "Petyr Baelish",
+        "casa": "House Baelish",
+        "titulo": "Littlefinger",
+        "imagem": "https://thronesapi.com/assets/images/littlefinger.jpg"
+    },
+    {
+        "id": 17,
+        "nome": "Davos Seaworth",
+        "casa": "House Seaworth",
+        "titulo": "Hand of the King",
+        "imagem": "https://thronesapi.com/assets/images/davos-seaworth.png"
+    },
+    {
+        "id": 18,
+        "nome": "Stannis Baratheon",
+        "casa": "House Baratheon",
+        "titulo": "Lord of Dragonstone",
+        "imagem": "https://thronesapi.com/assets/images/stannis.jpg"
+    },
+    {
+        "id": 19,
+        "nome": "Varys",
+        "casa": "Unknown",
+        "titulo": "Master of Whisperers",
+        "imagem": "https://thronesapi.com/assets/images/varys.jpg"
+    },
+    {
+        "id": 20,
+        "nome": "Khal Drogo",
+        "casa": "House Targaryen",
+        "titulo": "Khal",
+        "imagem": "https://thronesapi.com/assets/images/khal-drogo.jpg"
+    },
+    {
+        "id": 21,
+        "nome": "Margaery Tyrell",
+        "casa": "House Tyrell",
+        "titulo": "Queen of the Seven Kingdoms",
+        "imagem": "https://thronesapi.com/assets/images/margaery-tyrell.jpg"
+    },
+    {
+        "id": 22,
+        "nome": "Ygritte",
+        "casa": "Free Folk",
+        "titulo": "Spearwife",
+        "imagem": "https://thronesapi.com/assets/images/ygritte.jpg"
+    },
+    {
+        "id": 23,
+        "nome": "Brienne of Tarth",
+        "casa": "Tarth",
+        "titulo": "Lady Brienne",
+        "imagem": "https://thronesapi.com/assets/images/brienne-tarth.jpeg"
+    },
+    {
+        "id": 24,
+        "nome": "Missandei",
+        "casa": "Naathi",
+        "titulo": "Queen's Personal Advisor",
+        "imagem": "https://thronesapi.com/assets/images/missandei.jpeg"
+    },
+    {
+        "id": 25,
+        "nome": "Gilly",
+        "casa": "None",
+        "titulo": "The Rabbit Keeper",
+        "imagem": "https://thronesapi.com/assets/images/gilly.jpg"
+    },
+    {
+        "id": 26,
+        "nome": "Viserys Targaryn",
+        "casa": "Targaryan",
+        "titulo": "King Viserys III",
+        "imagem": "https://thronesapi.com/assets/images/viserys-targaryan.jpg"
+    },
+    {
+        "id": 27,
+        "nome": "Rickon Stark",
+        "casa": "Stark",
+        "titulo": "Prince",
+        "imagem": "https://thronesapi.com/assets/images/rickon.jpg"
+    },
+    {
+        "id": 28,
+        "nome": "Roose Bolton",
+        "casa": "Bolton",
+        "titulo": "Lord of Dreadfort",
+        "imagem": "https://thronesapi.com/assets/images/roose-bolton.jpg"
+    },
+    {
+        "id": 29,
+        "nome": "Daario",
+        "casa": "Naharis",
+        "titulo": "Commander of the Second Sons",
+        "imagem": "https://thronesapi.com/assets/images/daario.jpg"
+    },
+    {
+        "id": 30,
+        "nome": "Shae",
+        "casa": "Lorathi",
+        "titulo": "Mistress",
+        "imagem": "https://thronesapi.com/assets/images/shae.jpg"
+    },
+    {
+        "id": 31,
+        "nome": "Tommen Baratheon",
+        "casa": "Baratheon",
+        "titulo": "Prince",
+        "imagem": "https://thronesapi.com/assets/images/tommen.jpg"
+    },
+    {
+        "id": 32,
+        "nome": "Gendry Baratheon",
+        "casa": "Baratheon",
+        "titulo": "Lord of Storm's End",
+        "imagem": "https://thronesapi.com/assets/images/gendry.jpg"
+    },
+    {
+        "id": 33,
+        "nome": "Jorah Mormont",
+        "casa": "Mormont",
+        "titulo": "Knight",
+        "imagem": "https://thronesapi.com/assets/images/jorah-mormont.jpg"
+    },
+    {
+        "id": 34,
+        "nome": "Robert Baratheon",
+        "casa": "Baratheon",
+        "titulo": "King",
+        "imagem": "https://thronesapi.com/assets/images/king-robert.jpg"
+    },
+    {
+        "id": 35,
+        "nome": "Ramsey Bolton",
+        "casa": "Bolton",
+        "titulo": "The Bastard of Bolton",
+        "imagem": "https://thronesapi.com/assets/images/ramsey-bolton.jpg"
+    },
+    {
+        "id": 36,
+        "nome": "Talisa Stark",
+        "casa": "Stark",
+        "titulo": "Queen Consort",
+        "imagem": "https://thronesapi.com/assets/images/talisa-stark.jpg"
+    },
+    {
+        "id": 37,
+        "nome": "Jeor Mormont",
+        "casa": "Mormont",
+        "titulo": "Lord Commander of the Knight's Watch",
+        "imagem": "https://thronesapi.com/assets/images/lord-commander-mormont.jpg"
+    },
+    {
+        "id": 38,
+        "nome": "The High Sparrow",
+        "casa": "Sparrow",
+        "titulo": "High Septon",
+        "imagem": "https://thronesapi.com/assets/images/the-high-sparrow.jpg"
+    },
+    {
+        "id": 39,
+        "nome": "Oberyn Martell",
+        "casa": "Viper",
+        "titulo": "Red Viper of Dorne",
+        "imagem": "https://thronesapi.com/assets/images/red-viper.jpg"
+    },
+    {
+        "id": 40,
+        "nome": "Melisandre",
+        "casa": "Unkown",
+        "titulo": "Melisandre of Asshai",
+        "imagem": "https://thronesapi.com/assets/images/melisandre.jpg"
+    },
+    {
+        "id": 41,
+        "nome": "Jaqen H'ghar",
+        "casa": "Lorath",
+        "titulo": "Faceless Men of Braavos",
+        "imagem": "https://thronesapi.com/assets/images/jaqen-hghar.jpg"
+    },
+    {
+        "id": 42,
+        "nome": "Tywin Lannister",
+        "casa": "Lannister",
+        "titulo": "Lord Paramount of Westerlands",
+        "imagem": "https://thronesapi.com/assets/images/tywin-lannister.jpg"
+    },
+    {
+        "id": 43,
+        "nome": "Ellaria Sand",
+        "casa": "Sand",
+        "titulo": "Paramour of Prince Oberyn Martell",
+        "imagem": "https://thronesapi.com/assets/images/ellaria-sand.jpg"
+    },
+    {
+        "id": 44,
+        "nome": "Tormund Giantsbane",
+        "casa": "Free Folk",
+        "titulo": "Free Folk Warrior",
+        "imagem": "https://thronesapi.com/assets/images/tormund-giantsbane.jpg"
+    },
+    {
+        "id": 45,
+        "nome": "Yara Greyjoy",
+        "casa": "Greyjoy",
+        "titulo": "Lady of the Iron Islands",
+        "imagem": "https://thronesapi.com/assets/images/yara-greyjoy.jpg"
+    },
+    {
+        "id": 46,
+        "nome": "Euron Greyjoy",
+        "casa": "Greyjoy",
+        "titulo": "King of the iron Islands",
+        "imagem": "https://thronesapi.com/assets/images/euron-greyjoy.jpg"
+    },
+    {
+        "id": 47,
+        "nome": "Hodor",
+        "casa": "Stark",
+        "titulo": "Servant of House Stark",
+        "imagem": "https://thronesapi.com/assets/images/hodor.jpg"
+    },
+    {
+        "id": 48,
+        "nome": "Pycelle",
+        "casa": "",
+        "titulo": "Grand Maester of the Seven Kingdoms",
+        "imagem": "https://thronesapi.com/assets/images/pycelle.jpg"
+    },
+    {
+        "id": 49,
+        "nome": "Grey Worm",
+        "casa": "Worm",
+        "titulo": "Commander of the Unsullied",
+        "imagem": "https://thronesapi.com/assets/images/greyworm.jpg"
+    },
+    {
+        "id": 50,
+        "nome": "Olenna Tyrell",
+        "casa": "Tyrell",
+        "titulo": "Queen of Thorns",
+        "imagem": "https://thronesapi.com/assets/images/olenna-tyrell.jpg"
+    },
+    {
+        "id": 51,
+        "nome": "Qyburn",
+        "casa": "Qyburn",
+        "titulo": "Former maester of the Citadel",
+        "imagem": "https://thronesapi.com/assets/images/qyburn.jpg"
+    },
+    {
+        "id": 52,
+        "nome": "Lord Bronn",
+        "casa": "Bronn",
+        "titulo": "Lord of Highgarden",
+        "imagem": "https://thronesapi.com/assets/images/bronn.jpg"
+    }
+]

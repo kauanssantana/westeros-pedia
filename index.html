@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WesterosPedia | O Guia dos Sete Reinos</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="img/ico.jpg" type="image/jpeg">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo WesterosPedia" class="header-logo-img">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: var(--gold);">Início</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="casas.html">Casas</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="guerras.html">Guerras</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="bestiario.html">Bestiário</a></li>
+                <li><a href="religioes.html">Religiões</a></li>
+                <li><a href="artefatos.html">Artefatos</a></li>
+            </ul>
+        </nav>
+        
+        <div class="theme-dropdown-container">
+            <button id="btnTemas" class="theme-btn" onclick="abrirMenuTemas(event)">Temas ⚙️</button>
+            <div id="caixaTemas" class="theme-dropdown-content">
+                <button onclick="mudarTema('padrao')">Patrulha da Noite</button>
+                <button onclick="mudarTema('stark')">Stark</button>
+                <button onclick="mudarTema('targaryen')">Targaryen</button>
+                <button onclick="mudarTema('lannister')">Lannister</button>
+                <button onclick="mudarTema('baratheon')">Baratheon</button>
+                <button onclick="mudarTema('greyjoy')">Greyjoy</button>
+                <button onclick="mudarTema('tully')">Tully</button>
+                <button onclick="mudarTema('arryn')">Arryn</button>
+                <button onclick="mudarTema('tyrell')">Tyrell</button>
+                <button onclick="mudarTema('martell')">Martell</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>O Inverno Chegou</h2>
+                <p>Bem-vindo ao maior compêndio dos Sete Reinos. Explore a linhagem das Grandes Casas, descubra o paradeiro dos lordes de Westeros e os segredos esquecidos de Essos.</p>
+                <a href="#conteudo-guia" class="btn-explorar">Adentrar os Registros</a>
+            </div>
+        </section>
+
+        <div class="divisor-casas">
+            <img src="img/banner-casas.jpg" alt="Brasões das Grandes Casas">
+        </div>
+
+        <section id="conteudo-guia" class="guia-abas-section">
+            <h2 class="guia-titulo">Os Arquivos da Cidadela</h2>
+            <div class="guia-grid">
+                <div class="guia-card">
+                    <h3>🗺️ Mapa</h3>
+                    <p>Navegue pelas terras conhecidas. Da vastidão de Além da Muralha até as misteriosas ruínas de Valíria.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>🛡️ Casas</h3>
+                    <p>Lobo, Leão, Dragão ou Veado. Conheça as linhagens e as palavras das Grandes Casas.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>👑 Personagens</h3>
+                    <p>Reis, bastardos e traidores. Descubra a história das figuras que moldaram o mundo.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>⚔️ Guerras</h3>
+                    <p>Reviva a Dança dos Dragões, a Rebelião de Robert e a Guerra dos Cinco Reis.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>📜 História</h3>
+                    <p>Estude a Era dos Heróis, a Longa Noite e a Conquista de Aegon Targaryen.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>🐉 Bestiário</h3>
+                    <p>Examine registros sobre dragões, lobos gigantes e os temíveis Caminhantes Brancos.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>🔥 Religiões</h3>
+                    <p>Os Deuses Antigos, a Fé dos Sete e o Senhor da Luz. Conheça as crenças do reino.</p>
+                </div>
+                <div class="guia-card">
+                    <h3>🗡️ Artefatos</h3>
+                    <p>Lâminas de Aço Valiriano, chifres de controle e coroas perdidas dos antigos reis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="carrossel-secao">
+            <h2 class="guia-titulo" style="margin-bottom: 20px;">Crônicas em Destaque</h2>
+            <div class="carrossel-container">
+                <div class="carrossel-slides" id="carrosselSlides">
+                    
+                    <div class="carrossel-slide active">
+                        <img src="img/longa_noite.jpg">
+                        <div class="carrossel-conteudo-box">
+                            <h3 class="destaque-label">Eventos Históricos</h3>
+                            <h2 class="destaque-titulo">A Longa Noite</h2>
+                            <p class="destaque-paragrafo">O despertar do exército dos mortos que revelou o verdadeiro poder do Rei da Noite e ameaçou a existência da humanidade.</p>
+                            <a href="guerras.html" class="btn-explorar">Ler Registro Completo 📖</a>
+                        </div>
+                    </div>
+
+                    <div class="carrossel-slide">
+                        <img src="img/bastardos.jpg">
+                        <div class="carrossel-conteudo-box">
+                            <h3 class="destaque-label">Eventos Históricos</h3>
+                            <h2 class="destaque-titulo">Batalha dos Bastardos</h2>
+                            <p class="destaque-paragrafo">O violento embate entre Jon Snow e Ramsay Bolton pela reconquista de Winterfell e a honra da Casa Stark que resultou em uma batalha épica.</p>
+                            <a href="guerrras.html" class="btn-explorar">Ler Registro Completo 📖</a>
+                        </div>
+                    </div>
+
+                    <div class="carrossel-slide">
+                        <img src="img/dany_dragao.jpg">
+                        <div class="carrossel-conteudo-box">
+                            <h3 class="destaque-label">Personagens</h3>
+                            <h2 class="destaque-titulo">A Mãe de Dragões</h2>
+                            <p class="destaque-paragrafo">O retorno das lendárias criaturas ao mundo e a consolidação do poder de Daenerys Targaryen como a herdeira legítima do Trono de Ferro.</p>
+                            <a href="personagens.html" class="btn-explorar">Ler Registro Completo 📖</a>
+                        </div>
+                    </div>
+
+                    <div class="carrossel-slide">
+                        <img src="img/snow_fantasma.jpg">
+                        <div class="carrossel-conteudo-box">
+                            <h3 class="destaque-label">Eventos Históricos</h3>
+                            <h2 class="destaque-titulo">A Batalha do Tridente</h2>
+                            <p class="destaque-paragrafo">O duelo lendário entre Robert Baratheon e Rhaegar Targaryen que selou o fim da dinastia do Dragão e mudou o destino dos Sete Reinos.</p>
+                            <a href="guerras.html" class="btn-explorar">Ler Registro Completo 📖</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carrossel-btn prev" onclick="mudarSlide(-1)">&#10094;</button>
+                <button class="carrossel-btn next" onclick="mudarSlide(1)">&#10095;</button>
+
+                <div class="carrossel-indicadores">
+                    <span class="carrossel-ponto active" onclick="irParaSlide(0)"></span>
+                    <span class="carrossel-ponto" onclick="irParaSlide(1)"></span>
+                    <span class="carrossel-ponto" onclick="irParaSlide(2)"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="westeros-footer">
+        <div class="footer-content">
+            <p>Forjado com ⚔️ por <strong>Kauan Santana</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/kauanssantana" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+                <a href="https://instagram.com/kauan.santana12" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></a>
+                <a href="https://www.linkedin.com/in/kauan-santana-ab8915325/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+            </div>
+            <p class="footer-disclaimer">O Inverno Chegou. Todos os direitos reservados aos meistres.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
