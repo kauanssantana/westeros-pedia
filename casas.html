@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa de Westeros | WesterosPedia</title>
+    <title>Grandes Casas | WesterosPedia</title>
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/ico.jpg" type="image/jpeg">
 </head>
-<body class="pagina-mapa">
+<body class="pagina-casas">
     
     <header class="header">
         <h1 class="logo">
@@ -20,8 +20,8 @@
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="mapa.html" style="color: var(--gold);">Mapa</a></li>
-                <li><a href="casas.html">Casas</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="casas.html" style="color: var(--gold);">Casas</a></li>
                 <li><a href="personagens.html">Personagens</a></li>
                 <li><a href="guerras.html">Guerras</a></li>
                 <li><a href="historia.html">História</a></li>
@@ -47,24 +47,27 @@
         </div>
     </header>
 
-    <main class="mapa-wrapper">
-        <div class="mapa-container" id="mapaContainer">
-            <div class="mapa-conteudo">
-                <img src="img/mapa_westeros_hd.jpg" alt="Mapa dos Sete Reinos" class="mapa-imagem">
-                
-                <div id="marcadores-area"></div>
+    <main class="casas-section">
+        <div class="casas-header">
+            <h2 class="casas-titulo">As Grandes Casas de Westeros</h2>
+            <p class="casas-subtitulo">A verdadeira fundação dos Sete Reinos não é feita de terra e água, mas das ambições, alianças e traições destas poderosas famílias. Dos orgulhosos senhores de dragões aos austeros Reis do Inverno, conheça os senhores, tiranos e heróis que moldaram o mundo conhecido com honra, fogo e sangue.</p>
+            
+            <div class="filtros-casas">
+                <button class="btn-filtro ativo" data-regiao="todas">Todas as Casas</button>
+                <button class="btn-filtro" data-regiao="O Norte">O Norte</button>
+                <button class="btn-filtro" data-regiao="Terras da Coroa">Terras da Coroa</button>
+                <button class="btn-filtro" data-regiao="Terras Ocidentais">Terras Ocidentais</button>
+                <button class="btn-filtro" data-regiao="As Terras Fluviais">Terras Fluviais</button>
+                <button class="btn-filtro" data-regiao="A Campina">A Campina</button>
+                <button class="btn-filtro" data-regiao="Terras da Tempestade">Terras da Tempestade</button>
+                <button class="btn-filtro" data-regiao="Ilhas de Ferro">Ilhas de Ferro</button>
+                <button class="btn-filtro" data-regiao="Dorne">Dorne</button>
+                <button class="btn-filtro" data-regiao="Essos">Essos</button>
+                <button class="btn-filtro" data-regiao="O Vale">O Vale</button>
             </div>
         </div>
-
-        <aside class="painel-info" id="painelInfo">
-            <button class="btn-fechar" onclick="fecharPainel()">✖</button>
-            <div class="painel-conteudo">
-                <img id="painelImg" src="" alt="Imagem do Local" class="painel-destaque">
-                <h2 id="painelNome" class="painel-titulo">Selecione um local</h2>
-                <h4 id="painelCasa" class="painel-subtitulo"></h4>
-                <p id="painelDesc" class="painel-texto">O mapa aguarda sua exploração. Clique em um marcador para revelar seus segredos.</p>
-            </div>
-        </aside>
+        
+        <div id="casas-grid" class="casas-grid"></div>
     </main>
 
     <footer class="westeros-footer">
@@ -80,6 +83,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/mapa.js"></script>
+    <script src="js/casas.js"></script>
 </body>
 </html>

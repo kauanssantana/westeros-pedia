@@ -4,7 +4,7 @@
         "nome": "Daenerys Targaryen",
         "casa": "House Targaryen",
         "titulo": "Mother of Dragons",
-        "imagem": "https://thronesapi.com/assets/images/daenerys.jpg"
+        "imagem": "img/dany.jpg"
     },
     {
         "id": 1,
@@ -369,5 +369,247 @@
         "casa": "Bronn",
         "titulo": "Lord of Highgarden",
         "imagem": "https://thronesapi.com/assets/images/bronn.jpg"
+    },
+    {
+        "id": 53,
+        "nome": "Rhaenyra Targaryen",
+        "casa": "Targaryen",
+        "titulo": "The Realm's Delight / The Black Queen",
+        "imagem": "img/rhaenyra.jpg"
+    },
+    {
+        "id": 54,
+        "nome": "Daemon Targaryen",
+        "casa": "Targaryen",
+        "titulo": "The Rogue Prince",
+        "imagem": "img/daemon.jpg"
+    },
+    {
+        "id": 55,
+        "nome": "Viserys I Targaryen",
+        "casa": "Targaryen",
+        "titulo": "King of the Seven Kingdoms",
+        "imagem": "img/viserys-i.jpg"
+    },
+    {
+        "id": 56,
+        "nome": "Alicent Hightower",
+        "casa": "Hightower",
+        "titulo": "The Green Queen",
+        "imagem": "img/alicent.jpg"
+    },
+    {
+        "id": 57,
+        "nome": "Otto Hightower",
+        "casa": "Hightower",
+        "titulo": "Hand of the King",
+        "imagem": "img/otto.jpg"
+    },
+    {
+        "id": 58,
+        "nome": "Corlys Velaryon",
+        "casa": "Velaryon",
+        "titulo": "The Sea Snake",
+        "imagem": "img/corlys.jpg"
+    },
+    {
+        "id": 59,
+        "nome": "Rhaenys Targaryen",
+        "casa": "Targaryen",
+        "titulo": "The Queen Who Never Was",
+        "imagem": "img/rhaenys.jpg"
+    },
+    {
+        "id": 60,
+        "nome": "Aemond Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Aemond One-Eye",
+        "imagem": "img/aemond.jpg"
+    },
+    {
+        "id": 61,
+        "nome": "Aegon II Targaryen",
+        "casa": "Targaryen",
+        "titulo": "The Green King",
+        "imagem": "img/aegon-ii.jpg"
+    },
+    {
+        "id": 62,
+        "nome": "Criston Cole",
+        "casa": "Cole",
+        "titulo": "Lord Commander of the Kingsguard / The Kingmaker",
+        "imagem": "img/criston.jpg"
+    },
+    {
+        "id": 63,
+        "nome": "Larys Strong",
+        "casa": "Strong",
+        "titulo": "Lord Confessor / Larys Clubfoot",
+        "imagem": "img/larys.jpg"
+    },
+    {
+        "id": 64,
+        "nome": "Jacaerys Velaryon",
+        "casa": "Velaryon",
+        "titulo": "Prince of Dragonstone",
+        "imagem": "img/jacaerys.jpg"
     }
+    ,
+    {
+        "id": 65,
+        "nome": "Ser Duncan the Tall",
+        "casa": "Hedge Knight",
+        "titulo": "Lord Commander of the Kingsguard / Dunk",
+        "imagem": "img/duncan.jpg"
+    },
+    {
+        "id": 66,
+        "nome": "Aegon V Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Aegon the Unlikely / Egg",
+        "imagem": "img/aegon-v.jpg"
+    },
+    {
+        "id": 67,
+        "nome": "Baelor Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Baelor Breakspear / The Hammer",
+        "imagem": "img/baelor.jpg"
+    },
+    {
+        "id": 68,
+        "nome": "Lyonel Baratheon",
+        "casa": "Baratheon",
+        "titulo": "The Laughing Storm",
+        "imagem": "img/lyonel.jpg"
+    },
+    {
+        "id": 69,
+        "nome": "Aerion Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Aerion Brightflame",
+        "imagem": "img/aerion.jpg"
+    },
+    {
+        "id": 70,
+        "nome": "Maekar I Targaryen",
+        "casa": "Targaryen",
+        "titulo": "The Anvil",
+        "imagem": "img/maekar.jpg"
+    },
+    {
+        "id": 71,
+        "nome": "Ser Arlan of Pennytree",
+        "casa": "Hedge Knight",
+        "titulo": "Hedge Knight",
+        "imagem": "img/arlan.jpg"
+    }
+    ,
+    {
+        "id": 72,
+        "nome": "Rhaegar Targaryen",
+        "casa": "Targaryen",
+        "titulo": "The Last Dragon / Prince of Dragonstone",
+        "imagem": "img/rhaegar.jpg"
+    },
+    {
+        "id": 73,
+        "nome": "Young Griff",
+        "casa": "Targaryen",
+        "titulo": "Prince Aegon VI / The Feigned Prince",
+        "imagem": "img/young-griff.jpg"
+    },
+    {
+        "id": 74,
+        "nome": "Ser Arthur Dayne",
+        "casa": "Dayne",
+        "titulo": "The Sword of the Morning",
+        "imagem": "img/arthur-dayne.jpg"
+    },
+    {
+        "id": 75,
+        "nome": "Lady Stoneheart",
+        "casa": "Stark / Brotherhood Without Banners",
+        "titulo": "Mother Merciless / The Silent Sister",
+        "imagem": "img/stoneheart.jpg"
+    },
+    {
+        "id": 76,
+        "nome": "Victarion Greyjoy",
+        "casa": "Greyjoy",
+        "titulo": "Lord Captain of the Iron Fleet",
+        "imagem": "img/victarion.jpg"
+    },
+    {
+        "id": 77,
+        "nome": "Arianne Martell",
+        "casa": "Martell",
+        "titulo": "Princess of Dorne / Heir to Sunspear",
+        "imagem": "img/arianne.jpg"
+    },
+    {
+        "id": 78,
+        "nome": "Strong Belwas",
+        "casa": "None",
+        "titulo": "Queensguard / Former Pit Fighter",
+        "imagem": "img/belwas.jpg"
+    },
+    {
+        "id": 79,
+        "nome": "Ashara Dayne",
+        "casa": "Dayne",
+        "titulo": "Lady of Starfall",
+        "imagem": "img/ashara.jpg"
+    }
+    ,
+    {
+        "id": 80,
+        "nome": "Aegon I Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Aegon the Conqueror / The Dragon",
+        "imagem": "img/aegon-conqueror.jpg"
+    },
+    {
+        "id": 81,
+        "nome": "Visenya Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Queen Visenya / Wielder of Dark Sister",
+        "imagem": "img/visenya.jpg"
+    },
+    {
+        "id": 82,
+        "nome": "Rhaenys Targaryen",
+        "casa": "Targaryen",
+        "titulo": "Queen Rhaenys / The Queen of Love and Song",
+        "imagem": "img/rhaenys-conquest.jpg"
+    },
+    {
+        "id": 83,
+        "nome": "Lyanna Stark",
+        "casa": "Stark",
+        "titulo": "The She-Wolf / The Queen of Love and Beauty",
+        "imagem": "img/lyanna.jpg"
+    },
+    {
+        "id": 84,
+        "nome": "Renly Baratheon",
+        "casa": "Baratheon",
+        "titulo": "Lord of Storm's End / King in the South",
+        "imagem": "img/renly.jpg"
+    },
+    {
+        "id": 85,
+        "nome": "Loras Tyrell",
+        "casa": "Tyrell",
+        "titulo": "The Knight of Flowers",
+        "imagem": "img/loras.jpg"
+    },
+    {
+        "id": 86,
+        "nome": "Maester Aemon",
+        "casa": "Targaryen / Night's Watch",
+        "titulo": "Maester of Castle Black / Aemon the Dragonbane",
+        "imagem": "img/aemon.jpg"
+    }
+
 ]

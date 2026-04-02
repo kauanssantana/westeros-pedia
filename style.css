@@ -165,7 +165,7 @@ nav a:hover {
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 60px; 
 }
@@ -463,7 +463,7 @@ nav a:hover {
 /* =========================================
    TEMAS DAS CASAS (STARK, LANNISTER, ETC)
    ========================================= */
-body.tema-stark { --dark-bg: #111111; --gold: #ffffff; background-image: radial-gradient(ellipse at top center, #ece4e4 0%, #111111 40%, #000000 100%); }
+body.tema-stark { --dark-bg: #111111; --gold: #ffffff; background-image: radial-gradient(ellipse at top center, #ffffff4f 0%, #111111 40%, #000000 100%); }
 body.tema-targaryen { --dark-bg: #0a0000; --gold: #ff0000; background-image: radial-gradient(ellipse at top center, #3a0000 0%, #0a0000 40%, #000000 100%); }
 body.tema-lannister { --dark-bg: #2b0a0a; --gold: #ffd700; background-image: radial-gradient(ellipse at top center, #5c1616 0%, #2b0a0a 40%, #000000 100%); }
 body.tema-greyjoy { --dark-bg: #0f1115; --gold: #d4a373; background-image: radial-gradient(ellipse at top center, #232830 0%, #0f1115 50%, #000000 100%); }
@@ -882,4 +882,309 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 .painel-texto {
     color: #e0e0e0;
     line-height: 1.6;
+    
+}
+
+/* =========================================
+   PÁGINA DAS CASAS
+   ========================================= */
+.casas-section {
+    padding: 60px 20px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.casas-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.casas-titulo {
+    color: var(--gold);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.casas-subtitulo {
+    color: #888;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* O GRID RESPONSIVO */
+.casas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* O CARTÃO DA CASA */
+.casa-card {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9) 0%, rgba(5, 5, 5, 0.9) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: default; /* Sobrescrevendo o cursor pointer do sigil geral */
+}
+
+/* Efeito de hover no card */
+.casa-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cor-casa); /* Usa as cores que você já definiu no CSS global! */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px var(--cor-casa);
+}
+
+/* Imagem do Brasão no topo do card */
+.casa-card-img-box {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+
+.casa-card-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8)) grayscale(50%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.casa-card:hover .casa-card-img-box img {
+    filter: drop-shadow(0 0 15px var(--cor-casa)) grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Informações da Casa */
+.casa-card-nome {
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 5px;
+    transition: color 0.4s ease;
+}
+
+.casa-card:hover .casa-card-nome {
+    color: var(--cor-casa);
+}
+
+.casa-card-lema {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.casa-card-lema::before, .casa-card-lema::after {
+    content: '"';
+    color: var(--gold);
+}
+
+.casa-card-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.casa-card-detalhes strong {
+    color: var(--gold);
+}
+
+.casa-card-historia {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* =========================================
+   FILTROS DE REGIÃO (MODO ESTRATEGISTA)
+   ========================================= */
+.filtros-casas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-filtro {
+    background: rgba(10, 10, 10, 0.6);
+    color: #aaa;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 8px 18px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-filtro:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.btn-filtro.ativo {
+    background: var(--gold);
+    color: #000;
+    border-color: var(--gold);
+    font-weight: bold;
+}
+
+/* =========================================
+   PÁGINA DE PERSONAGENS E PESQUISA
+   ========================================= */
+.personagens-section {
+    padding: 20px 20px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* BARRA DE PESQUISA */
+.pesquisa-container {
+    text-align: center;
+    margin: 30px auto 60px auto;
+}
+
+.pesquisa-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px 25px;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 40px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.pesquisa-input::placeholder {
+    color: #666;
+}
+
+.pesquisa-input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), inset 0 2px 10px rgba(0,0,0,0.8);
+    background: rgba(20, 20, 20, 0.95);
+}
+
+/* GRID DOS PERSONAGENS */
+.personagens-grid {
+    display: grid;
+    /* Cartões menores para caber mais gente na tela (são 53 no total!) */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* CARTÃO DO PERSONAGEM (Estilo Retrato) */
+.personagem-card {
+    background: linear-gradient(to bottom, #141414, #050505);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    text-align: center;
+}
+
+.personagem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.9), 0 0 15px rgba(212, 175, 55, 0.3);
+    border-color: var(--gold);
+}
+
+.personagem-img-wrapper {
+    width: 100%;
+    height: 300px; /* Alto para focar no rosto/corpo */
+    overflow: hidden;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+}
+
+.personagem-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; /* Foca no rosto do personagem caso a imagem seja longa */
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: contrast(1.1) brightness(0.9);
+}
+
+.personagem-card:hover .personagem-img-wrapper img {
+    transform: scale(1.08);
+    filter: contrast(1.2) brightness(1.1);
+}
+
+/* Película escura na base da imagem para o texto não sumir */
+.personagem-img-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.personagem-info {
+    padding: 20px 15px 25px;
+}
+
+.personagem-nome {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.personagem-titulo {
+    color: #aaa;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 18px;
+    line-height: 1.4;
+    min-height: 40px; /* Ajuda a manter os cards do mesmo tamanho se o título quebrar linha */
+}
+
+.personagem-casa {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--text-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
