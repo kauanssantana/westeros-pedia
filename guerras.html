@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personagens | WesterosPedia</title>
+    <title>Guerras | WesterosPedia</title>
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/ico.jpg" type="image/jpeg">
 </head>
-<body class="pagina-personagens">
+<body class="pagina-guerras">
     
     <header class="header">
         <h1 class="logo">
@@ -22,8 +22,8 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
                 <li><a href="casas.html">Casas</a></li>
-                <li><a href="personagens.html" style="color: var(--gold);">Personagens</a></li>
-                <li><a href="guerras.html">Guerras e Batalhas</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="guerras.html" style="color: var(--gold);">Guerras e Batalhas</a></li>
                 <li><a href="historia.html">História</a></li>
                 <li><a href="bestiario.html">Bestiário</a></li>
                 <li><a href="religioes.html">Religiões</a></li>
@@ -47,31 +47,21 @@
         </div>
     </header>
 
-    <main class="personagens-section">
+    <main class="guerras-section">
         <div class="casas-header">
-            <h2 class="casas-titulo">Rostos de Westeros</h2>
-            <p class="casas-subtitulo" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-transform: none; letter-spacing: 0; font-size: 1.1rem; max-width: 900px; margin: 0 auto 30px auto; color: #ccc;">
-                Das terras gélidas Além da Muralha às areias escaldantes de Dorne, todo lorde e plebeu é uma peça no grande jogo. Reis e bastardos, cavaleiros e traidores: explore as lendas que forjaram a história de Westeros. Utilize a sabedoria dos meistres para buscar por nome ou filtre pela lealdade às Grandes Casas.
-            </p>
+            <h2 class="casas-titulo">Estandartes Caídos</h2>
             
-            <div class="filtros-casas filtros-personagens" style="margin-bottom: 20px;">
-                <button class="btn-filtro ativo" data-casa="todas">Todos</button>
-                <button class="btn-filtro" data-casa="Stark">Stark</button>
-                <button class="btn-filtro" data-casa="Targaryen">Targaryen</button>
-                <button class="btn-filtro" data-casa="Lannister">Lannister</button>
-                <button class="btn-filtro" data-casa="Baratheon">Baratheon</button>
-                <button class="btn-filtro" data-casa="Tyrell">Tyrell</button>
-                <button class="btn-filtro" data-casa="Greyjoy">Greyjoy</button>
-                <button class="btn-filtro" data-casa="Martell">Martell</button>
-                <button class="btn-filtro" data-casa="Velaryon">Velaryon</button>
-            </div>
-
-            <div class="pesquisa-container" style="margin-top: 0;">
-                <input type="text" id="pesquisa-input" class="pesquisa-input" placeholder="Buscar por personagem ou título... (ex: Jon, Rei, Dunk)">
+            <div class="intro-guerras">
+                <p>
+                    <span class="letra-capitular">"A</span> paz em Westeros é apenas o breve suspiro entre duas batalhas; o momento exato em que os lordes afiam as suas lâminas e sussurram novas traições nas sombras.
+                </p>
+                <p>
+                    Testemunhe os conflitos mais devastadores da história: do rugido colossal dos dragões de Aegon ao terror gélido da Longa Noite. Reviva histórias escritas com fogo, forjadas no sangue e eternizadas pelas cinzas das dinastias que ousaram jogar o Jogo dos Tronos."
+                </p>
             </div>
         </div>
         
-        <div id="personagens-grid" class="personagens-grid"></div>
+        <div id="guerras-container" class="guerras-container"></div>
     </main>
 
     <footer class="westeros-footer">
@@ -87,6 +77,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/personagens.js"></script>
+    <script src="js/guerras.js"></script>
 </body>
 </html>
