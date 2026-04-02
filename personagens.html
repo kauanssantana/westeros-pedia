@@ -50,10 +50,24 @@
     <main class="personagens-section">
         <div class="casas-header">
             <h2 class="casas-titulo">Rostos de Westeros</h2>
-            <p class="casas-subtitulo">Reis, cavaleiros, bastardos e traidores. Conheça as peças que se movem no grande tabuleiro de gelo e fogo. Procure por nome ou casa.</p>
+            <p class="casas-subtitulo" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-transform: none; letter-spacing: 0; font-size: 1.1rem; max-width: 900px; margin: 0 auto 30px auto; color: #ccc;">
+                Das terras gélidas Além da Muralha às areias escaldantes de Dorne, todo lorde e plebeu é uma peça no grande jogo. Reis e bastardos, cavaleiros e traidores: explore as lendas que forjaram a história de Westeros. Utilize a sabedoria dos meistres para buscar por nome ou filtre pela lealdade às Grandes Casas.
+            </p>
             
-            <div class="pesquisa-container">
-                <input type="text" id="pesquisa-input" class="pesquisa-input" placeholder="Buscar personagem ou casa... (ex: Jon, Lannister)">
+            <div class="filtros-casas filtros-personagens" style="margin-bottom: 20px;">
+                <button class="btn-filtro ativo" data-casa="todas">Todos</button>
+                <button class="btn-filtro" data-casa="Stark">Stark</button>
+                <button class="btn-filtro" data-casa="Targaryen">Targaryen</button>
+                <button class="btn-filtro" data-casa="Lannister">Lannister</button>
+                <button class="btn-filtro" data-casa="Baratheon">Baratheon</button>
+                <button class="btn-filtro" data-casa="Tyrell">Tyrell</button>
+                <button class="btn-filtro" data-casa="Greyjoy">Greyjoy</button>
+                <button class="btn-filtro" data-casa="Martell">Martell</button>
+                <button class="btn-filtro" data-casa="Velaryon">Velaryon</button>
+            </div>
+
+            <div class="pesquisa-container" style="margin-top: 0;">
+                <input type="text" id="pesquisa-input" class="pesquisa-input" placeholder="Buscar por personagem ou título... (ex: Jon, Rei, Dunk)">
             </div>
         </div>
         

@@ -7,7 +7,7 @@ casas_westeros = [
         "lema": "O Inverno Está Chegando",
         "sede": "Winterfell",
         "regiao": "O Norte",
-        "brasao": "img/brasao_stark.jpg",
+        "brasao": "img/sigil_stark.jpg",
         "historia": "Os antigos Reis do Inverno. Descendentes diretos dos Primeiros Homens, a Casa Stark governou o vasto e gélido Norte de Westeros por milhares de anos antes da Conquista de Aegon. Eles são reverenciados por sua honra inabalável, justiça severa e uma profunda resiliência contra o frio implacável. Diferente de outras casas que buscam poder pelo poder, os Stark são os guardiões do reino contra as verdadeiras ameaças que espreitam Além da Muralha.",
         "personagens_memoraveis": "Eddard (Ned) Stark, Robb Stark, Arya Stark, Jon Snow."
     },
@@ -17,7 +17,7 @@ casas_westeros = [
         "lema": "Fogo e Sangue",
         "sede": "Pedra do Dragão / Porto Real",
         "regiao": "Terras da Coroa",
-        "brasao": "img/brasao_targaryen.jpg",
+        "brasao": "img/sigil_targaryen.jpg",
         "historia": "Os senhores dos dragões que sobreviveram à Perdição de Valíria. Sob o comando de Aegon, o Conquistador, e suas irmãs-esposas, eles unificaram os Sete Reinos usando o terror e a majestade de seus dragões. Possuem uma afinidade lendária com fogo e magia, além de costumes de linhagem pura que frequentemente os levam à linha tênue entre a grandeza absoluta e a loucura incontrolável.",
         "personagens_memoraveis": "Aegon o Conquistador, Daenerys Targaryen, Aemon o Cavaleiro do Dragão."
     },
@@ -27,7 +27,7 @@ casas_westeros = [
         "lema": "Ouça-me Rugir!",
         "sede": "Rochedo Casterly",
         "regiao": "Terras Ocidentais",
-        "brasao": "img/brasao_lannister.jpg",
+        "brasao": "img/sigil_lannister.jpg",
         "historia": "Descendentes de Lann, o Esperto, os Lannister formam a casa mais rica e politicamente astuta de Westeros, construída sobre montanhas inesgotáveis de ouro. Embora seu lema oficial evoque o orgulho dos leões, a força da casa se apoia na fama de sua crueldade tática e no lema não oficial que ecoa por todo o reino: 'Um Lannister sempre paga suas dívidas', seja com ouro ou com sangue.",
         "personagens_memoraveis": "Tywin Lannister, Jaime Lannister, Tyrion Lannister, Cersei Lannister."
     },
@@ -37,7 +37,7 @@ casas_westeros = [
         "lema": "Nossa é a Fúria",
         "sede": "Ponta Tempestade",
         "regiao": "Terras da Tempestade",
-        "brasao": "img/brasao_baratheon.jpg",
+        "brasao": "img/sigil_baratheon.jpg",
         "historia": "A mais jovem das Grandes Casas, nascida durante a Conquista de Aegon através de Orys Baratheon. Eles ascenderam ao Trono de Ferro após a rebelião liderada por Robert Baratheon, que esmagou a dinastia Targaryen. São conhecidos por sua força bruta formidável, temperamento explosivo e uma determinação teimosa que se assemelha às violentas tempestades que castigam sua fortaleza.",
         "personagens_memoraveis": "Robert Baratheon, Stannis Baratheon, Renly Baratheon."
     },
@@ -47,7 +47,7 @@ casas_westeros = [
         "lema": "Nós Não Semeamos",
         "sede": "Pyke",
         "regiao": "Ilhas de Ferro",
-        "brasao": "img/brasao_greyjoy.jpg",
+        "brasao": "img/sigil_greyjoy.jpg",
         "historia": "Mestres do mar e senhores das Ilhas de Ferro. Os Greyjoy seguem a implacável 'Antiga Doutrina' e adoram o Deus Afogado. Rejeitando a agricultura e o comércio pacífico, eles acreditam que o verdadeiro valor de um homem é medido por sua capacidade de tomar o que deseja através do 'preço de ferro', promovendo pilhagens e saques implacáveis pelas costas de Westeros.",
         "personagens_memoraveis": "Balon Greyjoy, Euron Olho-de-Corvo, Theon Greyjoy, Asha (Yara) Greyjoy."
     },
@@ -57,7 +57,7 @@ casas_westeros = [
         "lema": "Crescendo Fortes",
         "sede": "Jardim de Cima",
         "regiao": "A Campina",
-        "brasao": "img/brasao_tyrell.jpg",
+        "brasao": "img/sigil_tyrell.jpg",
         "historia": "Os Protetores do Sul controlam as terras mais férteis e populosas do continente, permitindo-lhes reunir o maior exército de Westeros. Originalmente meros intendentes da Casa Gardener, os Tyrell ascenderam ao poder por sua capacidade de adaptação. Sob uma fachada de rosas floridas, beleza estonteante e cavalheirismo cortesão, escondem uma ambição política implacável e altamente estratégica.",
         "personagens_memoraveis": "Olenna Tyrell (Rainha dos Espinhos), Margaery Tyrell, Loras Tyrell."
     },
@@ -67,7 +67,7 @@ casas_westeros = [
         "lema": "Insubmissos, Não Curvados, Não Quebrados",
         "sede": "Lançassolar",
         "regiao": "Dorne",
-        "brasao": "img/brasao_martell.jpg",
+        "brasao": "img/sigil_martell.jpg",
         "historia": "Os príncipes governantes do deserto de Dorne. Fortemente influenciados pela imigração dos Roinares, os Martell foram os únicos em toda Westeros a resistir aos dragões de Aegon com sucesso, juntando-se aos Sete Reinos séculos depois apenas através de tratados de casamento. Possuem costumes igualitários únicos, onde o filho mais velho herda, independentemente de ser homem ou mulher.",
         "personagens_memoraveis": "Doran Martell, Oberyn Martell (A Víbora Vermelha), Elia Martell."
     },
@@ -77,7 +77,7 @@ casas_westeros = [
         "lema": "Família, Dever, Honra",
         "sede": "Correrrio",
         "regiao": "As Terras Fluviais",
-        "brasao": "img/brasao_tully.jpg",
+        "brasao": "img/sigil_tully.jpg",
         "historia": "Senhores Supremos das Terras Fluviais, uma região estrategicamente vital, mas amaldiçoada por sua geografia plana e central, tornando-a o campo de batalha de todas as grandes guerras. Os Tully nunca foram reis, mas mantêm seu poder através de fortes alianças matrimoniais, diplomacia cuidadosa e uma dedicação inquestionável à honra e aos juramentos familiares.",
         "personagens_memoraveis": "Hoster Tully, Catelyn Stark (nascida Tully), Brynden Tully (O Peixe Negro)."
     },

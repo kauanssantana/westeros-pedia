@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarPersonagens();
 });
 
-// Guardamos todos os personagens aqui para a barra de pesquisa funcionar sem precisar baixar o JSON de novo
+// Variáveis globais para guardar o estado atual da pesquisa
 let todosPersonagens = []; 
+let casaFiltroAtual = 'todas';
+let textoPesquisaAtual = '';
 
 async function carregarPersonagens() {
     try {
@@ -13,8 +15,9 @@ async function carregarPersonagens() {
         // Renderiza tudo na primeira vez
         renderizarPersonagens(todosPersonagens);
         
-        // Ativa o ouvinte da barra de pesquisa
+        // Ativa os ouvintes (Pesquisa e Botões)
         configurarPesquisa();
+        configurarFiltrosCasas();
 
     } catch (erro) {
         console.error("Os corvos foram abatidos e não trouxeram os personagens:", erro);
@@ -23,9 +26,8 @@ async function carregarPersonagens() {
 
 function renderizarPersonagens(personagens) {
     const grid = document.getElementById('personagens-grid');
-    grid.innerHTML = ''; // Limpa o grid antes de desenhar (importante para a pesquisa)
+    grid.innerHTML = ''; // Limpa o grid antes de desenhar
     
-    // Se a pesquisa não achar ninguém (ex: digitou "Batman")
     if (personagens.length === 0) {
         grid.innerHTML = `<p style="text-align: center; width: 100%; color: #888; font-style: italic; grid-column: 1 / -1;">Nenhum rosto encontrado em Westeros para essa busca...</p>`;
         return;
@@ -35,13 +37,13 @@ function renderizarPersonagens(personagens) {
         const card = document.createElement('div');
         card.className = 'personagem-card';
         
-        // Tratamento rápido para deixar os nomes das casas mais limpos (A API vem com 'House ' e alguns erros)
+        // Tratamento do nome da casa
         let casaFormatada = personagem.casa.replace('House ', '').replace('Lanister', 'Lannister');
-        if (!casaFormatada || casaFormatada === "Unknown" || casaFormatada === "None") {
+        if (!casaFormatada || casaFormatada === "Unknown" || casaFormatada === "None" || casaFormatada === "") {
             casaFormatada = "Desconhecida";
         }
 
-        // Monta o card estilo retrato/polaroid
+        // Monta o card
         card.innerHTML = `
             <div class="personagem-img-wrapper">
                 <img src="${personagem.imagem}" alt="${personagem.nome}" onerror="this.src='img/logo.png'">
@@ -50,6 +52,10 @@ function renderizarPersonagens(personagens) {
                 <h3 class="personagem-nome">${personagem.nome}</h3>
                 <p class="personagem-titulo">${personagem.titulo}</p>
                 <span class="personagem-casa">⚔️ ${casaFormatada}</span>
+                
+                <p class="personagem-descricao">
+                    ${personagem.descricao}
+                </p>
             </div>
         `;
         
@@ -57,18 +63,49 @@ function renderizarPersonagens(personagens) {
     });
 }
 
+// A FUNÇÃO MÁGICA: Junta o botão clicado com o que foi digitado
+function aplicarFiltros() {
+    const personagensFiltrados = todosPersonagens.filter(p => {
+        // 1. Verifica se bate com o texto digitado (Busca no nome, título ou casa)
+        const termo = textoPesquisaAtual.toLowerCase();
+        const bateTexto = p.nome.toLowerCase().includes(termo) || 
+                          p.titulo.toLowerCase().includes(termo) ||
+                          p.casa.toLowerCase().includes(termo);
+        
+        // 2. Verifica se bate com o botão de Casa clicado
+        let bateCasa = true;
+        if (casaFiltroAtual !== 'todas') {
+            bateCasa = p.casa.toLowerCase().includes(casaFiltroAtual.toLowerCase());
+        }
+
+        // Só mostra o personagem se ele passar nos DOIS testes
+        return bateTexto && bateCasa;
+    });
+    
+    renderizarPersonagens(personagensFiltrados);
+}
+
 function configurarPesquisa() {
     const inputPesquisa = document.getElementById('pesquisa-input');
     
     inputPesquisa.addEventListener('input', (evento) => {
-        const termoDigitado = evento.target.value.toLowerCase();
-        
-        // Filtra a lista principal verificando se o nome OU a casa contém o que foi digitado
-        const personagensFiltrados = todosPersonagens.filter(p => 
-            p.nome.toLowerCase().includes(termoDigitado) || 
-            p.casa.toLowerCase().includes(termoDigitado)
-        );
-        
-        renderizarPersonagens(personagensFiltrados);
+        textoPesquisaAtual = evento.target.value;
+        aplicarFiltros(); // Chama a inteligência de filtros
+    });
+}
+
+function configurarFiltrosCasas() {
+    const botoes = document.querySelectorAll('.filtros-personagens .btn-filtro');
+    
+    botoes.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove destaque dos outros botões e coloca no clicado
+            botoes.forEach(b => b.classList.remove('ativo'));
+            btn.classList.add('ativo');
+            
+            // Pega qual casa foi selecionada e aplica os filtros
+            casaFiltroAtual = btn.getAttribute('data-casa');
+            aplicarFiltros();
+        });
     });
 }

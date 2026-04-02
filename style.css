@@ -1188,3 +1188,16 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     letter-spacing: 1.5px;
     font-weight: 600;
 }
+
+.personagem-descricao {
+    margin-top: 15px;
+    font-size: 0.99rem; /* Aumentamos o tamanho da letra */
+    color: #d1d1d1;
+    border-top: 1px dashed rgba(212, 175, 55, 0.3);
+    padding-top: 15px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte muito mais legível para textos longos */
+    text-transform: none; /* Garante que não fique tudo em maiúsculo */
+    text-align: left; 
+}
+
