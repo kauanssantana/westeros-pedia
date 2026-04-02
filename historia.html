@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História | WesterosPedia</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ico.jpg" type="image/jpeg">
+</head>
+<body>
+    
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo WesterosPedia" class="header-logo-img">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="casas.html">Casas</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="guerras.html">Guerras e Batalhas</a></li>
+                <li><a href="historia.html" style="color: var(--gold);">História</a></li>
+                <li><a href="bestiario.html">Bestiário</a></li>
+                <li><a href="religioes.html">Religiões</a></li>
+            </ul>
+        </nav>
+        
+        <div class="theme-dropdown-container">
+            <button id="btnTemas" class="theme-btn" onclick="abrirMenuTemas(event)">Temas ⚙️</button>
+            <div id="caixaTemas" class="theme-dropdown-content">
+                <button onclick="mudarTema('padrao')">Patrulha da Noite</button>
+                <button onclick="mudarTema('stark')">Stark</button>
+                <button onclick="mudarTema('targaryen')">Targaryen</button>
+                <button onclick="mudarTema('lannister')">Lannister</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="historia-section">
+        <div class="casas-header">
+            <h2 class="casas-titulo">Ecos do Passado</h2>
+            
+            <div class="intro-guerras">
+                <p>
+                    <span class="letra-capitular">"O</span> passado é escrito com tinta, mas forjado em sangue e traição. Reis ascendem e impérios desmoronam ao som de espadas e sussurros.
+                </p>
+                <p>
+                    Percorra a linha do tempo dos eventos mais chocantes que moldaram o destino dos Sete Reinos. De decapitações injustas a casamentos tingidos de vermelho, até o fogo vivo que apagou dinastias inteiras. A História de Westeros não perdoa os fracos."
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-container" id="timeline-container">
+            </div>
+    </main>
+
+    <footer class="westeros-footer">
+        <div class="footer-content">
+            <p>Forjado com ⚔️ por <strong>Kauan Santana</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/kauanssantana" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+                <a href="https://instagram.com/kauan.santana12" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></a>
+                <a href="https://www.linkedin.com/in/kauan-santana-ab8915325/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+            </div>
+            <p class="footer-disclaimer">O Inverno Chegou. Todos os direitos reservados aos meistres.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/historia.js"></script>
+</body>
+</html>
