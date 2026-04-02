@@ -2,12 +2,28 @@ import json
 
 historia_westeros = [
     {
+        "id": "origem-caminhantes",
+        "ano": "~ 8000 a.C.",
+        "titulo": "A Criação do Rei da Noite",
+        "foco": "A Era da Aurora",
+        "imagem": "img/hist_caminhantes.jpg",
+        "descricao": "O maior erro da história mágica. Desesperadas e a perder a guerra contra a invasão dos Primeiros Homens, as Crianças da Floresta capturaram um homem e cravaram uma adaga de vidro de dragão no seu coração junto a uma árvore de represeiro. O feitiço transformou-o no primeiro Caminhante Branco, uma arma de gelo e morte que eventualmente se viraria contra os seus próprios criadores."
+    },
+    {
         "id": "perdicao-valiria",
         "ano": "114 a.C.",
         "titulo": "A Perdição de Valíria",
         "foco": "O Fim da Magia",
         "imagem": "img/hist_valiria.jpg",
         "descricao": "O cataclismo que destruiu o maior império que o mundo já conheceu. Num único dia, os vulcões conhecidos como 'Os Quatorze Fogos' explodiram simultaneamente, engolindo os temíveis senhores de dragões, as suas torres de vidro e a sua magia em fogo e cinzas. Apenas a Casa Targaryen sobreviveu graças a uma visão profética de Daenys, a Sonhadora, fugindo a tempo para a remota ilha de Pedra do Dragão."
+    },
+    {
+        "id": "conquista-aegon",
+        "ano": "1 d.C.",
+        "titulo": "A Conquista de Aegon",
+        "foco": "O Nascimento de um Império",
+        "imagem": "img/hist_aegon.jpg",
+        "descricao": "Montados em três dragões colossais, Aegon Targaryen e as suas irmãs, Visenya e Rhaenys, forçaram a submissão dos Sete Reinos independentes de Westeros. Castelos derreteram sob o fogo de Balerion, o Terror Negro, e espadas rendidas foram fundidas no fogo místico para criar o assento mais perigoso do mundo: o Trono de Ferro."
     },
     {
         "id": "morte-lucerys",
@@ -32,6 +48,30 @@ historia_westeros = [
         "foco": "O Julgamento dos Sete",
         "imagem": "img/hist_baelor.jpg",
         "descricao": "Durante o Torneio de Vaufreixo, o humilde cavaleiro andante Sor Duncan, o Alto, exigiu um Julgamento por Combate para provar a sua inocência de ter agredido um príncipe. O Príncipe Herdeiro, Baelor Targaryen, aclamado como o melhor cavaleiro do reino, surpreendeu a todos ao lutar a favor de Dunk, contra a sua própria família. Após a vitória de Dunk, Baelor retirou o seu capacete arruinado e revelou um ferimento fatal desferido pela maça do seu irmão Maekar, tombando morto na terra. O reino chorou aquele que teria sido um dos maiores reis da história."
+    },
+    {
+        "id": "solarestival",
+        "ano": "259 d.C.",
+        "titulo": "A Tragédia de Solarestival",
+        "foco": "O Preço da Magia",
+        "imagem": "img/hist_solarestival.jpg",
+        "descricao": "O Rei Aegon V (Egg) tentou realizar o milagre de chocar ovos de dragão petrificados no palácio de verão da Casa Targaryen. O ritual com fogo vivo saiu terrivelmente do controle, resultando num incêndio catastrófico que matou o rei, o Príncipe Duncan e o lendário Senhor Comandante Sor Duncan, o Alto. Das cinzas e lágrimas dessa noite, nasceu o Príncipe Rhaegar Targaryen."
+    },
+    {
+        "id": "torneio-harrenhal",
+        "ano": "281 d.C.",
+        "titulo": "O Torneio de Harrenhal",
+        "foco": "A Coroa de Inverno",
+        "imagem": "img/hist_harrenhal.jpg",
+        "descricao": "O evento que plantou as sementes da destruição dos Targaryen. Após vencer o maior torneio da época, o Príncipe Rhaegar Targaryen chocou todos os Sete Reinos: em vez de coroar a sua esposa, a Princesa Elia Martell, ele cavalgou até Lyanna Stark e depositou uma coroa de rosas azuis de inverno no seu colo. Naquele dia silencioso e tenso, a faísca da Rebelião de Robert foi acesa."
+    },
+    {
+        "id": "regicida",
+        "ano": "283 d.C.",
+        "titulo": "A Ascensão do Regicida",
+        "foco": "A Queda do Rei Louco",
+        "imagem": "img/hist_regicida.jpg",
+        "descricao": "Enquanto o exército rebelde de Robert Baratheon vencia no Tridente, Tywin Lannister invadiu e saqueou Porto Real. Recusando-se a render, o Rei Louco Aerys II ordenou aos piromantes que queimassem toda a cidade com estoques secretos de fogo vivo. Para salvar milhões de inocentes, o jovem Sor Jaime Lannister quebrou os seus votos, degolou os piromantes e cravou a sua espada dourada nas costas do seu próprio rei."
     },
     {
         "id": "torre-alegria",
@@ -150,4 +190,4 @@ historia_westeros = [
 with open('../historia.json', 'w', encoding='utf-8') as f:
     json.dump(historia_westeros, f, ensure_ascii=False, indent=4)
 
-print("historia.json forjado com sucesso! As 18 lendas do tempo foram registadas.")
+print("historia.json forjado com sucesso! As 22 lendas essenciais da História foram registadas.")

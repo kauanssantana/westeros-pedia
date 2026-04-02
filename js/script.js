@@ -25,11 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
         conjurarNeve();
     }
 
-    // D) Inicia o observador de rolagem (Fade-in)
+    // Inicia o observador de rolagem (Fade-in)
     iniciarObservadorAnimacoes();
 
+    // Inicia os sussurros do Varys
     inicializarSussurros();
     
+    // Inicia o Botão de Voltar ao Topo
+    iniciarBotaoTopo();
 });
 
 /* =========================================================
@@ -154,10 +157,8 @@ function irParaSlide(index) {
 }
 
 function showSlide(wrapper, slides, pontos) {
-    // Move o carrossel em 100% para cada slide
     wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
     
-    // Atualiza estados visuais
     slides.forEach((slide, index) => {
         slide.classList.toggle("active", index === slideIndex);
     });
@@ -172,30 +173,25 @@ function showSlide(wrapper, slides, pontos) {
    ========================================================= */
 function conjurarNeve() {
     const snowContainer = document.getElementById('snow-container');
-    if (!snowContainer) return; // Se não estiver na Home, a mágica não acontece
+    if (!snowContainer) return; 
 
-    const quantidadeFlocos = 70; // Quantidade de neve
+    const quantidadeFlocos = 70; 
 
     for (let i = 0; i < quantidadeFlocos; i++) {
         const floco = document.createElement('div');
         floco.classList.add('snowflake');
         
-        // Espalha a neve horizontalmente de forma aleatória
         floco.style.left = `${Math.random() * 100}%`;
         
-        // Tamanho aleatório do floco (entre 2px e 5px)
         const tamanho = Math.random() * 3 + 2;
         floco.style.width = `${tamanho}px`;
         floco.style.height = `${tamanho}px`;
         
-        // Velocidade da queda aleatória (entre 6s e 15s)
         const duracao = Math.random() * 9 + 6;
         floco.style.animationDuration = `${duracao}s`;
         
-        // Atraso para não cair tudo de uma vez
         floco.style.animationDelay = `${Math.random() * 5}s`;
         
-        // Opacidade aleatória para dar profundidade
         floco.style.opacity = Math.random();
 
         snowContainer.appendChild(floco);
@@ -206,23 +202,18 @@ function conjurarNeve() {
    7. ANIMAÇÕES DE ROLAGEM (FADE-IN OBSERVER)
    ========================================================= */
 function iniciarObservadorAnimacoes() {
-    // Cria o observador
     const observador = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => {
-            // Se o elemento entrou na tela...
             if (entrada.isIntersecting) {
-                // Adiciona a classe que faz ele aparecer
                 entrada.target.classList.add('is-visible');
-                // Para de observar depois que apareceu a primeira vez
                 observador.unobserve(entrada.target);
             }
         });
     }, {
-        rootMargin: '0px 0px -50px 0px', // A mágica acontece 50px antes do elemento surgir por completo
-        threshold: 0.15 // Requer que 15% do elemento esteja na tela
+        rootMargin: '0px 0px -50px 0px', 
+        threshold: 0.15 
     });
 
-    // Pega todos os elementos com a classe fade-in-section e manda o observador vigiá-los
     const elementosOcultos = document.querySelectorAll('.fade-in-section');
     elementosOcultos.forEach((el) => observador.observe(el));
 }
@@ -259,18 +250,44 @@ function inicializarSussurros() {
 
     if (btnVarys && textoSussurro) {
         btnVarys.addEventListener('click', () => {
-            // Sorteia um número aleatório de 0 a 19
             const indexAleatorio = Math.floor(Math.random() * curiosidadesVarys.length);
             
-            // Faz o texto sumir suavemente
             textoSussurro.style.opacity = 0;
             
-            // Espera 300ms (tempo do sumiço) para trocar o texto e fazer aparecer de novo
             setTimeout(() => {
-                // Coloca o prefixo "Você Sabia? " na frente da curiosidade
                 textoSussurro.innerHTML = `<strong>Você sabia?</strong> ${curiosidadesVarys[indexAleatorio]}`;
                 textoSussurro.style.opacity = 1;
             }, 300);
         });
     }
+}
+
+/* =========================================================
+   9. BOTÃO VOLTAR AO TOPO (MAGIA GLOBAL)
+   ========================================================= */
+function iniciarBotaoTopo() {
+    // 1. Cria o botão via JavaScript para não precisar editar o HTML de cada página
+    const btnTopo = document.createElement('button');
+    btnTopo.innerHTML = '&#8679;'; // Seta para cima elegante (⇧)
+    btnTopo.className = 'btn-voltar-topo';
+    btnTopo.title = "Voltar ao topo da página";
+    document.body.appendChild(btnTopo);
+
+    // 2. Evento para mostrar/esconder o botão ao rolar a página
+    window.addEventListener('scroll', () => {
+        // Se desceu mais de 300 pixels, o botão aparece
+        if (window.scrollY > 300) {
+            btnTopo.classList.add('mostrar');
+        } else {
+            btnTopo.classList.remove('mostrar');
+        }
+    });
+
+    // 3. Evento de clique para rolar para cima suavemente
+    btnTopo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Deslize suave de mestre
+        });
+    });
 }
