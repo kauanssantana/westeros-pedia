@@ -12,24 +12,24 @@ let slideIndex = 0; // Para o Carrossel
    2. INICIALIZAÇÃO (DOMContentLoaded)
    ========================================================= */
 document.addEventListener('DOMContentLoaded', () => {
-    // A) Carrega o Tema Salvo
     const temaSalvo = localStorage.getItem('temaEscolhidoWesteros');
     if (temaSalvo) {
         mudarTema(temaSalvo);
     }
 
-    // B) Se estiver na página de Personagens, carrega o JSON
-    if (characterContainer) {
+    if (typeof characterContainer !== 'undefined' && characterContainer) {
         carregarPersonagens();
     }
 
-    // C) Se o carrossel existir na página, inicia o ajuste de largura
-    const slidesWrapper = document.getElementById("carrosselSlides");
-    if (slidesWrapper) {
-        const slides = document.querySelectorAll(".carrossel-slide");
-        // Ajusta a largura para que os slides fiquem lado a lado corretamente
-        slidesWrapper.style.width = `${slides.length * 100}%`;
+    if (typeof conjurarNeve === 'function') {
+        conjurarNeve();
     }
+
+    // D) Inicia o observador de rolagem (Fade-in)
+    iniciarObservadorAnimacoes();
+
+    inicializarSussurros();
+    
 });
 
 /* =========================================================
@@ -165,4 +165,112 @@ function showSlide(wrapper, slides, pontos) {
     pontos.forEach((ponto, index) => {
         ponto.classList.toggle("active", index === slideIndex);
     });
+}
+
+/* =========================================================
+   6. EFEITO: O INVERNO CHEGOU (NEVE NO HERO)
+   ========================================================= */
+function conjurarNeve() {
+    const snowContainer = document.getElementById('snow-container');
+    if (!snowContainer) return; // Se não estiver na Home, a mágica não acontece
+
+    const quantidadeFlocos = 70; // Quantidade de neve
+
+    for (let i = 0; i < quantidadeFlocos; i++) {
+        const floco = document.createElement('div');
+        floco.classList.add('snowflake');
+        
+        // Espalha a neve horizontalmente de forma aleatória
+        floco.style.left = `${Math.random() * 100}%`;
+        
+        // Tamanho aleatório do floco (entre 2px e 5px)
+        const tamanho = Math.random() * 3 + 2;
+        floco.style.width = `${tamanho}px`;
+        floco.style.height = `${tamanho}px`;
+        
+        // Velocidade da queda aleatória (entre 6s e 15s)
+        const duracao = Math.random() * 9 + 6;
+        floco.style.animationDuration = `${duracao}s`;
+        
+        // Atraso para não cair tudo de uma vez
+        floco.style.animationDelay = `${Math.random() * 5}s`;
+        
+        // Opacidade aleatória para dar profundidade
+        floco.style.opacity = Math.random();
+
+        snowContainer.appendChild(floco);
+    }
+}
+
+/* =========================================================
+   7. ANIMAÇÕES DE ROLAGEM (FADE-IN OBSERVER)
+   ========================================================= */
+function iniciarObservadorAnimacoes() {
+    // Cria o observador
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            // Se o elemento entrou na tela...
+            if (entrada.isIntersecting) {
+                // Adiciona a classe que faz ele aparecer
+                entrada.target.classList.add('is-visible');
+                // Para de observar depois que apareceu a primeira vez
+                observador.unobserve(entrada.target);
+            }
+        });
+    }, {
+        rootMargin: '0px 0px -50px 0px', // A mágica acontece 50px antes do elemento surgir por completo
+        threshold: 0.15 // Requer que 15% do elemento esteja na tela
+    });
+
+    // Pega todos os elementos com a classe fade-in-section e manda o observador vigiá-los
+    const elementosOcultos = document.querySelectorAll('.fade-in-section');
+    elementosOcultos.forEach((el) => observador.observe(el));
+}
+
+/* =========================================================
+   8. OS SUSSURROS DE VARYS (CURIOSIDADES ALEATÓRIAS)
+   ========================================================= */
+const curiosidadesVarys = [
+    "A Fortaleza Vermelha levou décadas para ser construída. Quando o Rei Maegor, o Cruel, finalizou a obra, ele mandou matar todos os construtores para que ninguém além dele conhecesse as passagens secretas.",
+    "O Trono de Ferro original dos livros é descrito como uma monstruosidade assimétrica de espadas retorcidas, com quase 12 metros de altura, onde os reis frequentemente se cortavam e sangravam.",
+    "A Muralha não é feita apenas de gelo, terra e pedra. Ela possui feitiços antigos e poderosos tecidos nela para impedir que criaturas mágicas cruzem para o sul.",
+    "Valíria não era governada por um rei, mas por quarenta famílias nobres de senhores de dragões que disputavam o poder. Curiosamente, os Targaryen não eram os mais poderosos entre eles.",
+    "Aerys II, o Rei Louco, não era insano na juventude. Sua paranóia e crueldade se agravaram após o 'Desafio de Valdocaso', onde foi mantido refém por meses por um de seus próprios lordes.",
+    "Sor Barristan Selmy entrou furtivamente em Valdocaso disfarçado de mendigo para resgatar o Rei Aerys II, um feito considerado uma das maiores missões de infiltração da história.",
+    "Antes da chegada de Aegon, o Conquistador, Porto Real não passava de três colinas cobertas de florestas onde pescadores locais trabalhavam.",
+    "Castamere, a sede da Casa Reyne, era em grande parte subterrânea. Tywin Lannister os derrotou desviando um rio e inundando as minas, afogando todos lá dentro, fato que inspirou a canção 'As Chuvas de Castamere'.",
+    "Aegon IV, o Indigno, legitimou todos os seus bastardos em seu leito de morte, desencadeando as cinco sangrentas Rebeliões Blackfyre que assombraram os Targaryen por gerações.",
+    "A espada de aço valiriano de Aegon, o Conquistador, se chamava 'Blackfyre'. A de sua irmã Visenya era 'Irmã Sombria'. O paradeiro de ambas é atualmente um grande mistério nos livros.",
+    "Harrenhal foi o maior castelo já construído em Westeros. O Rei Harren achou que suas paredes colossais o protegeriam dos Targaryen, esquecendo de um detalhe fatal: dragões podem voar.",
+    "O famoso Lema da Casa Lannister, 'Um Lannister sempre paga suas dívidas', não é o lema oficial. As verdadeiras palavras da Casa são 'Ouça-me Rugir'.",
+    "Os meistres da Cidadela forjam colares com metais diferentes para cada área de estudo. Ouro para matemática, prata para medicina, e o raro aço valiriano para o estudo de magia e ocultismo.",
+    "Os Filhos da Floresta criaram os Caminhantes Brancos espetando vidro de dragão no coração de homens vivos, uma arma desesperada para se defenderem da invasão dos Primeiros Homens.",
+    "A Dança dos Dragões, a trágica guerra civil Targaryen, foi o evento que mais causou a morte e o quase completo desaparecimento dos dragões no mundo conhecido.",
+    "Aenys I, o segundo rei Targaryen, era tão fraco, indeciso e frágil que muitos em Westeros duvidavam que ele fosse realmente filho do imponente Aegon, o Conquistador.",
+    "O Deus de Muitas Faces, adorado pelos Homens Sem Rosto em Braavos, é na verdade a personificação da morte extraída de todas as outras religiões do mundo conhecido.",
+    "A espada 'Gelo', usada por Ned Stark, era tão colossal que em combates normais seria inútil. Tywin Lannister a derreteu para forjar a 'Lamento de Viúva' e a 'Cumpridora de Promessas'.",
+    "O continente de Essos é tão vasto e misterioso que suas fronteiras orientais, como Yi Ti, Asshai e as Terras Sombrias, são praticamente desconhecidas e temidas pelos meistres de Westeros.",
+    "No livro, o castelo de Pedra do Dragão foi todo esculpido e moldado com fogo mágico de dragão, dando às suas torres e muralhas as formas perfeitas de gárgulas e dragões reais."
+];
+
+function inicializarSussurros() {
+    const btnVarys = document.getElementById('btnVarys');
+    const textoSussurro = document.getElementById('texto-sussurro');
+
+    if (btnVarys && textoSussurro) {
+        btnVarys.addEventListener('click', () => {
+            // Sorteia um número aleatório de 0 a 19
+            const indexAleatorio = Math.floor(Math.random() * curiosidadesVarys.length);
+            
+            // Faz o texto sumir suavemente
+            textoSussurro.style.opacity = 0;
+            
+            // Espera 300ms (tempo do sumiço) para trocar o texto e fazer aparecer de novo
+            setTimeout(() => {
+                // Coloca o prefixo "Você Sabia? " na frente da curiosidade
+                textoSussurro.innerHTML = `<strong>Você sabia?</strong> ${curiosidadesVarys[indexAleatorio]}`;
+                textoSussurro.style.opacity = 1;
+            }, 300);
+        });
+    }
 }

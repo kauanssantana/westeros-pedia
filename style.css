@@ -2,8 +2,8 @@
    VARIÁVEIS GLOBAIS (Padrão: Patrulha da Noite)
    ========================================= */
 :root {
-    --gold: #d4af37;
-    --dark-bg: #03060a;
+    --gold: #837c7c;
+    --dark-bg: #000000;
     --text-light: #e0e0e0;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .header-logo-img {
-    height: 40px;
+    height: 47px;
     width: auto;
 }
 
@@ -132,15 +132,29 @@ nav a:hover {
 }
 
 /* =========================================
-   SEÇÃO HERO
+   SEÇÃO HERO COM BANNER ESTÁTICO
    ========================================= */
 .hero-section {
     text-align: center;
-    padding: 50px 20px 40px; 
+    position: relative; 
+    overflow: hidden;
+    padding: 160px 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('img/hero-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--gold);
+    /* Removido o background-attachment: fixed; */
+}
+
+.hero-content {
+    position: relative; /* Coloca o texto na frente da neve */
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para garantir a leitura sobre a imagem */
 }
 
 .hero-content h2 {
@@ -153,9 +167,33 @@ nav a:hover {
 .hero-content p {
     font-size: 1.1rem;
     line-height: 1.6;
-    
-    /* AUMENTE ESTE VALOR (estava 40px, tente 60px): */
     margin-bottom: 60px; 
+}
+
+/* --- MÁGICA DA NEVE --- */
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* A neve é como um fantasma, não impede o clique no botão */
+    z-index: 1; /* Fica atrás do texto, mas na frente do fundo */
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px) translateX(0); opacity: 0; }
+    10% { opacity: 1; } /* Aparece suavemente */
+    90% { opacity: 1; }
+    100% { transform: translateY(600px) translateX(20px); opacity: 0; } /* Derrete no final */
 }
 
 .btn-explorar {
@@ -167,7 +205,8 @@ nav a:hover {
     font-weight: 800;
     border-radius: 4px;
     transition: 0.3s;
-    margin-top: 30px; /* Aumentamos o espaço aqui */
+    margin-top: 30px;
+    text-shadow: none; /* Remove a sombra do texto de dentro do botão */
 }
 
 .btn-explorar:hover {
@@ -238,7 +277,7 @@ nav a:hover {
 .guia-card h3 { color: var(--gold); margin-bottom: 15px; }
 
 /* =========================================
-   CARROSSEL ÉPICO (LAYOUT HORIZONTAL)
+   CARROSSEL ÉPICO (LAYOUT HORIZONTAL COM FLEXBOX)
    ========================================= */
 .carrossel-secao {
     padding: 60px 20px;
@@ -260,11 +299,12 @@ nav a:hover {
 .carrossel-slides {
     display: flex; 
     transition: transform 0.6s ease-in-out; 
+    width: 100%; 
     height: 550px; 
 }
 
 .carrossel-slide {
-    min-width: 100%; 
+    flex: 0 0 100%; 
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -280,7 +320,9 @@ nav a:hover {
     z-index: 1;
 }
 
-
+.focal-bastardos { object-position: center 15%; }
+.focal-dany { object-position: center 20%; }
+.focal-snow { object-position: center 30%; }
 
 /* Película escura na esquerda para leitura */
 .carrossel-slide::after {
@@ -353,44 +395,491 @@ nav a:hover {
 .carrossel-ponto.active { background: var(--gold); }
 
 /* =========================================
-   RODAPÉ (FOOTER)
+   RODAPÉ (FOOTER) 
    ========================================= */
 .westeros-footer {
     width: 100%; 
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px 30px; /* Um pouco mais de respiro no topo */
     margin-top: 60px;
+    /* Gradiente que escurece para o fundo, dando sensação de fim de página */
+    background: linear-gradient(to bottom, rgba(15, 15, 15, 0.8), rgba(0, 0, 0, 1));
     border-top: 1px solid var(--gold);
-    background-color: rgba(0, 0, 0, 0.6);
+    /* Um brilho interno sutil na borda superior */
+    box-shadow: inset 0 2px 15px rgba(163, 141, 89, 0.05); 
+}
+
+.footer-content {
+    max-width: 800px; /* Mantém o conteúdo centralizado e não muito esticado */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cinzel', serif; /* Força a fonte épica no rodapé */
+}
+
+/* Texto principal ("Forjado com...") */
+.footer-content p:not(.footer-disclaimer) {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Destaque para o seu nome */
+.footer-content strong {
+    color: var(--gold);
+    font-weight: 600;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 20px; /* Espaço um pouco maior entre as redes */
+    margin: 25px 0; 
 }
 
+/* Animação para os botões sociais */
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px) scale(1.05); /* Levanta e cresce levemente */
+    filter: drop-shadow(0 4px 8px rgba(163, 141, 89, 0.4)); /* Brilho dourado no hover */
+}
+
+/* O texto dos Meistres */
+.footer-disclaimer {
+    font-size: 1rem;
+    color: #888; /* Cinza mais apagado para não roubar a atenção */
+    font-style: italic;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+    padding-top: 15px;
+    width: 150%;
+    border-top: 1px solid rgba(163, 141, 89, 0.2); /* Uma linha divisória bem fraquinha */
+}
 /* =========================================
    TEMAS DAS CASAS (STARK, LANNISTER, ETC)
    ========================================= */
-body.tema-stark {
-    --dark-bg: #f3f4f6; --text-light: #111827;
-    background-image: radial-gradient(ellipse at top center, #ffffff 0%, #e5e7eb 50%, #9ca3af 100%);
-}
-body.tema-stark .guia-card, body.tema-stark .header, body.tema-stark .westeros-footer {
-    background-color: rgba(255, 255, 255, 0.85); border-color: #d1d5db;
-}
-
-body.tema-targaryen { --dark-bg: #0a0000; --gold: #dc2626; background-image: radial-gradient(ellipse at top center, #3a0000 0%, #0a0000 40%, #000000 100%); }
+body.tema-stark { --dark-bg: #111111; --gold: #ffffff; background-image: radial-gradient(ellipse at top center, #ece4e4 0%, #111111 40%, #000000 100%); }
+body.tema-targaryen { --dark-bg: #0a0000; --gold: #ff0000; background-image: radial-gradient(ellipse at top center, #3a0000 0%, #0a0000 40%, #000000 100%); }
 body.tema-lannister { --dark-bg: #2b0a0a; --gold: #ffd700; background-image: radial-gradient(ellipse at top center, #5c1616 0%, #2b0a0a 40%, #000000 100%); }
 body.tema-greyjoy { --dark-bg: #0f1115; --gold: #d4a373; background-image: radial-gradient(ellipse at top center, #232830 0%, #0f1115 50%, #000000 100%); }
 body.tema-tully { --dark-bg: #0f1b29; --gold: #b91c1c; background-image: radial-gradient(ellipse at top center, #1e3a5f 0%, #0f1b29 50%, #000000 100%); }
-body.tema-arryn { --dark-bg: #f0f8ff; --gold: #1d4ed8; --text-light: #0f172a; background-image: radial-gradient(ellipse at top center, #ffffff 0%, #e0f2fe 50%, #bae6fd 100%); }
 body.tema-baratheon { --dark-bg: #111111; --gold: #facc15; background-image: radial-gradient(ellipse at top center, #333333 0%, #111111 40%, #000000 100%); }
 body.tema-tyrell { --dark-bg: #061f0e; --gold: #fbbf24; background-image: radial-gradient(ellipse at top center, #144521 0%, #061f0e 50%, #000000 100%); }
 body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radial-gradient(ellipse at top center, #7c2d12 0%, #3b1404 50%, #1a0800 100%); }
 
-/* Correção de Menu em Temas Claros */
-body.tema-stark .theme-dropdown-content, body.tema-arryn .theme-dropdown-content { background-color: white; }
-body.tema-stark .theme-dropdown-content button, body.tema-arryn .theme-dropdown-content button { color: #111827; }
+/* =========================================
+   CITAÇÃO ÉPICA (LORE BREAK)
+   ========================================= */
+.citacao-epica {
+    background-color: rgba(10, 10, 10, 0.7);
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 60px 20px;
+    margin: 60px auto; /* Dá um respiro entre os cards e o carrossel */
+    text-align: center;
+    max-width: 900px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.citacao-conteudo blockquote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Aspas douradas customizadas */
+.citacao-conteudo blockquote::before {
+    content: "“";
+    color: var(--gold);
+    font-size: 3rem;
+    vertical-align: bottom;
+    line-height: 0;
+    margin-right: 8px;
+}
+
+.citacao-conteudo blockquote::after {
+    content: "”";
+    color: var(--gold);
+    font-size: 3rem;
+    vertical-align: bottom;
+    line-height: 0;
+    margin-left: 8px;
+}
+
+.citacao-conteudo cite {
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+}
+
+/* =========================================
+   ANIMAÇÕES DE ROLAGEM (FADE-IN)
+   ========================================= */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    visibility: hidden;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+/* =========================================
+   DIVISOR DAS CASAS INTERATIVO (MEDALHÕES MAIORES E COLORIDOS)
+   ========================================= */
+.divisor-casas {
+    text-align: center;
+    margin: 60px auto 80px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+.sigil-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px; /* Mais espaço para os medalhões gigantes */
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 50px 0;
+}
+
+/* 🎨 A MÁGICA DAS CORES: Define uma cor característica para cada Casa */
+.casa-sigil.stark     { --cor-casa: #e2e8f0; } /* Gelo / Prata */
+.casa-sigil.targaryen { --cor-casa: #ef4444; } /* Vermelho Dragão */
+.casa-sigil.lannister { --cor-casa: #fbbf24; } /* Ouro Leão */
+.casa-sigil.baratheon { --cor-casa: #fde047; } /* Amarelo Tempestade */
+.casa-sigil.greyjoy   { --cor-casa: #0ea5e9; } /* Azul Oceano (ou Dourado) */
+.casa-sigil.tully     { --cor-casa: #3b82f6; } /* Azul Rio */
+.casa-sigil.tyrell    { --cor-casa: #22c55e; } /* Verde Campina */
+.casa-sigil.martell   { --cor-casa: #f97316; } /* Laranja Sol */
+
+.casa-sigil {
+    position: relative;
+    cursor: pointer;
+    width: 115px; /* Largura total da área do escudo aumentada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* 🛡️ OS MEDALHÕES (Agora muito maiores!) */
+.sigil-wrapper {
+    width: 125px;         /* Aumentado de 80px para 100px */
+    height: 125px;        /* Aumentado de 80px para 100px */
+    border-radius: 50%;
+    border: 3px solid rgba(150, 150, 150, 0.3); /* Borda cinza suave para dar contraste */
+    overflow: hidden;
+    background-color: #111111; /* MUDADO PARA ESCURO para misturar com o fundo do seu JPG */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sigil-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+    padding: 0px; /* Reduzi o padding para o logo ficar ainda maior lá dentro */
+}
+
+/* --- EFEITOS DE HOVER (MAGIA DAS CORES INDIVIDUAIS) --- */
+.casa-sigil:hover {
+    transform: translateY(-10px);
+}
+
+/* O Medalhão brilha com a cor exata da Casa */
+.casa-sigil:hover .sigil-wrapper {
+    border-color: var(--cor-casa);
+    box-shadow: 0 0 25px var(--cor-casa); /* Brilho colorido */
+    transform: scale(1.08); /* Ligeiro Zoom do círculo */
+}
+
+/* A imagem dentro ganha cor e zoom */
+.casa-sigil:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.15); /* Zoom interno no brasão */
+}
+
+/* --- A CAIXA DE INFORMAÇÕES QUE APARECE NO HOVER --- */
+.casa-info {
+    position: absolute;
+    top: 130px; /* Desceu para caber o círculo que agora tem 100px */
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Borda opaca antes do brilho */
+    padding: 15px;
+    border-radius: 4px;
+    width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 20;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+}
+
+/* Revelando e Colorindo a Caixa */
+.casa-sigil:hover .casa-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    border-color: var(--cor-casa); /* A caixa ganha a cor da casa */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px var(--cor-casa);
+}
+
+/* O Nome da Casa ganha a cor correspondente */
+.casa-info h4 {
+    color: var(--cor-casa);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.casa-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* =========================================
+   OS SUSSURROS DE VARYS (VOCÊ SABIA? - COM ARANHA)
+   ========================================= */
+.sussurros-varys {
+    margin: 60px auto;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.sussurros-container {
+    background-color: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Um leve brilho dourado no topo para elegância */
+.sussurros-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.sussurros-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 15px;
+}
+
+.sussurros-header h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* O BOTÃO CIRCULAR QUE AGORA CONTÉM A ARANHA */
+.btn-varys-aranha {
+    background: transparent; 
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    width: 60px;  /* Tamanho imponente mas discreto */
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    overflow: hidden; /* Garante que nada vaze do círculo */
+    padding: 0; /* Remove padding padrão do botão */
+}
+
+.btn-varys-aranha:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+/* A IMAGEM DA ARANHA DENTRO DO CÍRCULO */
+.img-aranha {
+    width: 100%;  /* O segredo para ficar 'bem pequenininha' e centralizada */
+    height: 100%;
+    object-fit: cover; /* Não distorce a aranha mecânica */
+    opacity: 0.8; /* Um pouco translúcida para misturar com o fundo */
+    filter: drop-shadow(0 0 5px var(--gold)); /* Brilho dourado suave */
+    transition: all 0.3s ease;
+    
+}
+
+/* Efeito de hover na aranha ao passar o mouse no botão */
+.btn-varys-aranha:hover .img-aranha {
+    opacity: 1; /* Ganha cor total */
+    transform: scale(1.1); /* Ligeiro zoom na aranha */
+    filter: drop-shadow(0 0 10px var(--gold)); /* Brilho dourado intenso */
+}
+
+/* O TEXTO DO SEGREDO */
+.sussurros-corpo p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-style: italic;
+    transition: opacity 0.4s ease; /* Transição suave ao trocar a frase */
+}
+
+/* =========================================
+   PÁGINA DO MAPA
+   ========================================= */
+.mapa-wrapper {
+    display: flex;
+    position: relative;
+    height: 85vh; /* Ocupa quase a tela toda abaixo do header */
+    background-color: #0d0d0d;
+    overflow: hidden;
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+.mapa-container {
+    flex-grow: 1;
+    overflow: auto; /* Permite rolar o mapa se for muito grande */
+    cursor: grab;
+    /* position: relative removido daqui para não quebrar os pins */
+}
+
+/* NOVA DIV: Garante que os pontos sigam o tamanho real da imagem */
+.mapa-conteudo {
+    position: relative; 
+    width: 100%;
+    min-width: 1400px; /* Garante que o mapa não fique pequeno demais */
+    display: block;
+}
+
+.mapa-imagem {
+    width: 100%;
+    display: block;
+}
+
+/* Área invisível que segura os pins em cima do mapa */
+#marcadores-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Os Pins (Marcadores) no mapa */
+.marcador {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--gold);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Centraliza exatamente na coordenada */
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(163, 141, 89, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 5; /* Garante que os pontos fiquem acima do mapa */
+}
+
+.marcador:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+    z-index: 6;
+}
+
+/* Painel Lateral */
+.painel-info {
+    width: 350px;
+    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+    border-left: 1px solid var(--gold);
+    padding: 20px;
+    transform: translateX(100%); /* Começa escondido fora da tela */
+    transition: transform 0.4s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.8);
+}
+
+.painel-info.ativo {
+    transform: translateX(0); /* Desliza para dentro da tela */
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    color: var(--gold);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.painel-destaque {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid var(--gold);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.painel-titulo {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    margin-bottom: 5px;
+}
+
+.painel-subtitulo {
+    color: #888;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.painel-texto {
+    color: #e0e0e0;
+    line-height: 1.6;
+}

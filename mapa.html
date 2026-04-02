@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Westeros | WesterosPedia</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ico.jpg" type="image/jpeg">
+</head>
+<body class="pagina-mapa">
+    
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo WesterosPedia" class="header-logo-img">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mapa.html" style="color: var(--gold);">Mapa</a></li>
+                <li><a href="casas.html">Casas</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="guerras.html">Guerras</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="bestiario.html">Bestiário</a></li>
+                <li><a href="religioes.html">Religiões</a></li>
+                <li><a href="artefatos.html">Artefatos</a></li>
+            </ul>
+        </nav>
+        
+        <div class="theme-dropdown-container">
+            <button id="btnTemas" class="theme-btn" onclick="abrirMenuTemas(event)">Temas ⚙️</button>
+            <div id="caixaTemas" class="theme-dropdown-content">
+                <button onclick="mudarTema('padrao')">Patrulha da Noite</button>
+                <button onclick="mudarTema('stark')">Stark</button>
+                <button onclick="mudarTema('targaryen')">Targaryen</button>
+                <button onclick="mudarTema('lannister')">Lannister</button>
+                <button onclick="mudarTema('baratheon')">Baratheon</button>
+                <button onclick="mudarTema('greyjoy')">Greyjoy</button>
+                <button onclick="mudarTema('tully')">Tully</button>
+                <button onclick="mudarTema('tyrell')">Tyrell</button>
+                <button onclick="mudarTema('martell')">Martell</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="mapa-wrapper">
+        <div class="mapa-container" id="mapaContainer">
+            <div class="mapa-conteudo">
+                <img src="img/mapa_westeros_hd.jpg" alt="Mapa dos Sete Reinos" class="mapa-imagem">
+                
+                <div id="marcadores-area"></div>
+            </div>
+        </div>
+
+        <aside class="painel-info" id="painelInfo">
+            <button class="btn-fechar" onclick="fecharPainel()">✖</button>
+            <div class="painel-conteudo">
+                <img id="painelImg" src="" alt="Imagem do Local" class="painel-destaque">
+                <h2 id="painelNome" class="painel-titulo">Selecione um local</h2>
+                <h4 id="painelCasa" class="painel-subtitulo"></h4>
+                <p id="painelDesc" class="painel-texto">O mapa aguarda sua exploração. Clique em um marcador para revelar seus segredos.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="westeros-footer">
+        <div class="footer-content">
+            <p>Forjado com ⚔️ por <strong>Kauan Santana</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/kauanssantana" target="_blank"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+                <a href="https://instagram.com/kauan.santana12" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"></a>
+                <a href="https://www.linkedin.com/in/kauan-santana-ab8915325/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+            </div>
+            <p class="footer-disclaimer">O Inverno Chegou. Todos os direitos reservados aos meistres.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="mapa.js"></script>
+</body>
+</html>

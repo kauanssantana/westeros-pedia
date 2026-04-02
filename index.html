@@ -41,7 +41,6 @@
                 <button onclick="mudarTema('baratheon')">Baratheon</button>
                 <button onclick="mudarTema('greyjoy')">Greyjoy</button>
                 <button onclick="mudarTema('tully')">Tully</button>
-                <button onclick="mudarTema('arryn')">Arryn</button>
                 <button onclick="mudarTema('tyrell')">Tyrell</button>
                 <button onclick="mudarTema('martell')">Martell</button>
             </div>
@@ -50,18 +49,100 @@
 
     <main>
         <section class="hero-section">
+            <div id="snow-container"></div>
+
             <div class="hero-content">
-                <h2>O Inverno Chegou</h2>
-                <p>Bem-vindo ao maior compêndio dos Sete Reinos. Explore a linhagem das Grandes Casas, descubra o paradeiro dos lordes de Westeros e os segredos esquecidos de Essos.</p>
+                <h2>As Crônicas do Gelo e Fogo</h2>
+                <p>A jornada começa aqui, nos arquivos mais profundos da Cidadela. Mais do que meras fronteiras traçadas em pergaminho, este mapa é o registro vivo de milênios de história, traições e conquistas. Desbrave os Sete Reinos e as vastidões Além do Mar Estreito. Descubra os segredos das Grandes Casas, das espadas Valirianas perdidas às linhagens esquecidas. Das cinzas da Perdição de Valíria às Muralhas de Winterfell, o conhecimento é o verdadeiro poder. Explore. Descubra. Lembre-se.</p> 
                 <a href="#conteudo-guia" class="btn-explorar">Adentrar os Registros</a>
             </div>
         </section>
 
-        <div class="divisor-casas">
-            <img src="img/banner-casas.jpg" alt="Brasões das Grandes Casas">
+        <div class="divisor-casas fade-in-section">
+            <div class="sigil-container">
+                <div class="casa-sigil stark">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_stark.jpg" alt="Casa Stark">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Stark</h4>
+                        <p>"O Inverno Está Chegando"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil targaryen">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_targaryen.jpg" alt="Casa Targaryen">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Targaryen</h4>
+                        <p>"Fogo e Sangue"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil lannister">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_lannister.jpg" alt="Casa Lannister">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Lannister</h4>
+                        <p>"Ouça-me Rugir"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil baratheon">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_baratheon.jpg" alt="Casa Baratheon">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Baratheon</h4>
+                        <p>"Nossa é a Fúria"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil greyjoy">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_greyjoy.jpg" alt="Casa Greyjoy">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Greyjoy</h4>
+                        <p>"Nós Não Semeamos"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil tully">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_tully.jpg" alt="Casa Tully">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Tully</h4>
+                        <p>"Família, Dever, Honra"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil tyrell">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_tyrell.jpg" alt="Casa Tyrell">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Tyrell</h4>
+                        <p>"Crescendo Fortes"</p>
+                    </div>
+                </div>
+                
+                <div class="casa-sigil martell">
+                    <div class="sigil-wrapper">
+                        <img src="img/sigil_martell.jpg" alt="Casa Martell">
+                    </div>
+                    <div class="casa-info">
+                        <h4>Martell</h4>
+                        <p>"Insubmissos, Não Curvados, Não Quebrados"</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <section id="conteudo-guia" class="guia-abas-section">
+        <section id="conteudo-guia" class="guia-abas-section fade-in-section">
             <h2 class="guia-titulo">Os Arquivos da Cidadela</h2>
             <div class="guia-grid">
                 <div class="guia-card">
@@ -99,50 +180,84 @@
             </div>
         </section>
 
-        <section class="carrossel-secao">
+        <section class="citacao-epica fade-in-section">
+            <div class="citacao-conteudo">
+                <blockquote>
+                    Uma mente necessita de livros da mesma forma que uma espada necessita de uma pedra de amolar, se quiser manter o seu corte.
+                </blockquote>
+                <cite>— Tyrion Lannister</cite>
+            </div>
+        </section>
+
+        <section class="sussurros-varys fade-in-section">
+            <div class="sussurros-container">
+                <div class="sussurros-header">
+                    <h3>Os Sussurros de Varys</h3>
+                    <button id="btnVarys" class="btn-varys-aranha" title="Ouvir outro segredo">
+                        <img src="img/aranha_varys.jpg" alt="Aranha de Varys" class="img-aranha">
+                    </button>
+                </div>
+                <div class="sussurros-corpo">
+                    <p id="texto-sussurro">"Toque no mestre dos susurros e meus passarinhos lhe contarão os maiores segredos e fatos esquecidos dos Sete Reinos..."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="carrossel-secao fade-in-section">
             <h2 class="guia-titulo" style="margin-bottom: 20px;">Crônicas em Destaque</h2>
             <div class="carrossel-container">
                 <div class="carrossel-slides" id="carrosselSlides">
                     
                     <div class="carrossel-slide active">
-                        <img src="img/longa_noite.jpg">
+                        <img src="img/longa_noite.jpg" alt="A Longa Noite" class="carrossel-fundo-img">
                         <div class="carrossel-conteudo-box">
                             <h3 class="destaque-label">Eventos Históricos</h3>
                             <h2 class="destaque-titulo">A Longa Noite</h2>
-                            <p class="destaque-paragrafo">O despertar do exército dos mortos que revelou o verdadeiro poder do Rei da Noite e ameaçou a existência da humanidade.</p>
+                            <p class="destaque-paragrafo">Quando o inverno se abateu sobre Westeros, uma escuridão ancestral despertou Além da Muralha. O exército dos mortos, liderado pelo temível Rei da Noite e seus Caminhantes Brancos, marchou implacável em direção ao sul. Esta batalha apocalíptica uniu casas inimigas, selvagens e dragões nas muralhas de Winterfell, em uma luta desesperada e sangrenta pela sobrevivência de toda a humanidade contra a noite que nunca termina.</p>
+                            <a href="historia.html" class="btn-explorar">Ler Registro Completo 📖</a>
+                        </div>
+                    </div>
+
+                    <div class="carrossel-slide">
+                        <img src="img/bastardos.jpg" alt="Batalha dos Bastardos" class="carrossel-fundo-img focal-bastardos">
+                        <div class="carrossel-conteudo-box">
+                            <h3 class="destaque-label">Batalhas Históricas</h3>
+                            <h2 class="destaque-titulo">Batalha dos Bastardos</h2>
+                            <p class="destaque-paragrafo">Os campos gélidos e encharcados de sangue do Norte testemunharam o embate mais brutal e pessoal de sua era. Jon Snow, liderando um exército fragmentado de selvagens e casas leais menores, enfrentou as forças esmagadoras e a crueldade sádica de Ramsay Bolton. Uma carnificina claustrofóbica e desesperada pela honra da Casa Stark, a vingança de Rickon e a retomada definitiva de Winterfell, marcando o retorno dos lobos ao seu lar de direito.</p>
                             <a href="guerras.html" class="btn-explorar">Ler Registro Completo 📖</a>
                         </div>
                     </div>
 
                     <div class="carrossel-slide">
-                        <img src="img/bastardos.jpg">
-                        <div class="carrossel-conteudo-box">
-                            <h3 class="destaque-label">Eventos Históricos</h3>
-                            <h2 class="destaque-titulo">Batalha dos Bastardos</h2>
-                            <p class="destaque-paragrafo">O violento embate entre Jon Snow e Ramsay Bolton pela reconquista de Winterfell e a honra da Casa Stark que resultou em uma batalha épica.</p>
-                            <a href="guerrras.html" class="btn-explorar">Ler Registro Completo 📖</a>
-                        </div>
-                    </div>
-
-                    <div class="carrossel-slide">
-                        <img src="img/dany_dragao.jpg">
+                        <img src="img/dany_dragao.jpg" alt="Daenerys e Drogon" class="carrossel-fundo-img focal-dany">
                         <div class="carrossel-conteudo-box">
                             <h3 class="destaque-label">Personagens</h3>
                             <h2 class="destaque-titulo">A Mãe de Dragões</h2>
-                            <p class="destaque-paragrafo">O retorno das lendárias criaturas ao mundo e a consolidação do poder de Daenerys Targaryen como a herdeira legítima do Trono de Ferro.</p>
+                            <p class="destaque-paragrafo">Das cinzas e chamas da pira funerária de Khal Drogo, o impossível se tornou realidade. Daenerys Nascida da Tormenta trouxe a magia de volta ao mundo com o nascimento de Drogon, Rhaegal e Viserion. Acompanhe a jornada épica da princesa exilada através do Mar Estreito, desde a quebra de correntes nas cidades escravagistas de Essos até se tornar a rainha conquistadora, pronta para reivindicar o Trono de Ferro com Fogo e Sangue.</p>
                             <a href="personagens.html" class="btn-explorar">Ler Registro Completo 📖</a>
                         </div>
                     </div>
 
                     <div class="carrossel-slide">
-                        <img src="img/snow_fantasma.jpg">
+                        <img src="img/rebeliao_robert.jpg" alt="Batalha do Tridente" class="carrossel-fundo-img">
                         <div class="carrossel-conteudo-box">
-                            <h3 class="destaque-label">Eventos Históricos</h3>
+                            <h3 class="destaque-label">Batalhas Históricas</h3>
                             <h2 class="destaque-titulo">A Batalha do Tridente</h2>
-                            <p class="destaque-paragrafo">O duelo lendário entre Robert Baratheon e Rhaegar Targaryen que selou o fim da dinastia do Dragão e mudou o destino dos Sete Reinos.</p>
+                            <p class="destaque-paragrafo">Nas águas rasas e agitadas do Ramo Verde, o destino dos Sete Reinos foi forjado a golpes de martelo de guerra. O furioso lorde rebelde Robert Baratheon e o Príncipe Herdeiro Rhaegar Targaryen travaram um duelo singular lendário que fez o mundo prender a respiração. A queda do Dragão de Prata e os rubis espalhados pela correnteza selaram o fim de quase três séculos de supremacia e loucura da Casa Targaryen, coroando o Veado.</p>
                             <a href="guerras.html" class="btn-explorar">Ler Registro Completo 📖</a>
                         </div>
                     </div>
+
+                    <div class="carrossel-slide">
+                        <img src="img/aegon.jpg" alt="A Conquista de Aegon" class="carrossel-fundo-img">
+                        <div class="carrossel-conteudo-box">
+                            <h3 class="destaque-label">Eventos Históricos</h3>
+                            <h2 class="destaque-titulo">A Conquista de Aegon</h2>
+                            <p class="destaque-paragrafo">Por milênios, Westeros foi um continente fragmentado por reis orgulhosos que viviam em guerra constante. Tudo mudou quando Aegon Targaryen e suas irmãs-esposas, Visenya e Rhaenys, desembarcaram com o poder supremo e incontestável de três dragões colossais: Balerion, Vhagar e Meraxes. Exércitos queimaram em seus castelos, lordes dobraram os joelhos e as espadas dos derrotados foram derretidas para forjar o assento mais cobiçado e perigoso do mundo: o Trono de Ferro.</p>
+                            <a href="historia.html" class="btn-explorar">Ler Registro Completo 📖</a>
+                        </div>
+                    </div>
+
                 </div>
 
                 <button class="carrossel-btn prev" onclick="mudarSlide(-1)">&#10094;</button>
@@ -152,6 +267,8 @@
                     <span class="carrossel-ponto active" onclick="irParaSlide(0)"></span>
                     <span class="carrossel-ponto" onclick="irParaSlide(1)"></span>
                     <span class="carrossel-ponto" onclick="irParaSlide(2)"></span>
+                    <span class="carrossel-ponto" onclick="irParaSlide(3)"></span>
+                    <span class="carrossel-ponto" onclick="irParaSlide(4)"></span>
                 </div>
             </div>
         </section>
