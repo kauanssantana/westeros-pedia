@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestiário | WesterosPedia</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ico.jpg" type="image/jpeg">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo WesterosPedia" class="header-logo-img">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="casas.html">Casas</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="guerras.html">Guerras e Batalhas</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="bestiario.html" style="color: var(--gold);">Bestiário</a></li>
+                <li><a href="religioes.html">Religiões</a></li>
+            </ul>
+        </nav>
+        
+        <div class="theme-dropdown-container">
+            <button id="btnTemas" class="theme-btn" onclick="abrirMenuTemas(event)">Temas ⚙️</button>
+            <div id="caixaTemas" class="theme-dropdown-content">
+                <button onclick="mudarTema('padrao')">Patrulha da Noite</button>
+                <button onclick="mudarTema('stark')">Stark</button>
+                <button onclick="mudarTema('targaryen')">Targaryen</button>
+                <button onclick="mudarTema('lannister')">Lannister</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="bestiario-section">
+        <div class="casas-header">
+            <h2 class="casas-titulo">Monstros e Mitos</h2>
+            
+            <div class="intro-guerras">
+                <p>
+                    <span class="letra-capitular">"H</span>á coisas na escuridão do mundo perante as quais as espadas dos homens não passam de brinquedos inúteis. Criaturas de fogo e escamas que escurecem o sol, e espectros de gelo que trazem a noite eterna.
+                </p>
+                <p>
+                    Estes são os registos das bestas lendárias, das raças esquecidas e dos companheiros letais que caminharam pelos continentes. Temam o que espreita Além da Muralha e venerem o que domina os céus."
+                </p>
+            </div>
+
+            <div class="filtros-casas filtros-bestiario" style="margin-bottom: 40px;">
+                <button class="btn-filtro ativo" data-categoria="todas">Todos</button>
+                <button class="btn-filtro" data-categoria="Dragão">Dragões</button>
+                <button class="btn-filtro" data-categoria="Lobo Gigante">Lobos Gigantes</button>
+                <button class="btn-filtro" data-categoria="Raças Antigas">Raças Antigas</button>
+                <button class="btn-filtro" data-categoria="Magia Negra">Magia Sombria</button>
+            </div>
+        </div>
+        
+        <div id="bestiario-grid" class="bestiario-grid">
+            </div>
+    </main>
+
+    <footer class="westeros-footer">
+        <div class="footer-content">
+            <p>Forjado com ⚔️ por <strong>Kauan Santana</strong></p>
+            <p class="footer-disclaimer">O Inverno Chegou. Todos os direitos reservados aos meistres.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/bestiario.js"></script>
+</body>
+</html>

@@ -1636,3 +1636,124 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     transform: scale(1.1) translateY(0);
     box-shadow: 0 0 20px var(--gold);
 }
+
+/* =========================================
+   PÁGINA DO BESTIÁRIO
+   ========================================= */
+.bestiario-section {
+    padding: 20px 20px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bestiario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Um pouco mais largas que as de personagens */
+    gap: 40px;
+}
+
+.besta-card {
+    background: linear-gradient(180deg, #111 0%, #050505 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.besta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.9), 0 0 20px rgba(212, 175, 55, 0.15);
+    border-color: var(--gold);
+}
+
+.besta-img-box {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    overflow: hidden;
+}
+
+.besta-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.85) contrast(1.1);
+}
+
+.besta-card:hover .besta-img-box img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.2);
+}
+
+/* Película escura na base da imagem */
+.besta-img-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+}
+
+/* Selo com o Tamanho da criatura */
+.besta-tamanho {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(120, 10, 10, 0.85); /* Fundo vermelho sangue escuro */
+    color: #fca5a5; /* Vermelho claro */
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    border: 1px solid rgba(252, 165, 165, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.besta-info {
+    padding: 25px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.besta-nome {
+    color: var(--gold);
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.besta-categoria {
+    display: inline-block;
+    color: #aaa;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.besta-divisor {
+    width: 50px;
+    height: 2px;
+    background-color: var(--gold);
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.besta-desc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ccc;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-top: auto; /* Empurra o texto para organizar os cards */
+}
