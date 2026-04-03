@@ -7,8 +7,9 @@ guerras_westeros = [
         "ano": "2 a.C. - 1 d.C.",
         "combatentes": "Casa Targaryen vs. Os Sete Reinos Independentes",
         "desfecho": "Unificação de Westeros sob o Trono de Ferro",
+        "baixas": "10.000+ (4.000 apenas no Campo de Fogo)",
         "imagem": "img/aegon.jpg",
-        "descricao": "Aegon Targaryen e as suas irmãs-esposas, Visenya e Rhaenys, desembarcaram em Westeros com um exército pequeno, mas acompanhados pelo poder supremo: três dragões imensos. Durante a campanha, o impenetrável castelo de Harrenhal foi derretido por Balerion, exércitos combinados foram transformados em cinzas no brutal Campo de Fogo, e reis orgulhosos, como Torrhen Stark, ajoelharam-se para evitar a aniquilação. Foi o evento que unificou o continente, reiniciou o calendário do mundo e forjou o Trono de Ferro a partir do fogo negro e das espadas dos derrotados."
+        "descricao": "Aegon Targaryen e as suas irmãs-esposas, Visenya e Rhaenys, mudaram o curso da história ao desembarcarem em Westeros com o poder supremo de três dragões colossais: Balerion, Vhagar e Meraxes. Reis orgulhosos como Mern IX da Campina pereceram em chamas no Campo de Fogo, enquanto outros, como Torrhen Stark, ajoelharam-se para evitar a extinção. A guerra culminou na fundação de Porto Real e na forja do Trono de Ferro, moldado com as mil espadas dos derrotados e o hálito ardente do Terror Negro."
     },
     {
         "id": "degraus",
@@ -16,8 +17,9 @@ guerras_westeros = [
         "ano": "106 d.C. - 109 d.C.",
         "combatentes": "Daemon Targaryen e Casa Velaryon vs. A Triarquia",
         "desfecho": "Vitória de Daemon; coroado Rei do Mar Estreito",
+        "baixas": "5.000+",
         "imagem": "img/batalha_degraus.jpg",
-        "descricao": "Buscando glória longe da sombra do irmão e irritado com as taxas comerciais abusivas que prejudicavam Derivamarca, o Príncipe Daemon Targaryen e Lorde Corlys Velaryon iniciaram uma guerra brutal nas ilhas dos Degraus. A Triarquia utilizou táticas de guerrilha e cavernas para anular o poder do dragão Caraxes. O conflito atingiu o seu clímax sangrento quando Daemon fingiu uma rendição suicida para atrair Craghas Drahar, o temido Engorda Caranguejo, para fora das cavernas, cortando-o literalmente ao meio com a espada Irmã Sombria."
+        "descricao": "Movido por ambição e desejo de glória, o Príncipe Daemon Targaryen aliou-se a Lorde Corlys Velaryon, o Serpente Marinha, para expulsar a Triarquia (a aliança de Myr, Lys e Tyrosh) das ilhas estratégicas dos Degraus. O conflito foi marcado por táticas brutais de guerrilha em cavernas e combate naval intenso. A guerra atingiu o seu clímax sangrento quando Daemon enfrentou e executou Craghas Drahar, o cruel 'Engorda Caranguejo', cortando-o ao meio e limpando as rotas comerciais do Mar Estreito."
     },
     {
         "id": "pouso-gralhas",
@@ -25,8 +27,9 @@ guerras_westeros = [
         "ano": "129 d.C.",
         "combatentes": "Rhaenys Targaryen (Pretos) vs. Aegon II e Aemond (Verdes)",
         "desfecho": "Vitória dos Verdes; morte de Rhaenys e Meleys",
+        "baixas": "800+ soldados e 1 dragão",
         "imagem": "img/batalha_pouso_gralhas.jpg",
-        "descricao": "Uma emboscada meticulosamente orquestrada por Sor Criston Cole e um dos combates aéreos mais brutais da história. A Princesa Rhaenys, a 'Rainha Que Nunca Foi', atendeu ao pedido de socorro do castelo voando na sua experiente dragão Meleys. No entanto, foi surpreendida pelos irmãos Aegon II (em Sunfyre) e Aemond (na colossal Vhagar). Apesar da sua bravura inigualável e de ter ferido o Rei Aegon e Sunfyre quase mortalmente, o peso de Vhagar prevaleceu. Rhaenys e Meleys caíram dos céus em chamas e glória, marcando uma perda devastadora para a facção Negra."
+        "descricao": "Uma das batalhas mais trágicas e decisivas da Dança dos Dragões. Sor Criston Cole preparou uma armadilha meticulosa para atrair os defensores da Rainha Rhaenyra. A Princesa Rhaenys, a 'Rainha que Nunca Foi', respondeu ao apelo montada na sua dragão Meleys, apenas para ser emboscada pelos irmãos Aegon II em Sunfyre e Aemond na colossal Vhagar. O confronto aéreo resultou na queda mortal de Rhaenys e Meleys, deixando o Rei Aegon II com queimaduras terríveis que o marcariam para o resto da vida."
     },
     {
         "id": "danca",
@@ -34,8 +37,9 @@ guerras_westeros = [
         "ano": "129 d.C. - 131 d.C.",
         "combatentes": "Os Pretos (Rhaenyra) vs. Os Verdes (Aegon II)",
         "desfecho": "Morte de quase todos os dragões e ruína da dinastia",
+        "baixas": "50.000+ e a extinção parcial dos dragões",
         "imagem": "img/guerra_danca.jpg",
-        "descricao": "A guerra civil mais devastadora da dinastia Targaryen, iniciada após a morte do Rei Viserys I, quando o Conselho Verde usurpou o trono que pertencia por direito a Rhaenyra. O reino foi rasgado ao meio. Castelos foram incendiados, grandes casas foram dizimadas e a capital assistiu à sangrenta invasão do Fosso dos Dragões pela população enfurecida. O conflito fratricida resultou na extinção quase total das feras aladas e deixou a Casa Targaryen numa sombra do que outrora foi, culminando na coroação do traumatizado Aegon III."
+        "descricao": "A guerra civil fratricida que quase destruiu a Casa Targaryen após a morte de Viserys I. Irmão lutou contra irmã, e dragão devorou dragão num conflito que rasgou Westeros ao meio entre as facções dos Verdes e dos Pretos. Das areias de Dorne às muralhas de Winterfell, o reino sangrou. A guerra não só dizimou a linhagem real, como levou à quase extinção dos dragões, deixando a dinastia permanentemente enfraquecida e o mundo desprovido da sua magia mais poderosa."
     },
     {
         "id": "blackfyre",
@@ -43,17 +47,19 @@ guerras_westeros = [
         "ano": "196 d.C.",
         "combatentes": "Coroa Targaryen (Daeron II) vs. Rebeldes Blackfyre (Daemon I)",
         "desfecho": "Vitória Targaryen e exílio dos sobreviventes Blackfyre",
+        "baixas": "15.000+ (apenas no Campo do Capim Vermelho)",
         "imagem": "img/guerra_blackfyre.jpg",
-        "descricao": "O péssimo Rei Aegon IV legitimou todos os seus bastardos no leito de morte e entregou a espada ancestral 'Blackfyre' a Daemon, plantando as sementes para a maior revolta do século. Argumentando que Daeron II era ilegítimo e focado nos dorneses, Daemon Blackfyre ergueu os seus estandartes do dragão negro. O reino sangrou até à Batalha do Campo do Capim Vermelho, onde um mar de homens pereceu e a rebelião foi esmagada pelas flechas de represeiro do feiticeiro Corvo de Sangue, forçando os sobreviventes a fugir para Essos."
+        "descricao": "O Rei Aegon IV, o Indigno, semeou o caos ao legitimar todos os seus bastardos no leito de morte e entregar a espada ancestral Blackfyre ao seu filho guerreiro, Daemon. Argumentando que o herdeiro legítimo Daeron II era um intelectual fraco e talvez bastardo, Daemon Blackfyre ergueu o estandarte do dragão negro. A rebelião culminou na épica Batalha do Campo do Capim Vermelho, onde Daemon e os seus filhos foram abatidos pelas setas de Corvo de Sangue, forçando os sobreviventes a fugir para as Cidades Livres."
     },
     {
         "id": "rebeliao",
         "nome": "A Rebelião de Robert",
         "ano": "282 d.C. - 283 d.C.",
-        "combatentes": "Aliança Rebelde (Baratheon, Stark, Arryn, Tully) vs. Coroa Targaryen",
+        "combatentes": "Aliança Rebelde vs. Coroa Targaryen",
         "desfecho": "Fim da Dinastia Targaryen e Coroação de Robert",
+        "baixas": "30.000+",
         "imagem": "img/rebeliao_robert.jpg",
-        "descricao": "Desencadeada pelo desaparecimento de Lyanna Stark com Rhaegar Targaryen e pela atrocidade do Rei Louco, que queimou Lorde Rickard Stark vivo e estrangulou o seu herdeiro. Jon Arryn recusou-se a entregar as cabeças de Robert e Ned, erguendo as suas bandeiras em revolta. O conflito culminou no lendário vau do Tridente, onde o martelo de guerra de Robert Baratheon esmagou as pedras preciosas da armadura de Rhaegar, e foi finalizado pelo cruel Saque de Porto Real, onde Tywin Lannister traiu a coroa e exterminou a linhagem real."
+        "descricao": "Também conhecida como a Guerra do Usurpador, esta revolta foi desencadeada pelo suposto sequestro de Lyanna Stark pelo Príncipe Rhaegar e pela execução brutal de Lorde Rickard e Brandon Stark pelo Rei Louco. Robert Baratheon, Ned Stark e Jon Arryn lideraram uma aliança que derrubou três séculos de domínio Targaryen. O destino do reino selou-se nas águas do Tridente, onde Robert esmagou o peito de Rhaegar, e terminou tragicamente com o Saque de Porto Real e a morte da família real."
     },
     {
         "id": "bosque-murmurios",
@@ -61,81 +67,89 @@ guerras_westeros = [
         "ano": "298 d.C.",
         "combatentes": "Exército do Norte (Robb Stark) vs. Exército Lannister (Jaime)",
         "desfecho": "Vitória Stark; Jaime Lannister capturado",
+        "baixas": "2.000 Lannisters mortos",
         "imagem": "img/batalha_bosque.jpg",
-        "descricao": "O momento em que Robb Stark provou ser um génio tático. Enganando Tywin Lannister ao enviar uma força menor para o Tridente, Robb desceu com a sua cavalaria em segredo e armou uma emboscada noturna perfeita. O exército de Jaime Lannister foi pego desprevenido no bosque. Mesmo percebendo a derrota, o Regicida lutou furiosamente para tentar matar Robb num combate direto, mas as suas espadas falharam e o orgulhoso Leão Dourado foi feito prisioneiro do Jovem Lobo."
+        "descricao": "Robb Stark, o Jovem Lobo, provou o seu génio estratégico logo no início da Guerra dos Cinco Reis. Ao enviar a sua infantaria para distrair Tywin Lannister, Robb liderou a sua cavalaria através de pântanos e florestas para emboscar o exército de Jaime Lannister durante a noite. O silêncio do bosque foi quebrado pelo uivo dos lobos e pelo tinir do aço. A vitória foi absoluta: as forças Lannister foram destroçadas e o próprio 'Regicida' foi feito prisioneiro, dando aos Stark uma vantagem política sem precedentes."
     },
     {
-        
         "id": "cinco-reis",
         "nome": "A Guerra dos Cinco Reis",
         "ano": "298 d.C. - 300 d.C.",
         "combatentes": "Lannister vs. Stark vs. Baratheon (Stannis) vs. Baratheon (Renly) vs. Greyjoy",
-        "desfecho": "Vitória Lannister (com alianças de Tyrell, Bolton e Frey)",
+        "desfecho": "Vitória Lannister (alianças Bolton/Frey)",
+        "baixas": "200.000+ (incluindo civis)",
         "imagem": "img/guerra_cinco_reis.jpg",
-        "descricao": "O continente foi lançado no mais puro caos após a caçada fatal de Robert Baratheon e a execução injusta de Ned Stark por Joffrey. Robb Stark foi coroado Rei do Norte, enquanto Stannis e Renly Baratheon disputavam o Sul, e Balon Greyjoy atacava as costas. A guerra viu o brilhantismo tático de Robb desfazer-se perante quebras de promessas, culminando no traiçoeiro Casamento Vermelho, orquestrado por Tywin Lannister, Roose Bolton e Walder Frey, redefinindo o conceito de honra em Westeros."
+        "descricao": "O conflito mais sangrento da era moderna de Westeros, iniciado após a morte de Robert Baratheon e a execução de Ned Stark. Joffrey, Robb, Renly, Stannis e Balon Greyjoy reclamaram coroas simultaneamente, mergulhando o continente num caos de traição e fome. A guerra redefiniu os limites da honra com o infame Casamento Vermelho, onde a Casa Stark foi traída pelos seus vassalos Bolton e Frey, permitindo que a aliança Lannister-Tyrell consolidasse o poder sobre um reino em ruínas."
     },
     {
         "id": "agua-negra",
         "nome": "A Batalha da Água Negra",
         "ano": "299 d.C.",
         "combatentes": "Defensores Lannister/Tyrell vs. Frota de Stannis Baratheon",
-        "desfecho": "Vitória da Coroa; Frota de Stannis dizimada pelo fogo vivo",
+        "desfecho": "Vitória da Coroa; Frota de Stannis dizimada",
+        "baixas": "20.000+",
         "imagem": "img/batalha_agua_negra.jpg",
-        "descricao": "O maior cerco anfíbio da Guerra dos Cinco Reis. Stannis Baratheon trouxe uma frota massiva para tomar Porto Real e depor o seu sobrinho bastardo. Graças ao génio tático da Mão do Rei, Tyrion Lannister, um navio carregado com a instável e mágica substância verde conhecida como Fogo Vivo foi lançado na baía, incinerando metade da armada inimiga numa explosão dantesca. As forças de Stannis quase tomaram os muros, mas foram esmagadas pela chegada de última hora da aliança Lannister-Tyrell."
+        "descricao": "O maior cerco naval da Guerra dos Cinco Reis. Stannis Baratheon lançou um ataque massivo contra Porto Real, mas foi travado pelo génio tático de Tyrion Lannister. Um único navio carregado com Fogo Vivo transformou a baía num inferno verde esmeralda, incinerando a frota de Stannis e milhares de soldados. A batalha nas muralhas foi desesperada e apenas terminou com a chegada surpresa das forças combinadas de Tywin Lannister e Mace Tyrell, que esmagaram a retaguarda de Stannis e garantiram o trono de Joffrey."
     },
     {
         "id": "castelo-negro",
         "nome": "A Batalha de Castelo Negro",
         "ano": "300 d.C.",
-        "combatentes": "Patrulha da Noite vs. Exército do Povo Livre (Selvagens)",
+        "combatentes": "Patrulha da Noite vs. Selvagens",
         "desfecho": "Vitória da Patrulha com a chegada surpresa de Stannis",
+        "baixas": "1.500+",
         "imagem": "img/batalha_castelo_negro.jpg",
-        "descricao": "Impulsionados pelo medo dos mortos-vivos, cem mil selvagens unidos por Mance Rayder atacaram a Muralha com gigantes montados em mamutes e alpinistas mortíferos. Com a liderança superior ausente, o jovem patrulheiro Jon Snow assumiu o comando da defesa desesperada. A Patrulha resistiu usando barris inflamáveis e flechas na escuridão, sofrendo perdas dolorosas como a da guerreira Ygritte. Quando a Muralha parecia prestes a cair, a cavalaria de Stannis Baratheon emergiu da floresta, derrotando o Rei Próximo à Muralha."
+        "descricao": "Cem mil selvagens, liderados por Mance Rayder e acompanhados por gigantes montados em mamutes, atacaram a Muralha em busca de refúgio contra o avanço dos mortos. Com menos de cem homens aptos, a Patrulha da Noite, liderada de forma heroica por Jon Snow, resistiu a assaltos brutais do sul e do norte. A defesa desesperada, feita com fogo, óleo a ferver e coragem, só foi bem-sucedida quando a cavalaria de Stannis Baratheon surgiu inesperadamente da floresta assombrada para desbaratar as forças do Rei-Para-Lá-da-Muralha."
     },
     {
         "id": "durolar",
         "nome": "O Massacre de Durolar (Hardhome)",
         "ano": "301 d.C.",
-        "combatentes": "Povo Livre e Patrulha da Noite vs. O Exército dos Mortos",
-        "desfecho": "Aniquilação quase total dos vivos; Retirada desesperada",
+        "combatentes": "Vivos vs. O Exército dos Mortos",
+        "desfecho": "Aniquilação total; Retirada desesperada",
+        "baixas": "30.000+ (ressuscitados como mortos-vivos)",
         "imagem": "img/batalha_durolar.jpg",
-        "descricao": "Mais do que uma batalha, foi um aviso aterrorizante para os vivos. O Senhor Comandante Jon Snow viajou à baía gelada de Durolar para evacuar os selvagens restantes. Subitamente, um frio antinatural desceu das montanhas, trazendo consigo uma avalanche de mortos-vivos incontroláveis. Milhares foram massacrados. Jon Snow descobriu que o aço valiriano podia destruir Caminhantes Brancos, mas foi forçado a fugir nos barcos, assistindo em pânico absoluto ao Rei da Noite a erguer os braços e a ressuscitar todos os caídos."
+        "descricao": "Não foi uma batalha, mas um extermínio arrepiante que revelou a verdadeira escala da ameaça branca. Jon Snow viajou para a vila selvagem de Durolar para resgatar milhares de Povo Livre, mas o local foi emboscado pelo Rei da Noite. Uma maré imparável de mortos-vivos saltou dos penhascos, massacrando tudo no seu caminho. O verdadeiro horror foi revelado quando, no silêncio da baía gelada, o Rei da Noite ergueu os braços e trouxe todos os caídos de volta à vida como escravos dos mortos perante os olhos dos poucos sobreviventes."
     },
     {
         "id": "bastardos",
         "nome": "A Batalha dos Bastardos",
         "ano": "303 d.C.",
         "combatentes": "Exército Stark (Jon Snow) vs. Exército Bolton (Ramsay)",
-        "desfecho": "Vitória Stark, retomada de Winterfell e morte de Ramsay",
+        "desfecho": "Vitória Stark e morte de Ramsay",
+        "baixas": "6.000+",
         "imagem": "img/batalha_bastardos.jpg",
-        "descricao": "Um confronto visceral e claustrofóbico que decidiu o destino do Norte. O sádico Ramsay Bolton utilizou o jovem Rickon Stark como isca, provocando Jon Snow a abandonar a sua estratégia e a liderar uma carga suicida. As forças Stark viram-se esmagadas sob uma parede de escudos e lanças dos Bolton, formando uma montanha asfixiante de cadáveres e lama. Quando a esperança parecia totalmente perdida, os Cavaleiros do Vale, convocados por Sansa Stark, romperam as linhas inimigas, permitindo que a bandeira do Lobo Gigante voltasse a hastear em Winterfell."
+        "descricao": "Um confronto visceral, sufocante e sujo pelo domínio do Norte e pela alma de Winterfell. Ramsay Bolton usou Rickon Stark para atrair Jon Snow para uma armadilha, forçando um massacre onde os corpos se empilharam em montanhas intransponíveis. As forças Stark estavam cercadas e à beira da aniquilação total pela falange Bolton até que os Cavaleiros do Vale, trazidos por Sansa Stark e Petyr Baelish, romperam o cerco. A batalha terminou com a retomada do lar Stark e a execução poética do sádico Ramsay pelos seus próprios cães."
     },
     {
         "id": "estrada-ouro",
-        "nome": "A Batalha da Estrada de Ouro (Espólios de Guerra)",
+        "nome": "A Batalha da Estrada de Ouro",
         "ano": "304 d.C.",
-        "combatentes": "Exército Targaryen/Dothraki vs. Forças Lannister/Tarly",
-        "desfecho": "Massacre das forças Lannister por Daenerys e Drogon",
+        "combatentes": "Exército Targaryen vs. Forças Lannister",
+        "desfecho": "Massacre Lannister por Daenerys e Drogon",
+        "baixas": "4.000+",
         "imagem": "img/batalha_estrada_ouro.jpg",
-        "descricao": "Após o saque bem-sucedido de Jardim de Cima, Jaime Lannister e os seus exércitos marchavam triunfantes com o ouro da Campina. O ar de tranquilidade foi quebrado pelo som de milhares de cascos: os temíveis senhores dos cavalos Dothraki. Mas o verdadeiro terror emergiu das nuvens. Daenerys Targaryen montada em Drogon varreu a linha de defesa Lannister num mar de chamas ardentes. Nem mesmo as balistas desenhadas por Qyburn impediram o massacre que provou aos Lordes de Westeros que a era dos Dragões não era apenas um mito distante."
+        "descricao": "O retorno do fogo de dragão aos campos de Westeros. Jaime Lannister e o exército real regressavam de Jardim de Cima com os espólios da guerra quando foram subitamente emboscados por uma horda Dothraki. O verdadeiro terror, no entanto, surgiu das nuvens: Daenerys Targaryen montada num Drogon adulto. O fogo do dragão incinerou o comboio de suprimentos e transformou as linhas de defesa Lannister em cinzas. Foi um aviso brutal de que as balistas de Qyburn não seriam suficientes para deter a Rainha Dragão."
     },
     {
         "id": "longa-noite",
         "nome": "A Batalha de Winterfell (A Longa Noite)",
         "ano": "305 d.C.",
-        "combatentes": "Os Vivos (Aliança Stark-Targaryen) vs. O Exército dos Mortos",
-        "desfecho": "Destruição do Rei da Noite e dos Caminhantes Brancos",
+        "combatentes": "Os Vivos vs. O Exército dos Mortos",
+        "desfecho": "Destruição do Rei da Noite",
+        "baixas": "100.000+ (vivos e mortos)",
         "imagem": "img/guerra_longa_noite.jpg",
-        "descricao": "A maior convergência de poder na história contra a ameaça apocalíptica. O Rei da Noite rompeu a Muralha com o seu dragão reanimado e lançou um manto de trevas sobre Winterfell. A formidável carga Dothraki foi extinta em segundos na escuridão. O castelo foi invadido e até as criptas provaram ser letais quando os Starks mortos despertaram. Com o fogo de dragão a provar ser ineficaz contra o Rei da Noite, foi necessário que Arya Stark aplicasse os seus treinos letais com uma adaga de aço valiriano para quebrar o Rei do Inverno e desintegrar todo o seu exército de uma só vez."
+        "descricao": "A maior batalha da história da humanidade, onde a vida e a morte colidiram sob um manto de trevas absolutas. Aliados improváveis – Starks, Targaryens, Imaculados, Dothraki e o Povo Livre – fizeram a sua última resistência nas muralhas de Winterfell. A batalha foi um pesadelo de neve e sangue, onde gigantes e dragões mortos-vivos devastaram as defesas. Quando toda a esperança parecia perdida e os mortos já caminhavam dentro do castelo, Arya Stark desferiu o golpe de misericórdia no Rei da Noite com a adaga de aço valiriano, dissipando o exército das sombras."
     },
     {
         "id": "porto-real",
         "nome": "O Saque de Porto Real (Os Sinos)",
         "ano": "305 d.C.",
-        "combatentes": "Daenerys Targaryen (Drogon) e Imaculados vs. Defesas de Cersei",
-        "desfecho": "Destruição completa da cidade e da Fortaleza Vermelha",
+        "combatentes": "Daenerys Targaryen vs. Defesas de Cersei",
+        "desfecho": "Destruição completa da cidade",
+        "baixas": "200.000+ (maioria civis)",
         "imagem": "img/batalha_porto_real.jpg",
-        "descricao": "O momento final e devastador pelo Trono de Ferro. Apesar do exército Lannister e da Companhia Dourada terem soado os sinos em sinal de rendição, Daenerys Targaryen, impulsionada pela dor de inúmeras perdas e traições, cedeu à fúria. Drogon incinerou as defesas, os civis e a Fortaleza Vermelha quarteirão por quarteirão. Nas ruas, o caos reinou enquanto os exércitos invasores executavam os rendidos. Cersei e Jaime Lannister morreram esmagados sob o castelo, no dia em que a 'Quebradora de Correntes' se tornou a Rainha das Cinzas."
+        "descricao": "A batalha final pelo Trono de Ferro transformou-se no dia mais sombrio de Porto Real. Mesmo após os sinos da cidade terem tocado em sinal de rendição, Daenerys Targaryen, impulsionada por perdas pessoais e fúria acumulada, ignorou o cessar-fogo. Montada em Drogon, ela incinerou não apenas a Companhia Dourada e a frota de Euron, mas ruas inteiras repletas de civis inocentes. A Fortaleza Vermelha desmoronou sobre Jaime e Cersei Lannister, e a cidade que Daenerys veio libertar tornou-se um cemitério fumegante de cinzas e dragões."
     }
 ]
 
@@ -143,4 +157,4 @@ guerras_westeros = [
 with open('../guerras.json', 'w', encoding='utf-8') as f:
     json.dump(guerras_westeros, f, ensure_ascii=False, indent=4)
 
-print("guerras.json forjado com sucesso! As cinzas e o sangue foram registados.")
+print("guerras.json atualizado com as estatísticas de baixas e descrições épicas!")
