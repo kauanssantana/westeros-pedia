@@ -2004,15 +2004,16 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         font-size: 1.1rem;
     }
     
-    /* --- 3. Medalhões das Casas na Home --- */
+    /* --- 3. Medalhões das Casas na Home (CORREÇÃO FORÇADA DE Z-INDEX) --- */
     .sigil-container {
         gap: 15px; 
         padding: 20px 0;
-        row-gap: 25px; 
+        row-gap: 25px; /* Leve respiro vertical entre as linhas */
     }
     .casa-sigil {
         width: 75px; 
     }
+    /* O Segredo Mágico: Força absoluta para o telemóvel trazer a casa para a FRENTE de tudo */
     .casa-sigil:hover, .casa-sigil:active, .casa-sigil:focus {
         z-index: 9999 !important; 
     }
@@ -2025,7 +2026,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         width: 180px;
         top: 85px; 
         padding: 10px;
-        z-index: 10000 !important; 
+        z-index: 10000 !important; /* Garante que a caixa de texto nunca fique atrás da linha de baixo */
     }
     .casa-info h4 {
         font-size: 0.95rem;
@@ -2049,7 +2050,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         padding: 25px 15px;
     }
     
-    /* --- 5. Crônicas em Destaque (CARROSSEL CORRIGIDO PARA LEITURA) --- */
+    /* --- 5. Crônicas em Destaque (CARROSSEL COM PROPORÇÃO DE CINEMA) --- */
     .carrossel-secao {
         padding: 15px 0; 
     }
@@ -2059,11 +2060,12 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         border-right: none;
     }
     .carrossel-slides {
+        /* ALTURA DRASTICAMENTE REDUZIDA: Impede a imagem horizontal de ser cortada nas laterais */
         height: 240px !important; 
     }
     .carrossel-slide::after {
-        /* Película MUITO mais escura e alta, para garantir o contraste perfeito */
-        background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 60%, transparent 100%) !important;
+        /* Película apenas na base, para que a imagem superior fique 100% visível */
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
     }
     .carrossel-conteudo-box,
     .carrossel-slide.active .carrossel-conteudo-box {
@@ -2076,21 +2078,19 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         width: auto;
     }
     .carrossel-conteudo-box .destaque-titulo {
-        font-size: 1.25rem !important; 
+        font-size: 1.2rem !important; /* Reduzido para caber no novo espaço menor */
         margin-bottom: 4px !important;
-        /* Sombra negra profunda ao redor do título */
         text-shadow: 2px 2px 5px #000000, 0 0 15px #000000 !important;
     }
     .carrossel-conteudo-box p {
-        font-size: 0.85rem !important;
-        line-height: 1.3 !important;
-        color: #ffffff !important; /* Força um branco puro */
-        /* Sombra negra pesada para salvar a leitura em fotos muito claras */
+        font-size: 0.8rem !important;
+        line-height: 1.2 !important;
+        color: #ffffff !important;
         text-shadow: 1px 1px 3px #000000, 0 0 10px #000000, 0 0 20px #000000 !important;
     }
     .carrossel-btn {
-        top: 30% !important; /* Subiu ligeiramente para fugir da película muito escura */
-        padding: 6px 12px !important; 
+        top: 35% !important; 
+        padding: 6px 12px !important; /* Setas muito mais discretas e menores */
         background: rgba(0,0,0,0.6);
         border-color: rgba(212, 175, 55, 0.4);
         font-size: 0.9rem !important;
