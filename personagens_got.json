@@ -4,6 +4,7 @@
         "nome": "Daenerys Targaryen",
         "casa": "House Targaryen",
         "titulo": "Mãe de Dragões",
+        "status": "Morto",
         "imagem": "img/dany.jpg",
         "descricao": "Última herdeira da dinastia original. De uma princesa exilada, ela chocou três dragões petrificados, aboliu a escravidão na Baía dos Escravos e cruzou o Mar Estreito com um exército colossal para reivindicar o Trono de Ferro com fogo e sangue."
     },
@@ -12,6 +13,7 @@
         "nome": "Jon Snow",
         "casa": "House Stark",
         "titulo": "Rei do Norte",
+        "status": "Vivo",
         "imagem": "img/jon.jpg",
         "descricao": "Criado como o bastardo de Ned Stark, ascendeu a Senhor Comandante e Rei do Norte após vencer a famosa batalha dos bastardos. Liderou a defesa dos vivos contra a ameaça dos Caminhantes Brancos, carregando nas veias o sangue de gelo (Stark) e fogo (Targaryen)."
     },
@@ -20,6 +22,7 @@
         "nome": "Samwell Tarly",
         "casa": "House Tarly",
         "titulo": "Meistre",
+        "status": "Vivo",
         "imagem": "img/sam.jpg",
         "descricao": "Rejeitado por seu pai por sua aversão a espadas, encontrou sua verdadeira força nos livros. Descobriu o poder do vidro de dragão, curou a letal escamagris de Jorah Mormont e revelou a verdadeira identidade de Jon Snow."
     },
@@ -28,6 +31,7 @@
         "nome": "Arya Stark",
         "casa": "House Stark",
         "titulo": "Ninguém",
+        "status": "Vivo",
         "imagem": "img/arya.jpg",
         "descricao": "Presenciou a queda de sua família e jurou vingança. Cruzou o mundo para treinar com os letais Homens Sem Rosto de Braavos, usando suas habilidades para exterminar a Casa Frey e desferir o golpe final no Rei da Noite."
     },
@@ -36,6 +40,7 @@
         "nome": "Sansa Stark",
         "casa": "House Stark",
         "titulo": "Lady de Winterfell",
+        "status": "Vivo",
         "imagem": "img/sansa.jpeg",
         "descricao": "Sobreviveu a anos como refém política, suportando a crueldade de Joffrey, Cersei e Ramsay Bolton. Aprendeu as regras do jogo com seus captores e emergiu como a sagaz e implacável Rainha do Norte Independente."
     },
@@ -44,6 +49,7 @@
         "nome": "Brandon Stark",
         "casa": "House Stark",
         "titulo": "Lorde de Winterfell",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/bran-stark.jpg",
         "descricao": "Após sobreviver a uma queda que o deixou paralisado, viajou em uma jornada mística Além da Muralha para se tornar o Corvo de Três Olhos, a memória onisciente e viva de todo o mundo."
     },
@@ -52,6 +58,7 @@
         "nome": "Ned Stark",
         "casa": "House Stark",
         "titulo": "Lorde de Winterfell",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/ned-stark.jpg",
         "descricao": "O pilar da honra em um mundo de traições. Sua descoberta sobre a verdadeira linhagem de Joffrey Baratheon e sua trágica e injusta decapitação foram o estopim da devastadora Guerra dos Cinco Reis."
     },
@@ -60,6 +67,7 @@
         "nome": "Robert Baratheon",
         "casa": "House Baratheon",
         "titulo": "O Demônio do Tridente",
+        "status": "Morto",
         "imagem": "img/robert.jpg",
         "descricao": "Guerreiro lendário e formidável. Liderou a rebelião que derrubou três séculos da dinastia dos dragões após esmagar o peito de Rhaegar Targaryen. Reinou em tempos de paz mascarada por excessos e dívidas."
     },
@@ -68,6 +76,7 @@
         "nome": "Jamie Lannister",
         "casa": "House Lannister",
         "titulo": "Senhor Comandante da Guarda Real",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/jaime-lannister.jpg",
         "descricao": "O Regicida. Amaldiçoado pela história por matar o Rei Louco que jurou proteger, seu ato desonroso secretamente salvou milhões de cidadãos de Porto Real de queimarem pelo fogo vivo."
     },
@@ -76,6 +85,7 @@
         "nome": "Cersei Lannister",
         "casa": "House Lannister",
         "titulo": "Lady de Rochedo Casterly",
+        "status": "Morto",
         "imagem": "img/cersei.jpg",
         "descricao": "Rainha feroz, estratégica e cruelmente protetora de seus filhos. Orquestrou traições inimagináveis e destruiu o Grande Septo de Baelor com fogo vivo para eliminar todos os seus inimigos políticos de uma só vez."
     },
@@ -84,6 +94,7 @@
         "nome": "Catelyn Stark",
         "casa": "House Stark",
         "titulo": "Lady de Winterfell",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/catelyn-stark.jpg",
         "descricao": "Matriarca leal e protetora, viajou pelos Sete Reinos buscando justiça por sua família. Suas decisões impulsivas mudaram os rumos da guerra antes de encontrar um fim brutal e trapaceiro no Casamento Vermelho."
     },
@@ -92,6 +103,7 @@
         "nome": "Rob Stark",
         "casa": "House Stark",
         "titulo": "Lorde de Winterfell",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/robb-stark.jpg",
         "descricao": "O Jovem Lobo. Aclamado Rei do Norte por seus vassalos. Era um gênio tático que nunca perdeu uma única batalha em campo, mas suas falhas diplomáticas e amorosas o levaram à ruína nas Gêmeas."
     },
@@ -100,6 +112,7 @@
         "nome": "Theon Greyjoy",
         "casa": "House Greyjoy",
         "titulo": "Capitão da Meretriz do Mar",
+        "status": "Morto",
         "imagem": "img/theon.jpg",
         "descricao": "Criado entre os Stark, traiu sua casa adotiva para provar seu valor aos Nascidos do Ferro. Após sofrer torturas indescritíveis nas mãos de Ramsay Bolton, encontrou redenção lutando e morrendo por Bran."
     },
@@ -108,6 +121,7 @@
         "nome": "Joffrey Baratheon",
         "casa": "House Lannister",
         "titulo": "Rei dos Sete Reinos, Protetor do Domínio",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/joffrey.jpg",
         "descricao": "O sádico filho bastardo do incesto Lannister. Seu reinado foi marcado por crueldade desenfreada, tortura e impulsividade, terminando asfixiado por veneno em seu próprio banquete de casamento."
     },
@@ -116,6 +130,7 @@
         "nome": "Tyrion Lannister",
         "casa": "House Lannister",
         "titulo": "Mão da Rainha",
+        "status": "Vivo",
         "imagem": "img/tyrion.jpg",
         "descricao": "O Duende. Sua inteligência afiada salvou Porto Real na Batalha da Água Negra. Desprezado por sua família e condenado injustamente, cruzou o mundo para se tornar o braço direito de Daenerys."
     },
@@ -124,6 +139,7 @@
         "nome": "The Hound",
         "casa": "House Clegane",
         "titulo": "O Cão de Caça",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/the-hound.jpg",
         "descricao": "Guerreiro letal, queimado pelo irmão na infância e profundamente cínico em relação à cavalaria. Abandonou o Rei para proteger Arya Stark, culminando no combate final contra o próprio irmão nas chamas."
     },
@@ -132,6 +148,7 @@
         "nome": "Gregor Clegane",
         "casa": "House Clegane",
         "titulo": "O Montanha que Cavalga",
+        "status": "Morto",
         "imagem": "img/mountain.jpg",
         "descricao": "Um monstro gigantesco e o braço mais violento dos Lannister. Conhecido por atrocidades na rebelião e por ter esmagado o crânio da Víbora Vermelha antes de ser ressuscitado como um zumbi pela ciência de Qyburn."
     },
@@ -140,6 +157,7 @@
         "nome": "Petyr Baelish",
         "casa": "House Baelish",
         "titulo": "Mindinho",
+        "status": "Morto",
         "imagem": "img/petyr.jpeg",
         "descricao": "O arquiteto invisível da Guerra dos Cinco Reis. Manipulou nobres, envenenou alianças e causou mortes apenas para semear o caos, acreditando que o caos era uma escada para o poder absoluto."
     },
@@ -148,6 +166,7 @@
         "nome": "Davos Seaworth",
         "casa": "House Seaworth",
         "titulo": "Mão do Rei",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/davos-seaworth.png",
         "descricao": "O Cavaleiro das Cebolas. Ex-contrabandista que ascendeu a Mão do Rei graças à sua lealdade e sabedoria ímpar. Serviu como a bússola moral fundamental de Stannis Baratheon e, mais tarde, de Jon Snow."
     },
@@ -156,6 +175,7 @@
         "nome": "Stannis Baratheon",
         "casa": "House Baratheon",
         "titulo": "Lorde de Pedra do Dragão",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/stannis.jpg",
         "descricao": "O herdeiro de direito ao Trono de Ferro após a morte de Robert. Comandante inflexível, foi consumido por profecias sombrias da magia vermelha, sacrificando sua própria família em sua busca incansável pela coroa."
     },
@@ -164,6 +184,7 @@
         "nome": "Varys",
         "casa": "Desconhecida",
         "titulo": "Mestre dos Sussurros",
+        "status": "Morto",
         "imagem": "img/varys.jpg",
         "descricao": "O Aranha. Um eunuco brilhante que comandava uma vasta rede global de espiões. Mudava suas lealdades frequentemente, argumentando que sua verdadeira fidelidade sempre pertenceu ao povo e à paz do reino."
     },
@@ -172,6 +193,7 @@
         "nome": "Khal Drogo",
         "casa": "House Targaryen",
         "titulo": "Khal",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/khal-drogo.jpg",
         "descricao": "Senhor da guerra Dothraki lendário que nunca foi derrotado em combate. Desenvolveu um amor profundo por Daenerys, prometendo invadir Westeros por ela, mas sucumbiu a um ferimento infectado e magia de sangue."
     },
@@ -180,6 +202,7 @@
         "nome": "Margaery Tyrell",
         "casa": "House Tyrell",
         "titulo": "Rainha dos Sete Reinos",
+        "status": "Morto",
         "imagem": "img/margeary.jpg",
         "descricao": "A Rosa de Jardim de Cima. Mestra da política cortês, casou-se com três reis consecutivos e manipulou o povo a seu favor para tentar arrancar o controle do reino das mãos de Cersei."
     },
@@ -188,6 +211,7 @@
         "nome": "Ygritte",
         "casa": "Free Folk",
         "titulo": "Esposa de Lança",
+        "status": "Morto",
         "imagem": "img/ygritte.jpg",
         "descricao": "Feroz e destemida guerreira do Povo Livre Além da Muralha. Ensinou a Jon Snow o valor e a humanidade dos Selvagens antes de cair em batalha nos braços do homem que amava."
     },
@@ -196,6 +220,7 @@
         "nome": "Brienne of Tarth",
         "casa": "House Tarth",
         "titulo": "Lady Brienne",
+        "status": "Vivo",
         "imagem": "img/brienne.jpg",
         "descricao": "Zombada por sua aparência, tornou-se a primeira mulher sagrada Cavaleira dos Sete Reinos. Sua lealdade inquestionável, honra e habilidade com a espada protegeram Sansa Stark e Jaime Lannister."
     },
@@ -204,6 +229,7 @@
         "nome": "Missandei",
         "casa": "Naathi",
         "titulo": "Conselheira Pessoal da Rainha",
+        "status": "Morto",
         "imagem": "img/missandei.jpg",
         "descricao": "Resgatada das correntes de Astapor, onde traduzia para os Mestres de Escravos. Tornou-se a voz mais diplomática, tradutora poliglota e a amiga mais íntima e leal de Daenerys."
     },
@@ -212,6 +238,7 @@
         "nome": "Gilly",
         "casa": "Povo Livre",
         "titulo": "A Guardiã de Coelhos",
+        "status": "Vivo",
         "imagem": "img/gilly.jpg",
         "descricao": "Escapou do destino sombrio na Fortaleza de Craster graças a Sam. Aprendeu a ler e, acidentalmente, descobriu o diário de um Alto Septão que anulava a rebelião de Robert Baratheon."
     },
@@ -220,6 +247,7 @@
         "nome": "Viserys Targaryen",
         "casa": "House Targaryen",
         "titulo": "Rei Viserys III",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/viserys-targaryan.jpg",
         "descricao": "O Rei Pedinte. Consumido pela ilusão de restaurar a dinastia, vendeu a própria irmã aos Dothraki em troca de um exército, encontrando seu destino cruel ao receber uma 'coroa' de ouro fervente."
     },
@@ -228,6 +256,7 @@
         "nome": "Rickon Stark",
         "casa": "House Stark",
         "titulo": "Príncipe",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/rickon.jpg",
         "descricao": "O mais novo, selvagem e temperamental dos filhos de Ned Stark. Passou anos se escondendo em Umber, até ser usado sadicamente como isca mortal na abertura da Batalha dos Bastardos."
     },
@@ -236,6 +265,7 @@
         "nome": "Roose Bolton",
         "casa": "House Bolton",
         "titulo": "Lorde do Forte do Pavor",
+        "status": "Morto",
         "imagem": "img/rose.jpg",
         "descricao": "Calculista e sem emoções. Aliou-se silenciosamente aos Lannister e Frey, orquestrando o Casamento Vermelho e apunhalando seu próprio Rei no coração com a frase: 'Os Lannister mandam lembranças'."
     },
@@ -244,6 +274,7 @@
         "nome": "Daario Naharis",
         "casa": "Naharis",
         "titulo": "Comandante dos Segundos Filhos",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/daario.jpg",
         "descricao": "Comandante mercenário galante e mortífero. Decapitou seus próprios capitães para entregar a lealdade do seu exército e seu coração aos pés de Daenerys Targaryen em Essos."
     },
@@ -252,6 +283,7 @@
         "nome": "Shae",
         "casa": "Lorathi",
         "titulo": "Amante",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/shae.jpg",
         "descricao": "Uma acompanhante apaixonada e protetora de Sansa. Quando acreditou ter sido descartada, sua amargura a levou a testemunhar falsamente contra Tyrion, selando seu próprio destino trágico."
     },
@@ -260,6 +292,7 @@
         "nome": "Tommen Baratheon",
         "casa": "House Baratheon",
         "titulo": "Príncipe",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/tommen.jpg",
         "descricao": "Um jovem de coração mole em um trono de ferro cruel. Manipulado pela esposa e pressionado pela mãe, atirou-se da Fortaleza Vermelha após assistir à destruição do Septo de Baelor."
     },
@@ -268,6 +301,7 @@
         "nome": "Gendry Baratheon",
         "casa": "House Baratheon",
         "titulo": "Lorde de Ponta Tempestade",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/gendry.jpg",
         "descricao": "Ferreiro habilidoso da Baixada das Pulgas e último herdeiro vivo do sangue de Robert. Foi resgatado do sacrifício de sangue, forjou armas para a Grande Guerra e recuperou as terras de sua família."
     },
@@ -276,6 +310,7 @@
         "nome": "Jorah Mormont",
         "casa": "House Mormont",
         "titulo": "Cavaleiro",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/jorah-mormont.jpg",
         "descricao": "Exilado por vender escravos. Começou como espião do rei, mas redimiu sua honra e curou-se da escamagris, doando até sua última gota de sangue para salvar sua Khaleesi contra os mortos."
     },
@@ -284,6 +319,7 @@
         "nome": "Robert Baratheon",
         "casa": "House Baratheon",
         "titulo": "Rei",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/king-robert.jpg",
         "descricao": "Reinou de forma displicente após conquistar o trono martelando Rhaegar. Sua morte por um javali na caça e a conspiração Cersei Lannister lançaram os Sete Reinos no caos absoluto."
     },
@@ -292,6 +328,7 @@
         "nome": "Ramsey Bolton",
         "casa": "House Bolton",
         "titulo": "O Bastardo de Bolton",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/ramsey-bolton.jpg",
         "descricao": "A personificação do sadismo. Esfolava inimigos, castrou Theon Greyjoy e usurpou Winterfell. Foi derrotado pelas tropas de Jon e Sansa, sendo devorado pelos próprios cães que ele deixava passar fome."
     },
@@ -300,6 +337,7 @@
         "nome": "Jeor Mormont",
         "casa": "House Mormont",
         "titulo": "Senhor Comandante da Patrulha da Noite",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/lord-commander-mormont.jpg",
         "descricao": "O honorável Velho Urso. Conduziu a Patrulha da Noite na Grande Patrulha além da Muralha, sendo o primeiro líder a entender que a verdadeira guerra do reino era contra os Caminhantes Brancos."
     },
@@ -308,6 +346,7 @@
         "nome": "The High Sparrow",
         "casa": "Pardais",
         "titulo": "Alto Septão",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/the-high-sparrow.jpg",
         "descricao": "Um religioso astuto com vestes de mendigo. Assumiu o controle da Fé, armou os plebeus e humilhou a nobreza de Porto Real, antes de subestimar a capacidade incendiária de vingança de Cersei."
     },
@@ -316,6 +355,7 @@
         "nome": "Oberyn Martell",
         "casa": "House Martell",
         "titulo": "Víbora Vermelha de Dorne",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/red-viper.jpg",
         "descricao": "Príncipe impetuoso e envenenador. Chegou à capital buscando justiça por sua irmã assassinada e assumiu o julgamento por combate, perdendo a vida em sua distração após abater o temível Montanha."
     },
@@ -324,6 +364,7 @@
         "nome": "Melisandre",
         "casa": "Desconhecida",
         "titulo": "Melisandre de Asshai",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/melisandre.jpg",
         "descricao": "A Sacerdotisa Vermelha. Cometeu atrocidades em nome de magias de sangue e profecias confusas. Redimiu-se ressuscitando Jon Snow e trazendo o fogo essencial para iluminar a Batalha de Winterfell."
     },
@@ -332,6 +373,7 @@
         "nome": "Jaqen H'ghar",
         "casa": "Lorathi",
         "titulo": "Homens sem Rosto de Braavos",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/jaqen-hghar.jpg",
         "descricao": "O enigmático assassino de muitas faces. Libertado por Arya Stark, concedeu a ela três mortes mágicas antes de levá-la à Casa de Preto e Branco para treiná-la como a arma letal definitiva."
     },
@@ -340,6 +382,7 @@
         "nome": "Tywin Lannister",
         "casa": "House Lannister",
         "titulo": "Lorde Supremo das Terras Ocidentais",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/tywin-lannister.jpg",
         "descricao": "A força mais temida do continente. Governava o reino com pragmatismo gelado e montanhas de ouro, até ser assassinado no local mais vulnerável pelo filho anão que ele passou a vida humilhando."
     },
@@ -348,6 +391,7 @@
         "nome": "Ellaria Sand",
         "casa": "House Martell",
         "titulo": "Amante do Príncipe Oberyn Martell",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/ellaria-sand.jpg",
         "descricao": "Guiada pela fúria de seu luto, exterminou o governo pacífico de Dorne e envenenou a filha inocente de Cersei Lannister, o que a levou a ser condenada a apodrecer viva nas masmorras."
     },
@@ -356,6 +400,7 @@
         "nome": "Tormund Giantsbane",
         "casa": "Free Folk",
         "titulo": "Guerreiro do Povo Livre",
+        "status": "Vivo",
         "imagem": "img/tormund.jpg",
         "descricao": "Selvagem carismático e sobrevivente nato. Liderou a invasão a Westeros, e após ser capturado, rompeu milênios de ódio para lutar bravamente ao lado de Jon Snow na defesa da Muralha."
     },
@@ -364,6 +409,7 @@
         "nome": "Yara Greyjoy",
         "casa": "House Greyjoy",
         "titulo": "Lady das Ilhas de Ferro",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/yara-greyjoy.jpg",
         "descricao": "A verdadeira e honrada guerreira das Ilhas de Ferro. Rebelou-se contra a usurpação do tio Euron, roubou os navios de sua frota e navegou até Essos para forjar a primeira aliança com Daenerys Targaryen."
     },
@@ -372,6 +418,7 @@
         "nome": "Euron Greyjoy",
         "casa": "House Greyjoy",
         "titulo": "Rei das Ilhas de Ferro",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/euron-greyjoy.jpg",
         "descricao": "O Olho de Corvo. Retornou de seu exílio brutal, atirou o próprio irmão de uma ponte e usou sua enorme frota naval e crueldade para se aliar a Cersei no embate final pelo trono."
     },
@@ -380,6 +427,7 @@
         "nome": "Hodor",
         "casa": "House Stark",
         "titulo": "Servo da Casa Stark",
+        "status": "Morto",
         "imagem": "img/hodor.jpg",
         "descricao": "Gigante gentil que teve sua mente fraturada por um eco do futuro. Seu propósito final se revelou em um sacrifício de partir o coração, segurando a porta e as hordas de mortos-vivos para salvar a vida de Bran."
     },
@@ -388,6 +436,7 @@
         "nome": "Grey Worm",
         "casa": "Imaculados",
         "titulo": "Comandante dos Imaculados",
+        "status": "Vivo",
         "imagem": "https://thronesapi.com/assets/images/greyworm.jpg",
         "descricao": "Arrancado de sua humanidade pelos mestres, encontrou amor em Missandei e disciplina no combate. Tornou-se o marechal mais formidável e leal do vasto exército de Daenerys Targaryen."
     },
@@ -396,6 +445,7 @@
         "nome": "Olenna Tyrell",
         "casa": "House Tyrell",
         "titulo": "Rainha dos Espinhos",
+        "status": "Morto",
         "imagem": "https://thronesapi.com/assets/images/olenna-tyrell.jpg",
         "descricao": "Dona da mente mais afiada e da maior riqueza agrícola do reino. Envenenou secretamente o Rei Joffrey e, mesmo derrotada no fim, usou seu último suspiro para ferir Cersei com a verdade do ato."
     },
@@ -404,6 +454,7 @@
         "nome": "Lord Bronn",
         "casa": "House Tyrell",
         "titulo": "Lorde de Jardim de Cima",
+        "status": "Vivo",
         "imagem": "img/bronn.jpg",
         "descricao": "Mercenário brilhante e pragmático. Sobreviveu às maiores batalhas da época apostando sempre na sobrevivência e no ouro, o que o alçou da sarjeta às portas de Mestre da Moeda e Lorde da Campina."
     },
@@ -412,6 +463,7 @@
         "nome": "Rhaenyra Targaryen",
         "casa": "House Targaryen",
         "titulo": "O Deleite do Reino / A Rainha Negra",
+        "status": "Morto",
         "imagem": "img/rhaenyra.jpg",
         "descricao": "Herdeira escolhida pelo pai. Viu seu trono ser roubado pelos Verdes. Liderou a Facção Negra em uma campanha de sangue e chamas, marcando o início do evento mais destrutivo da história dos Dragões."
     },
@@ -420,6 +472,7 @@
         "nome": "Daemon Targaryen",
         "casa": "House Targaryen",
         "titulo": "O Príncipe Rebelde",
+        "status": "Morto",
         "imagem": "img/daemon.jpg",
         "descricao": "Comandante da Patrulha da Cidade e cavaleiro do letal dragão Caraxes. Um homem movido a paixão e caos, responsável pelos assassinatos mais brutais e pelas vitórias mais espetaculares na guerra civil Targaryen."
     },
@@ -428,6 +481,7 @@
         "nome": "Viserys I Targaryen",
         "casa": "House Targaryen",
         "titulo": "Rei dos Sete Reinos",
+        "status": "Morto",
         "imagem": "img/viserys-i.jpg",
         "descricao": "Governador pacífico que presidiu o auge do império dos dragões. Porém, sua incapacidade de resolver a rivalidade entre sua esposa e sua herdeira foi a fagulha que acendeu a guerra após seu último suspiro."
     },
@@ -436,6 +490,7 @@
         "nome": "Alicent Hightower",
         "casa": "House Hightower",
         "titulo": "A Rainha Verde",
+        "status": "Morto",
         "imagem": "img/alicent.jpg",
         "descricao": "Amiga de infância de Rhaenyra e segunda esposa de Viserys. Tomada pela paranoia protetora em relação à vida de seus filhos, liderou ativamente o conselho que usurpou a coroa, fundando os Verdes."
     },
@@ -444,6 +499,7 @@
         "nome": "Otto Hightower",
         "casa": "House Hightower",
         "titulo": "Mão do Rei",
+        "status": "Morto",
         "imagem": "img/otto.jpg",
         "descricao": "O intelecto por trás do Trono por décadas. Posicionou meticulosamente sua filha no leito real e os peões no Conselho, garantindo que o sangue Hightower reivindicasse a coroa real no instante em que o rei morreu."
     },
@@ -452,6 +508,7 @@
         "nome": "Corlys Velaryon",
         "casa": "House Velaryon",
         "titulo": "A Serpente Marinha",
+        "status": "Morto",
         "imagem": "img/corlys.jpg",
         "descricao": "O mais formidável navegador da história naval, com viagens que trouxeram riquezas imensas de Yi Ti. Casado com a realeza, usou sua imbatível frota em Pedra do Dragão para controlar o bloqueio da guerra."
     },
@@ -460,6 +517,7 @@
         "nome": "Rhaenys Targaryen",
         "casa": "House Targaryen",
         "titulo": "A Rainha Que Nunca Foi",
+        "status": "Morto",
         "imagem": "img/rhaenys.jpg",
         "descricao": "Preterida ao trono apenas por ser mulher, provou o erro do reino. Com a armadura negra e sua dragão de fogo, Meleys, mergulhou de cabeça nos maiores combates suicidas para proteger a coroa de Rhaenyra."
     },
@@ -468,6 +526,7 @@
         "nome": "Aemond Targaryen",
         "casa": "House Targaryen",
         "titulo": "Aemond Caolho",
+        "status": "Morto",
         "imagem": "img/aemond.jpg",
         "descricao": "O segundo filho implacável que trocou um olho na infância para domar Vhagar, a colossal deusa da guerra. Seu rancor mal resolvido fez o primeiro e catastrófico sangue jorrar entre as nuvens de Ponta Tempestade."
     },
@@ -476,6 +535,7 @@
         "nome": "Aegon II Targaryen",
         "casa": "House Targaryen",
         "titulo": "O Rei Verde",
+        "status": "Morto",
         "imagem": "img/aegon-ii.jpg",
         "descricao": "Arrastado por sua mãe e seu avô para sentar em um trono que não almejava inicialmente. Sobreviveu aos piores ferimentos de combate de dragão da história para segurar sua coroa aos pedaços."
     },
@@ -484,6 +544,7 @@
         "nome": "Criston Cole",
         "casa": "House Cole",
         "titulo": "Senhor Comandante da Guarda Real / O Fazedor de Reis",
+        "status": "Morto",
         "imagem": "img/criston.jpg",
         "descricao": "De protetor leal a inquisidor furioso, o rancor deste formidável espadachim o transformou na mente militar dos Verdes, coroando Aegon de forma incisiva com a coroa que ele acreditava ser legítima."
     },
@@ -492,6 +553,7 @@
         "nome": "Jacaerys Velaryon",
         "casa": "House Velaryon",
         "titulo": "Príncipe de Pedra do Dragão",
+        "status": "Morto",
         "imagem": "img/jacaerys.jpg",
         "descricao": "O primogênito e jovem herdeiro da Facção Negra. Mostrou uma genialidade diplomática surpreendente, voando em seu dragão Vermax até Winterfell para conquistar o juramento vital de sangue e gelo da Casa Stark."
     },
@@ -500,6 +562,7 @@
         "nome": "Ser Duncan the Tall",
         "casa": "Cavaleiro Andante",
         "titulo": "Senhor Comandante da Guarda Real / Dunk",
+        "status": "Morto",
         "imagem": "img/duncan.jpg",
         "descricao": "Um garoto órfão e imenso da Baixada das Pulgas. Mesmo sem ser nascido nas honras de berço, ele se tornou a personificação perfeita da verdadeira cavalaria, defendendo escudeiros oprimidos e príncipes bondosos."
     },
@@ -508,6 +571,7 @@
         "nome": "Aegon V Targaryen",
         "casa": "House Targaryen",
         "titulo": "Aegon, o Improvável / Egg",
+        "status": "Morto",
         "imagem": "img/aegon-v.jpg",
         "descricao": "Escondeu seu sangue real e cabelos prateados para viajar e lavar a armadura de um cavaleiro andante. A convivência com o sofrimento do povo moldou nele o governo com mais compaixão e reforma social."
     },
@@ -516,6 +580,7 @@
         "nome": "Baelor Targaryen",
         "casa": "House Targaryen",
         "titulo": "Baelor Quebra-Lanças / O Martelo",
+        "status": "Morto",
         "imagem": "img/baelor.jpg",
         "descricao": "Herdeiro do trono e aclamado como o melhor e mais justo guerreiro do reino. Rompeu as barreiras da pompa nobre para salvar a vida de Duncan no fatídico Julgamento dos Sete, perdendo sua própria vida no processo."
     },
@@ -524,6 +589,7 @@
         "nome": "Lyonel Baratheon",
         "casa": "House Baratheon",
         "titulo": "A Tempestade Risonha",
+        "status": "Morto",
         "imagem": "img/lyonel.jpg",
         "descricao": "O gigante das Tempestades. Famoso por sua força avassaladora e pelo hábito de lutar em torneios proferindo gargalhadas. Mais tarde, desafiou diretamente o Trono de Ferro quando o orgulho e o juramento de sua casa foram rasgados."
     },
@@ -532,6 +598,7 @@
         "nome": "Aerion Targaryen",
         "casa": "House Targaryen",
         "titulo": "Aerion Chama Brilhante",
+        "status": "Morto",
         "imagem": "img/aerion.jpg",
         "descricao": "A personificação da insanidade real. Crente absoluto em sua divindade e crueldade sem fim, acreditava que ao ingerir um frasco cheio do instável fogo vivo, seu corpo humano daria à luz um poderoso dragão."
     },
@@ -540,6 +607,7 @@
         "nome": "Maekar I Targaryen",
         "casa": "House Targaryen",
         "titulo": "A Bigorna",
+        "status": "Morto",
         "imagem": "img/maekar.jpg",
         "descricao": "Estrategista de guerra frio e punitivo. Governou amargurado e isolado após o golpe maciço e acidental de sua clava aniquilar a vida de seu irmão mais amado e sábio durante uma luta sagrada por justiça."
     },
@@ -548,6 +616,7 @@
         "nome": "Ser Arthur Dayne",
         "casa": "House Dayne",
         "titulo": "A Espada da Manhã",
+        "status": "Morto",
         "imagem": "img/arthur-dayne.jpg",
         "descricao": "Dito o mais perfeito cavaleiro a já brandir uma lâmina. Empunhando a mítica e esbranquiçada Alvorada, tombou cumprindo ordens de proteger o bebê Jon Snow do lado de fora da isolada Torre da Alegria."
     },
@@ -556,6 +625,7 @@
         "nome": "Aegon I Targaryen",
         "casa": "House Targaryen",
         "titulo": "Aegon, o Conquistador / O Dragão",
+        "status": "Morto",
         "imagem": "img/aegon-conqueror.jpg",
         "descricao": "O início de tudo. Montou o formidável e aterrador dragão Balerion, atravessou o mar de Antiga Valíria e derreteu todas as espadas opostas para fundir os Sete Reinos em uma única dinastia de fogo."
     },
@@ -564,6 +634,7 @@
         "nome": "Visenya Targaryen",
         "casa": "House Targaryen",
         "titulo": "Rainha Visenya / Portadora da Irmã Sombria",
+        "status": "Morto",
         "imagem": "img/visenya.jpg",
         "descricao": "Austera, severa e amante da feitiçaria militar. Domadora de Vhagar e portadora da famosa Irmã Sombria, cortou o rei para provar que Westeros necessitava imediatamente da fundação da ordem da Guarda Real."
     },
@@ -572,6 +643,7 @@
         "nome": "Rhaenys Targaryen",
         "casa": "House Targaryen",
         "titulo": "Rainha Rhaenys / A Rainha do Amor e da Canção",
+        "status": "Morto",
         "imagem": "img/rhaenys-conquest.jpg",
         "descricao": "Bela e amada rainha guerreira da Conquista. Diferente de seus irmãos duros, adorava os trovadores e os céus, e pereceu com seu majestoso dragão sob o implacável fogo do sol e das armas nos desertos de Dorne."
     },
@@ -580,6 +652,7 @@
         "nome": "Lyanna Stark",
         "casa": "House Stark",
         "titulo": "A Loba / A Rainha do Amor e da Beleza",
+        "status": "Morto",
         "imagem": "img/lyanna.jpg",
         "descricao": "Mulher impetuosa e exímia cavaleira, cuja paixão ardente pelo herdeiro Targaryen desencadeou o sequestro e a revolta de todo o continente, culminando no nascimento em segredo da criança do gelo e fogo."
     },
@@ -588,6 +661,7 @@
         "nome": "Maester Aemon",
         "casa": "House Targaryen",
         "titulo": "Meistre de Castelo Negro / Aemon, o Perdição de Dragões",
+        "status": "Morto",
         "imagem": "img/aemon.jpg",
         "descricao": "Um legítimo príncipe sangue de dragão que abdicou do poder e exilou-se nas nevascas do norte. Sua sabedoria serviu gerações, escolhendo sua inteligência afiada como conselheiro ao invés das intrigas mortais pelo poder de sua família."
     },
@@ -596,7 +670,17 @@
         "nome": "Barristan Selmy",
         "casa": "House Selmy",
         "titulo": "Barristan, o Ousado / Senhor Comandante da Guarda Real",
+        "status": "Morto",
         "imagem": "img/barristan.jpg",
         "descricao": "Respeitado universalmente. Entrou para o folclore lutando sob várias dinastias, até ser demitido injustamente pelos novos governantes cruéis, mudando o mundo e suas honras para Essos, para treinar as lâminas fiéis à Rainha Daenerys."
+    },
+    {
+        "id": 75,
+        "nome": "Shireen Baratheon",
+        "casa": "House Baratheon",
+        "titulo": "Princesa",
+        "status": "Morto",
+        "imagem": "img/shireen.jpg",
+        "descricao": "Filha única de Stannis Baratheon, uma menina doce e inteligente que sobreviveu à escamagris na infância. Seu fim trágico ocorreu quando foi sacrificada nas chamas por ordens de seu próprio pai e de Melisandre, na esperança de derreter as nevascas do Norte."
     }
 ]

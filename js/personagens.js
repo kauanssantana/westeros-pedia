@@ -46,18 +46,18 @@ function renderizarPersonagens(personagens) {
         // Monta o card
         card.innerHTML = `
             <div class="personagem-img-wrapper">
-                <img src="${personagem.imagem}" alt="${personagem.nome}" onerror="this.src='img/logo.png'">
+                <img src="${personagem.imagem}" alt="${personagem.nome}" onerror="this.src='img/hero-fundo.jpg'">
             </div>
             <div class="personagem-info">
                 <h3 class="personagem-nome">${personagem.nome}</h3>
+                <div>
+                    <span class="personagem-casa">${personagem.casa}</span>
+                </div>
                 <p class="personagem-titulo">${personagem.titulo}</p>
-                <span class="personagem-casa">⚔️ ${casaFormatada}</span>
-                
-                <p class="personagem-descricao">
-                    ${personagem.descricao}
-                </p>
+                <p class="personagem-status">Status: ${personagem.status}</p>
+                <p class="personagem-descricao">${personagem.descricao}</p>
             </div>
-        `;
+        `;;
         
         grid.appendChild(card);
     });

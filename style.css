@@ -781,9 +781,10 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 
 .mapa-container {
     flex-grow: 1;
-    overflow: auto; /* Permite rolar o mapa se for muito grande */
+    overflow: hidden; 
     cursor: grab;
-    /* position: relative removido daqui para não quebrar os pins */
+    position: relative;
+    background-color: #0d0d0d;
 }
 
 /* NOVA DIV: Garante que os pontos sigam o tamanho real da imagem */
@@ -792,6 +793,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     width: 100%;
     min-width: 1400px; /* Garante que o mapa não fique pequeno demais */
     display: block;
+    transform-origin: 0 0; /* Importante para o zoom focar corretamente */
 }
 
 .mapa-imagem {
@@ -1105,7 +1107,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 /* GRID DOS PERSONAGENS */
 .personagens-grid {
     display: grid;
-    /* Cartões menores para caber mais gente na tela (são 53 no total!) */
+    /* Cartões menores para caber mais gente na tela */
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 30px;
 }
@@ -1166,17 +1168,14 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 .personagem-nome {
     color: var(--gold);
     font-size: 1.3rem;
-    margin-bottom: 8px;
     letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 5px; /* Espaço pequeno antes da Casa */
 }
 
-.personagem-titulo {
-    color: #aaa;
-    font-size: 0.85rem;
-    font-style: italic;
-    margin-bottom: 18px;
-    line-height: 1.4;
-    min-height: 40px; /* Ajuda a manter os cards do mesmo tamanho se o título quebrar linha */
+/* Container da Casa para dar um espacinho antes do Título */
+.personagem-info > div {
+    margin-bottom: 8px;
 }
 
 .personagem-casa {
@@ -1192,15 +1191,31 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     font-weight: 600;
 }
 
+/* Estilo unificado e COLADO para Título e Status */
+.personagem-titulo, .personagem-status {
+    color: #aaa;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+.personagem-status {
+    font-weight: 600;
+    margin-top: -2px; /* Puxa ligeiramente para cima para colar de vez no título */
+    margin-bottom: 15px; /* Espaço maior apenas DEPOIS do status, antes da descrição */
+}
+
 .personagem-descricao {
-    margin-top: 15px;
-    font-size: 0.99rem; /* Aumentamos o tamanho da letra */
+    margin-top: 0;
+    font-size: 0.99rem;
     color: #d1d1d1;
     border-top: 1px dashed rgba(212, 175, 55, 0.3);
     padding-top: 15px;
     line-height: 1.6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte muito mais legível para textos longos */
-    text-transform: none; /* Garante que não fique tudo em maiúsculo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: none;
     text-align: left; 
 }
 
@@ -1289,6 +1304,34 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     font-size: 2.2rem;
     margin-bottom: 15px;
     line-height: 1.2;
+}
+
+.guerra-baixas {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ff4d4d; /* Vermelho vibrante para impacto */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 0, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 4px;
+    border-left: 3px solid #ff0000;
+}
+
+.guerra-baixas span {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Efeito no Hover para o card brilhar em vermelho quando focado na morte */
+.guerra-card:hover .guerra-baixas {
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+    transition: 0.3s ease;
 }
 
 .guerra-detalhes {
@@ -1756,4 +1799,275 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     font-size: 1.05rem;
     line-height: 1.6;
     margin-top: auto; /* Empurra o texto para organizar os cards */
+}
+
+/* =========================================
+   PÁGINA DE RELIGIÕES (ALTARES DIVINOS)
+   ========================================= */
+.religioes-section {
+    padding: 20px 20px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.religioes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.religiao-card {
+    display: flex;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(0, 0, 0, 0.95));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8), inset 0 0 40px rgba(0,0,0,0.8);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.religiao-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9), 0 0 25px rgba(212, 175, 55, 0.1);
+}
+
+.religiao-img-box {
+    width: 40%;
+    height: 100%;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-right: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.religiao-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.2);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.religiao-card:hover .religiao-img-box img {
+    filter: brightness(1) contrast(1.3);
+    transform: scale(1.05);
+}
+
+/* Película sobre a imagem */
+.religiao-img-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+}
+
+.religiao-info {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.religiao-nome {
+    color: var(--gold);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.religiao-lema {
+    color: #a38d59; /* Dourado mais escuro e apagado */
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.religiao-detalhes {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 3px solid var(--gold);
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.religiao-detalhes p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+.religiao-detalhes strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.religiao-divisor {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.religiao-desc {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Alternar os lados no desktop para um design de zigue-zague elegante */
+.religiao-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.religiao-card:nth-child(even) .religiao-img-box {
+    border-right: none;
+    border-left: 2px solid rgba(212, 175, 55, 0.2);
+}
+.religiao-card:nth-child(even) .religiao-divisor {
+    background: linear-gradient(270deg, var(--gold), transparent);
+}
+
+/* Responsividade Mágica para Celulares */
+@media (max-width: 900px) {
+    .religiao-card, .religiao-card:nth-child(even) {
+        flex-direction: column;
+    }
+    .religiao-img-box, .religiao-info {
+        width: 100%;
+    }
+    .religiao-img-box {
+        height: 250px;
+        min-height: auto;
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+    }
+    .religiao-info {
+        padding: 25px;
+    }
+    .religiao-nome {
+        font-size: 1.8rem;
+    }
+    .religiao-divisor, .religiao-card:nth-child(even) .religiao-divisor {
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+}
+
+/* =========================================
+   MAGIA MOBILE (RESPONSIVIDADE)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Cabeçalho e Navegação */
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav a {
+        font-size: 0.95rem;
+    }
+    
+    /* Seção Hero */
+    .hero-section {
+        padding: 100px 20px;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    /* Carrossel */
+    .carrossel-slides {
+        height: 400px;
+    }
+    .carrossel-conteudo-box {
+        left: 5%;
+        right: 5%;
+        transform: translateY(-50%) translateX(0);
+        text-align: center;
+    }
+    .carrossel-slide.active .carrossel-conteudo-box {
+        transform: translateY(-50%) translateX(0);
+    }
+    .carrossel-conteudo-box .destaque-titulo {
+        font-size: 1.8rem;
+    }
+    .carrossel-btn {
+        padding: 10px 5px;
+    }
+    
+    /* Citação e Sussurros */
+    .citacao-epica {
+        padding: 40px 20px;
+        margin: 40px 20px;
+    }
+    .citacao-conteudo blockquote {
+        font-size: 1.2rem;
+    }
+    .sussurros-container {
+        padding: 20px;
+    }
+    .sussurros-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    /* Filtros Botoes */
+    .btn-filtro {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+    
+    /* Grid Bestiário & Casas */
+    .bestiario-grid, .casas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Grid Personagens */
+    .personagens-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    
+    /* Mapa: Painel e Container */
+    .painel-info {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid var(--gold);
+    }
+    
+    /* Títulos Gerais e Interface */
+    .casas-titulo {
+        font-size: 2.2rem;
+    }
+    
+    .btn-voltar-topo {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+    }
 }

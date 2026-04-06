@@ -1,8 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Inicializa os marcadores
     carregarMarcadores();
+
+    // 2. Configura o Panzoom no mapa-conteudo
+    const elem = document.querySelector('.mapa-conteudo');
+    const panzoom = Panzoom(elem, {
+        maxScale: 4,     // Zoom máximo (4x)
+        minScale: 0.5,   // Zoom mínimo
+        contain: 'outside', // Garante que o mapa não "fuja" da tela
+        cursor: 'default'
+    });
+
+    // 3. Ativa o zoom com a roda do rato (Scroll)
+    const parent = elem.parentElement;
+    parent.addEventListener('wheel', (event) => {
+        // Usa a lógica interna da biblioteca para zoom suave
+        panzoom.zoomWithWheel(event);
+    });
+
+    // 4. Se precisares de resetar o zoom ou chamar o panzoom noutro lugar:
+    window.panzoom = panzoom; 
 });
 
-// Busca os dados gerados pelo Python
 async function carregarMarcadores() {
     try {
         const resposta = await fetch('locais.json');
@@ -11,14 +30,14 @@ async function carregarMarcadores() {
         const areaMarcadores = document.getElementById('marcadores-area');
         
         locais.forEach(local => {
-            // Cria o elemento div para o pin
             const pin = document.createElement('div');
             pin.className = 'marcador';
             pin.style.top = local.top;
             pin.style.left = local.left;
             pin.title = local.nome;
             
-            // Adiciona o evento de clique
+            // Evento de clique modificado para não bugar com o arrasto
+            pin.addEventListener('mousedown', (e) => e.stopPropagation()); 
             pin.addEventListener('click', () => abrirPainel(local));
             
             areaMarcadores.appendChild(pin);
@@ -30,8 +49,6 @@ async function carregarMarcadores() {
 
 function abrirPainel(local) {
     const painel = document.getElementById('painelInfo');
-    
-    // Atualiza os dados no HTML do painel
     document.getElementById('painelNome').innerText = local.nome;
     document.getElementById('painelCasa').innerText = local.casa;
     document.getElementById('painelDesc').innerText = local.descricao;
@@ -40,7 +57,6 @@ function abrirPainel(local) {
     imgElement.src = local.imagem;
     imgElement.style.display = 'block';
 
-    // Desliza o painel para a tela
     painel.classList.add('ativo');
 }
 

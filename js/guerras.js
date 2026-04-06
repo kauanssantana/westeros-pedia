@@ -28,6 +28,7 @@ async function carregarGuerras() {
                     <div class="guerra-detalhes">
                         <p><strong>⚔️ Facções:</strong> ${guerra.combatentes}</p>
                         <p><strong>🛡️ Desfecho:</strong> ${guerra.desfecho}</p>
+                        <p class="guerra-baixas"><span>💀 Baixas Estimadas:</span> ${guerra.baixas}</p>
                     </div>
                     
                     <div class="divisor-guerra"></div>

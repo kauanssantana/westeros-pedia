@@ -45,7 +45,7 @@
         "titulo": "A Morte de Baelor Quebra-Lanças",
         "foco": "O Julgamento dos Sete",
         "imagem": "img/hist_baelor.jpg",
-        "descricao": "Durante o Torneio de Vaufreixo, o humilde cavaleiro andante Sor Duncan, o Alto, exigiu um Julgamento por Combate para provar a sua inocência de ter agredido um príncipe. O Príncipe Herdeiro, Baelor Targaryen, aclamado como o melhor cavaleiro do reino, surpreendeu a todos ao lutar a favor de Dunk, contra a sua própria família. Após a vitória de Dunk, Baelor retirou o seu capacete arruinado e revelou um ferimento fatal desferido pela maça do seu irmão Maekar, tombando morto na terra. O reino chorou aquele que teria sido um dos maiores reis da história."
+        "descricao": "Durante o Torneio de Vaufreixo, o humilde cavaleiro andante Sor Duncan, o Alto, exigiu um Julgamento por Combate para provar a sua inocência de ter agredido um príncipe. O Príncipe Herdeiro, Baelor Targaryen, aclamado como o melhor cavaleiro do reino, surpreendeu a todos ao lutar a favor de Dunk, contra a sua própria família. Após a vitória de Dunk, Baelor retirou o seu capacete arruinado e revelou um ferimento fatal desferido pela maça do seu irmão Maekar, tombando morto na terra."
     },
     {
         "id": "solarestival",
@@ -125,7 +125,7 @@
         "titulo": "O Casamento Púrpura",
         "foco": "A Morte de um Tirano",
         "imagem": "img/hist_joffrey.jpg",
-        "descricao": "A justiça finalmente alcançou o sádico Joffrey. Durante o seu suntuoso banquete de casamento com Margaery Tyrell, o rei bebeu vinho envenenado com 'O Estrangulador'. Diante de toda a corte, o jovem tirano asfixiou-se até à morte, com o rosto roxo e a sangrar. A culpa recaiu sobre Tyrion, mas a arquiteta oculta foi Olenna Tyrell."
+        "descricao": "A justiça finalmente alcançou o sádico Joffrey. Durante o seu suntuoso banquete de casamento com Margaery Tyrell, o rei bebeu vinho envenenado com 'O Estrangulador'. Diante de toda a corte, o jovem tirano asfixiou-se até à morte, com o rosto roxo e a sangrar."
     },
     {
         "id": "julgamento-tyrion",
@@ -142,6 +142,14 @@
         "foco": "Vergonha!",
         "imagem": "img/hist_cersei_shame.jpg",
         "descricao": "Uma rainha orgulhosa reduzida ao chão. O fanático Alto Pardal, a quem Cersei Lannister entregou poder ingenuamente, virou as suas forças contra ela. Despida das suas sedas, com os cabelos cortados e rodeada pelos gritos de 'Vergonha!' de milhares de plebeus, Cersei foi forçada a caminhar ensanguentada pelas ruas da capital."
+    },
+    {
+        "id": "morte-shireen",
+        "ano": "302 d.C.",
+        "titulo": "O Sacrifício de Shireen Baratheon",
+        "foco": "O Preço do Trono",
+        "imagem": "img/hist_shireen.jpg",
+        "descricao": "Um dos momentos mais cruéis da guerra. Encurralado pelas nevascas mortais do Norte, Stannis Baratheon permitiu que a Sacerdotisa Vermelha Melisandre sacrificasse a sua única filha, a Princesa Shireen, nas chamas de uma pira. O ato visava aplacar o Senhor da Luz para derreter as neves e garantir a vitória, mas resultou apenas em tragédia, deserção e no fim da linhagem de Stannis."
     },
     {
         "id": "ressurreicao-jon",
