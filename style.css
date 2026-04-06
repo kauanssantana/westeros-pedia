@@ -2004,7 +2004,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         font-size: 1.1rem;
     }
     
-    /* --- 3. Medalhões das Casas na Home --- */
+    /* --- 3. Medalhões das Casas na Home (CORRIGIDO) --- */
     .sigil-container {
         gap: 15px; 
         padding: 20px 0;
@@ -2012,26 +2012,30 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     .casa-sigil {
         width: 75px; 
     }
+    /* O Segredo Mágico: Garante que a caixa de info fique sempre por cima da linha de baixo */
+    .casa-sigil:hover {
+        z-index: 50; 
+    }
     .sigil-wrapper {
         width: 75px;
         height: 75px;
         border-width: 2px;
     }
-    /* Ajuste crucial: Caixa de info menor para não vazar da tela no clique/hover */
     .casa-info {
-        width: 160px;
+        width: 150px;
         top: 85px; 
-        padding: 10px;
+        padding: 8px;
     }
     .casa-info h4 {
-        font-size: 0.95rem;
-        margin-bottom: 4px;
+        font-size: 0.9rem;
+        margin-bottom: 2px;
     }
     .casa-info p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
-    /* --- 4. Arquivos da Cidadela (Cards da Home) --- */
+    /* --- 4. Arquivos da Cidadela (MANTIDO PERFEITO) --- */
     .guia-grid {
         display: flex;
         flex-direction: column; 
@@ -2039,27 +2043,32 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     }
     .guia-card {
         width: 100%;
-        max-width: 100%; /* Ocupa a tela de ponta a ponta respeitando o padding */
-        flex: none; /* Anula a magia de "amassar" do Flexbox do desktop */
+        max-width: 100%; 
+        flex: none; 
         padding: 25px 15px;
     }
     
-    /* --- 5. Crônicas em Destaque (Carrossel) --- */
+    /* --- 5. Crônicas em Destaque (CARROSSEL CORRIGIDO) --- */
     .carrossel-secao {
-        padding: 30px 10px;
+        padding: 20px 0; /* Tira o espaçamento lateral para a foto usar a tela toda */
+    }
+    .carrossel-container {
+        border-radius: 0; /* Tela cheia no mobile */
+        border-left: none;
+        border-right: none;
     }
     .carrossel-slides {
-        height: 480px; 
+        /* ALTURA REDUZIDA: É isto que impede a imagem de ser cortada nas laterais! */
+        height: 300px; 
     }
-    /* Escurece a base da imagem para ler o texto */
+    /* Escurece APENAS a base da imagem para ler o texto, revelando a arte inteira */
     .carrossel-slide::after {
-        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
     }
-    /* Força o texto ir para o rodapé e anula a centralização do Desktop */
     .carrossel-conteudo-box,
     .carrossel-slide.active .carrossel-conteudo-box {
         top: auto !important; 
-        bottom: 20px !important; 
+        bottom: 25px !important; 
         left: 10px !important;
         right: 10px !important;
         transform: none !important; 
@@ -2067,18 +2076,21 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         width: auto;
     }
     .carrossel-conteudo-box .destaque-titulo {
-        font-size: 1.5rem; /* Letra menor para caber perfeitamente */
-        margin-bottom: 8px;
+        font-size: 1.35rem; 
+        margin-bottom: 5px;
     }
     .carrossel-conteudo-box p {
-        font-size: 0.9rem;
-        line-height: 1.4;
+        font-size: 0.85rem;
+        line-height: 1.3;
     }
-    /* Sobe os botões de avançar/voltar para não pisarem no texto */
     .carrossel-btn {
-        top: 35% !important; 
-        padding: 12px 15px !important;
-        background: rgba(0,0,0,0.7);
+        top: 40% !important; /* Ajusta a seta para a nova altura */
+        padding: 8px 12px !important;
+        background: rgba(0,0,0,0.5);
+        border-color: rgba(212, 175, 55, 0.4);
+    }
+    .carrossel-indicadores {
+        bottom: 10px;
     }
     
     /* --- 6. Citação e Sussurros --- */
