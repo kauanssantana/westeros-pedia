@@ -1969,65 +1969,111 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 }
 
 /* =========================================
-   MAGIA MOBILE (RESPONSIVIDADE)
+   MAGIA MOBILE (RESPONSIVIDADE - APENAS CELULARES)
    ========================================= */
 @media (max-width: 768px) {
-    /* Cabeçalho e Navegação */
+    
+    /* --- 1. Cabeçalho e Navegação --- */
     .header {
         flex-direction: column;
-        padding: 15px 20px;
-        gap: 15px;
+        padding: 20px;
+        gap: 20px;
+    }
+    .header-logo-img {
+        height: auto;
+        width: 240px; /* Aumentado drasticamente para dar destaque ao logo */
+        max-width: 100%;
     }
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
     }
     nav a {
-        font-size: 0.95rem;
+        font-size: 1.1rem; /* Retornado para um tamanho de leitura decente */
     }
     
-    /* Seção Hero */
+    /* --- 2. Seção Hero --- */
     .hero-section {
-        padding: 100px 20px;
+        padding: 120px 20px 80px;
     }
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
     
-    /* Carrossel */
+    /* --- 3. Medalhões das Casas na Home --- */
+    .sigil-container {
+        gap: 15px; /* Reduz o espaço para caberem melhor */
+        padding: 20px 0;
+    }
+    .casa-sigil {
+        width: 80px; /* Fica menor e mais alinhado em telas estreitas */
+    }
+    .sigil-wrapper {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+    .casa-info {
+        width: 200px;
+        top: 95px; /* Sobe um pouquinho a caixa de info */
+        font-size: 0.85rem;
+    }
+
+    /* --- 4. Arquivos da Cidadela (Cards da Home) --- */
+    .guia-grid {
+        flex-direction: column; /* Força os cards a empilharem em coluna (1 por linha) */
+        align-items: center;
+    }
+    .guia-card {
+        width: 100%;
+        max-width: 350px; /* Permite que fiquem grandes e preencham a tela do celular */
+    }
+    
+    /* --- 5. Crônicas em Destaque (Carrossel) --- */
+    .carrossel-secao {
+        padding: 40px 10px;
+    }
     .carrossel-slides {
-        height: 400px;
+        height: 500px; /* Mais altura para a imagem respirar */
+    }
+    /* No celular a película escurece a parte de BAIXO para ler melhor */
+    .carrossel-slide::after {
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
     }
     .carrossel-conteudo-box {
+        top: auto; 
+        bottom: 30px; /* Joga o texto para a parte inferior do banner */
         left: 5%;
         right: 5%;
-        transform: translateY(-50%) translateX(0);
-        text-align: center;
+        transform: none; /* Remove a centralização do desktop */
+        text-align: center; /* Centraliza o texto */
     }
     .carrossel-slide.active .carrossel-conteudo-box {
-        transform: translateY(-50%) translateX(0);
+        transform: none;
     }
     .carrossel-conteudo-box .destaque-titulo {
         font-size: 1.8rem;
+        margin-bottom: 10px;
     }
     .carrossel-btn {
-        padding: 10px 5px;
+        top: 35%; /* Sobe as setinhas para não ficarem em cima do texto */
+        padding: 10px 12px;
     }
     
-    /* Citação e Sussurros */
+    /* --- 6. Citação e Sussurros --- */
     .citacao-epica {
         padding: 40px 20px;
-        margin: 40px 20px;
+        margin: 40px 10px;
     }
     .citacao-conteudo blockquote {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .sussurros-container {
-        padding: 20px;
+        padding: 25px 20px;
     }
     .sussurros-header {
         flex-direction: column;
@@ -2035,38 +2081,35 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         text-align: center;
     }
     
-    /* Filtros Botoes */
+    /* --- 7. Filtros e Grids Gerais (Para as outras abas) --- */
     .btn-filtro {
-        font-size: 0.75rem;
-        padding: 6px 12px;
+        font-size: 0.85rem;
+        padding: 8px 14px;
     }
     
-    /* Grid Bestiário & Casas */
     .bestiario-grid, .casas-grid {
         grid-template-columns: 1fr;
     }
     
-    /* Grid Personagens */
     .personagens-grid {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
     
-    /* Mapa: Painel e Container */
+    /* --- 8. Interface e Mapa --- */
     .painel-info {
         width: 100%;
         border-left: none;
         border-top: 2px solid var(--gold);
     }
     
-    /* Títulos Gerais e Interface */
     .casas-titulo {
         font-size: 2.2rem;
     }
     
     .btn-voltar-topo {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
         bottom: 15px;
         right: 15px;
     }
