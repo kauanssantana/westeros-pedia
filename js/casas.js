@@ -13,11 +13,9 @@ async function carregarCasas() {
             // Cria o elemento do card
             const card = document.createElement('article');
             card.className = `casa-card ${casa.id}`;
-            
-            // ATENÇÃO AQUI: Guardamos a região dentro do HTML do card para o filtro funcionar!
+
             card.setAttribute('data-regiao', casa.regiao); 
             
-            // Preenche o conteúdo HTML do card
             card.innerHTML = `
                 <div class="casa-card-img-box">
                     <img src="${casa.brasao}" alt="Brasão da ${casa.nome}" onerror="this.src='img/logo.png'">
@@ -61,7 +59,6 @@ function configurarFiltros() {
             // 2. Descobre qual região o usuário quer ver
             const regiaoSelecionada = btn.getAttribute('data-regiao');
 
-            // 3. Faz a mágica acontecer card por card
             cards.forEach(card => {
                 const regiaoDoCard = card.getAttribute('data-regiao');
 

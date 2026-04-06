@@ -1,7 +1,6 @@
 import requests
 import json
 
-# URL da API que contém as imagens dos personagens
 URL_API = "https://thronesapi.com/api/v2/Characters"
 
 def forjar_banco_de_dados():
@@ -9,12 +8,11 @@ def forjar_banco_de_dados():
     
     try:
         resposta = requests.get(URL_API)
-        resposta.raise_for_status() # Verifica se a requisição deu certo
+        resposta.raise_for_status() 
         
         dados_brutos = resposta.json()
         banco_de_dados = []
         
-        # Filtramos apenas o que importa para o nosso front-end
         for personagem in dados_brutos:
             personagem_limpo = {
                 "id": personagem["id"],
@@ -25,7 +23,6 @@ def forjar_banco_de_dados():
             }
             banco_de_dados.append(personagem_limpo)
             
-        # Salvando tudo em um arquivo JSON local
         with open("personagens_got.json", "w", encoding="utf-8") as f:
             json.dump(banco_de_dados, f, indent=4, ensure_ascii=False)
             

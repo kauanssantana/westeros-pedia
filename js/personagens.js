@@ -63,22 +63,19 @@ function renderizarPersonagens(personagens) {
     });
 }
 
-// A FUNÇÃO MÁGICA: Junta o botão clicado com o que foi digitado
 function aplicarFiltros() {
     const personagensFiltrados = todosPersonagens.filter(p => {
-        // 1. Verifica se bate com o texto digitado (Busca no nome, título ou casa)
+
         const termo = textoPesquisaAtual.toLowerCase();
         const bateTexto = p.nome.toLowerCase().includes(termo) || 
                           p.titulo.toLowerCase().includes(termo) ||
                           p.casa.toLowerCase().includes(termo);
         
-        // 2. Verifica se bate com o botão de Casa clicado
         let bateCasa = true;
         if (casaFiltroAtual !== 'todas') {
             bateCasa = p.casa.toLowerCase().includes(casaFiltroAtual.toLowerCase());
         }
 
-        // Só mostra o personagem se ele passar nos DOIS testes
         return bateTexto && bateCasa;
     });
     

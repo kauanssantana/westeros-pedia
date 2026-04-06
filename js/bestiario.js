@@ -31,7 +31,6 @@ function renderizarBestiario(criaturas) {
         const card = document.createElement('div');
         card.className = 'besta-card';
 
-        // Define um ícone baseado na categoria
         let iconeCat = '🐾';
         if(beast.categoria === 'Dragão') iconeCat = '🐉';
         if(beast.categoria === 'Lobo Gigante') iconeCat = '🐺';

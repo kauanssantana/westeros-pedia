@@ -11,7 +11,7 @@ async function carregarHistoria() {
         
         eventos.forEach((evento, index) => {
             const node = document.createElement('div');
-            // Alterna a classe 'left' e 'right' dependendo de ser par ou ímpar
+
             node.className = `timeline-item ${index % 2 === 0 ? 'left' : 'right'}`;
 
             node.innerHTML = `

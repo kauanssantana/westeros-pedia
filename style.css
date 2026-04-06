@@ -71,7 +71,7 @@ nav a:hover {
 }
 
 /* =========================================
-   BOTÃO DE TEMAS (DROPDOWN)
+   BOTÃO DE TEMAS 
    ========================================= */
 .theme-dropdown-container {
     position: relative;
@@ -148,13 +148,12 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid var(--gold);
-    /* Removido o background-attachment: fixed; */
 }
 
 .hero-content {
     position: relative; /* Coloca o texto na frente da neve */
     max-width: 800px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para garantir a leitura sobre a imagem */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
 .hero-content h2 {
@@ -170,14 +169,13 @@ nav a:hover {
     margin-bottom: 60px; 
 }
 
-/* --- MÁGICA DA NEVE --- */
 #snow-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* A neve é como um fantasma, não impede o clique no botão */
+    pointer-events: none; 
     z-index: 1; /* Fica atrás do texto, mas na frente do fundo */
 }
 
@@ -206,7 +204,7 @@ nav a:hover {
     border-radius: 4px;
     transition: 0.3s;
     margin-top: 30px;
-    text-shadow: none; /* Remove a sombra do texto de dentro do botão */
+    text-shadow: none; 
 }
 
 .btn-explorar:hover {
@@ -257,7 +255,7 @@ nav a:hover {
 .guia-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* O segredo para centralizar a linha de baixo! */
+    justify-content: center; 
     gap: 25px;
 }
 
@@ -268,8 +266,8 @@ nav a:hover {
     border-radius: 8px;
     text-align: center;
     transition: 0.3s;  
-    flex: 1 1 250px; /* Permite crescer e encolher, com base de 250px */
-    max-width: 280px; /* Impede que fiquem gigantes em telas muito largas */
+    flex: 1 1 250px; 
+    max-width: 280px; 
 }
 
 .guia-card:hover {
@@ -280,7 +278,7 @@ nav a:hover {
 .guia-card h3 { color: var(--gold); margin-bottom: 15px; }
 
 /* =========================================
-   CARROSSEL ÉPICO (LAYOUT HORIZONTAL COM FLEXBOX)
+   CARROSSEL 
    ========================================= */
 .carrossel-secao {
     padding: 60px 20px;
@@ -327,7 +325,6 @@ nav a:hover {
 .focal-dany { object-position: center 20%; }
 .focal-snow { object-position: center 30%; }
 
-/* Película escura na esquerda para leitura */
 .carrossel-slide::after {
     content: '';
     position: absolute;
@@ -403,32 +400,28 @@ nav a:hover {
 .westeros-footer {
     width: 100%; 
     text-align: center;
-    padding: 50px 20px 30px; /* Um pouco mais de respiro no topo */
+    padding: 50px 20px 30px; 
     margin-top: 60px;
-    /* Gradiente que escurece para o fundo, dando sensação de fim de página */
     background: linear-gradient(to bottom, rgba(15, 15, 15, 0.8), rgba(0, 0, 0, 1));
     border-top: 1px solid var(--gold);
-    /* Um brilho interno sutil na borda superior */
     box-shadow: inset 0 2px 15px rgba(163, 141, 89, 0.05); 
 }
 
 .footer-content {
-    max-width: 800px; /* Mantém o conteúdo centralizado e não muito esticado */
+    max-width: 800px; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Cinzel', serif; /* Força a fonte épica no rodapé */
+    font-family: 'Cinzel', serif; 
 }
 
-/* Texto principal ("Forjado com...") */
 .footer-content p:not(.footer-disclaimer) {
     color: #e0e0e0;
     font-size: 1.1rem;
     letter-spacing: 1px;
 }
 
-/* Destaque para o seu nome */
 .footer-content strong {
     color: var(--gold);
     font-weight: 600;
@@ -437,31 +430,29 @@ nav a:hover {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaço um pouco maior entre as redes */
+    gap: 20px;
     margin: 25px 0; 
 }
 
-/* Animação para os botões sociais */
 .social-links a {
     display: inline-block;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .social-links a:hover {
-    transform: translateY(-4px) scale(1.05); /* Levanta e cresce levemente */
-    filter: drop-shadow(0 4px 8px rgba(163, 141, 89, 0.4)); /* Brilho dourado no hover */
+    transform: translateY(-4px) scale(1.05); 
+    filter: drop-shadow(0 4px 8px rgba(163, 141, 89, 0.4)); 
 }
 
-/* O texto dos Meistres */
 .footer-disclaimer {
     font-size: 1rem;
-    color: #888; /* Cinza mais apagado para não roubar a atenção */
+    color: #888; 
     font-style: italic;
     letter-spacing: 1.5px;
     margin-top: 15px;
     padding-top: 15px;
     width: 150%;
-    border-top: 1px solid rgba(163, 141, 89, 0.2); /* Uma linha divisória bem fraquinha */
+    border-top: 1px solid rgba(163, 141, 89, 0.2); 
 }
 /* =========================================
    TEMAS DAS CASAS (STARK, LANNISTER, ETC)
@@ -483,7 +474,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     border-top: 1px solid var(--gold);
     border-bottom: 1px solid var(--gold);
     padding: 60px 20px;
-    margin: 60px auto; /* Dá um respiro entre os cards e o carrossel */
+    margin: 60px auto; 
     text-align: center;
     max-width: 900px;
     border-radius: 4px;
@@ -498,7 +489,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     line-height: 1.6;
 }
 
-/* Aspas douradas customizadas */
 .citacao-conteudo blockquote::before {
     content: "“";
     color: var(--gold);
@@ -558,40 +548,39 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px; /* Mais espaço para os medalhões gigantes */
+    gap: 30px; 
     border-top: 1px solid rgba(212, 175, 55, 0.3);
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     padding: 50px 0;
 }
 
-/* 🎨 A MÁGICA DAS CORES: Define uma cor característica para cada Casa */
-.casa-sigil.stark     { --cor-casa: #e2e8f0; } /* Gelo / Prata */
-.casa-sigil.targaryen { --cor-casa: #ef4444; } /* Vermelho Dragão */
-.casa-sigil.lannister { --cor-casa: #fbbf24; } /* Ouro Leão */
-.casa-sigil.baratheon { --cor-casa: #fde047; } /* Amarelo Tempestade */
-.casa-sigil.greyjoy   { --cor-casa: #0ea5e9; } /* Azul Oceano (ou Dourado) */
-.casa-sigil.tully     { --cor-casa: #3b82f6; } /* Azul Rio */
-.casa-sigil.tyrell    { --cor-casa: #22c55e; } /* Verde Campina */
-.casa-sigil.martell   { --cor-casa: #f97316; } /* Laranja Sol */
+.casa-sigil.stark     { --cor-casa: #e2e8f0; } 
+.casa-sigil.targaryen { --cor-casa: #ef4444; } 
+.casa-sigil.lannister { --cor-casa: #fbbf24; } 
+.casa-sigil.baratheon { --cor-casa: #fde047; } 
+.casa-sigil.greyjoy   { --cor-casa: #0ea5e9; } 
+.casa-sigil.tully     { --cor-casa: #3b82f6; } 
+.casa-sigil.tyrell    { --cor-casa: #22c55e; } 
+.casa-sigil.martell   { --cor-casa: #f97316; } 
 
 .casa-sigil {
     position: relative;
     cursor: pointer;
-    width: 115px; /* Largura total da área do escudo aumentada */
+    width: 115px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease;
 }
 
-/* 🛡️ OS MEDALHÕES (Agora muito maiores!) */
+/* 🛡️ OS MEDALHÕES */
 .sigil-wrapper {
-    width: 125px;         /* Aumentado de 80px para 100px */
-    height: 125px;        /* Aumentado de 80px para 100px */
+    width: 125px;        
+    height: 125px;        
     border-radius: 50%;
-    border: 3px solid rgba(150, 150, 150, 0.3); /* Borda cinza suave para dar contraste */
+    border: 3px solid rgba(150, 150, 150, 0.3); 
     overflow: hidden;
-    background-color: #111111; /* MUDADO PARA ESCURO para misturar com o fundo do seu JPG */
+    background-color: #111111; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     transition: all 0.4s ease;
     display: flex;
@@ -605,35 +594,31 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     object-fit: contain;
     filter: grayscale(100%);
     transition: all 0.4s ease;
-    padding: 0px; /* Reduzi o padding para o logo ficar ainda maior lá dentro */
+    padding: 0px; 
 }
 
-/* --- EFEITOS DE HOVER (MAGIA DAS CORES INDIVIDUAIS) --- */
 .casa-sigil:hover {
     transform: translateY(-10px);
 }
 
-/* O Medalhão brilha com a cor exata da Casa */
 .casa-sigil:hover .sigil-wrapper {
     border-color: var(--cor-casa);
-    box-shadow: 0 0 25px var(--cor-casa); /* Brilho colorido */
-    transform: scale(1.08); /* Ligeiro Zoom do círculo */
+    box-shadow: 0 0 25px var(--cor-casa); 
+    transform: scale(1.08); 
 }
 
-/* A imagem dentro ganha cor e zoom */
 .casa-sigil:hover img {
     filter: grayscale(0%);
-    transform: scale(1.15); /* Zoom interno no brasão */
+    transform: scale(1.15); 
 }
 
-/* --- A CAIXA DE INFORMAÇÕES QUE APARECE NO HOVER --- */
 .casa-info {
     position: absolute;
-    top: 130px; /* Desceu para caber o círculo que agora tem 100px */
+    top: 130px; 
     left: 50%;
     transform: translateX(-50%) translateY(15px);
     background: rgba(10, 10, 10, 0.95);
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Borda opaca antes do brilho */
+    border: 1px solid rgba(212, 175, 55, 0.3); 
     padding: 15px;
     border-radius: 4px;
     width: 220px;
@@ -645,16 +630,14 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     pointer-events: none;
 }
 
-/* Revelando e Colorindo a Caixa */
 .casa-sigil:hover .casa-info {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
-    border-color: var(--cor-casa); /* A caixa ganha a cor da casa */
+    border-color: var(--cor-casa); 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px var(--cor-casa);
 }
 
-/* O Nome da Casa ganha a cor correspondente */
 .casa-info h4 {
     color: var(--cor-casa);
     font-size: 1.15rem;
@@ -689,7 +672,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     overflow: hidden;
 }
 
-/* Um leve brilho dourado no topo para elegância */
 .sussurros-container::before {
     content: '';
     position: absolute;
@@ -716,12 +698,11 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     text-transform: uppercase;
 }
 
-/* O BOTÃO CIRCULAR QUE AGORA CONTÉM A ARANHA */
 .btn-varys-aranha {
     background: transparent; 
     border: 1px solid var(--gold);
     border-radius: 50%;
-    width: 60px;  /* Tamanho imponente mas discreto */
+    width: 60px;  
     height: 60px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -729,8 +710,8 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-    overflow: hidden; /* Garante que nada vaze do círculo */
-    padding: 0; /* Remove padding padrão do botão */
+    overflow: hidden; 
+    padding: 0; 
 }
 
 .btn-varys-aranha:hover {
@@ -739,31 +720,28 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
 }
 
-/* A IMAGEM DA ARANHA DENTRO DO CÍRCULO */
 .img-aranha {
-    width: 100%;  /* O segredo para ficar 'bem pequenininha' e centralizada */
+    width: 100%;  
     height: 100%;
-    object-fit: cover; /* Não distorce a aranha mecânica */
-    opacity: 0.8; /* Um pouco translúcida para misturar com o fundo */
-    filter: drop-shadow(0 0 5px var(--gold)); /* Brilho dourado suave */
+    object-fit: cover; 
+    opacity: 0.8; 
+    filter: drop-shadow(0 0 5px var(--gold)); 
     transition: all 0.3s ease;
     
 }
 
-/* Efeito de hover na aranha ao passar o mouse no botão */
 .btn-varys-aranha:hover .img-aranha {
-    opacity: 1; /* Ganha cor total */
-    transform: scale(1.1); /* Ligeiro zoom na aranha */
-    filter: drop-shadow(0 0 10px var(--gold)); /* Brilho dourado intenso */
+    opacity: 1; 
+    transform: scale(1.1); 
+    filter: drop-shadow(0 0 10px var(--gold)); 
 }
 
-/* O TEXTO DO SEGREDO */
 .sussurros-corpo p {
     color: var(--text-light);
     font-size: 1.1rem;
     line-height: 1.7;
     font-style: italic;
-    transition: opacity 0.4s ease; /* Transição suave ao trocar a frase */
+    transition: opacity 0.4s ease; 
 }
 
 /* =========================================
@@ -772,7 +750,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 .mapa-wrapper {
     display: flex;
     position: relative;
-    height: 85vh; /* Ocupa quase a tela toda abaixo do header */
+    height: 85vh; 
     background-color: #0d0d0d;
     overflow: hidden;
     border-top: 2px solid var(--gold);
@@ -787,13 +765,12 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     background-color: #0d0d0d;
 }
 
-/* NOVA DIV: Garante que os pontos sigam o tamanho real da imagem */
 .mapa-conteudo {
     position: relative; 
     width: 100%;
-    min-width: 1400px; /* Garante que o mapa não fique pequeno demais */
+    min-width: 1400px; 
     display: block;
-    transform-origin: 0 0; /* Importante para o zoom focar corretamente */
+    transform-origin: 0 0; 
 }
 
 .mapa-imagem {
@@ -801,7 +778,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     display: block;
 }
 
-/* Área invisível que segura os pins em cima do mapa */
 #marcadores-area {
     position: absolute;
     top: 0;
@@ -810,7 +786,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     height: 100%;
 }
 
-/* Os Pins (Marcadores) no mapa */
 .marcador {
     position: absolute;
     width: 24px;
@@ -818,11 +793,11 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     background-color: var(--gold);
     border: 2px solid #fff;
     border-radius: 50%;
-    transform: translate(-50%, -50%); /* Centraliza exatamente na coordenada */
+    transform: translate(-50%, -50%); 
     cursor: pointer;
     box-shadow: 0 0 15px rgba(163, 141, 89, 0.8);
     transition: transform 0.2s, box-shadow 0.2s;
-    z-index: 5; /* Garante que os pontos fiquem acima do mapa */
+    z-index: 5; 
 }
 
 .marcador:hover {
@@ -831,13 +806,12 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     z-index: 6;
 }
 
-/* Painel Lateral */
 .painel-info {
     width: 350px;
     background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
     border-left: 1px solid var(--gold);
     padding: 20px;
-    transform: translateX(100%); /* Começa escondido fora da tela */
+    transform: translateX(100%); 
     transition: transform 0.4s ease-in-out;
     position: absolute;
     right: 0;
@@ -848,7 +822,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 }
 
 .painel-info.ativo {
-    transform: translateX(0); /* Desliza para dentro da tela */
+    transform: translateX(0); 
 }
 
 .btn-fechar {
@@ -940,13 +914,13 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     position: relative;
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-    cursor: default; /* Sobrescrevendo o cursor pointer do sigil geral */
+    cursor: default; 
 }
 
 /* Efeito de hover no card */
 .casa-card:hover {
     transform: translateY(-8px);
-    border-color: var(--cor-casa); /* Usa as cores que você já definiu no CSS global! */
+    border-color: var(--cor-casa); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px var(--cor-casa);
 }
 
@@ -1107,12 +1081,10 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 /* GRID DOS PERSONAGENS */
 .personagens-grid {
     display: grid;
-    /* Cartões menores para caber mais gente na tela */
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 30px;
 }
 
-/* CARTÃO DO PERSONAGEM (Estilo Retrato) */
 .personagem-card {
     background: linear-gradient(to bottom, #141414, #050505);
     border: 1px solid rgba(212, 175, 55, 0.2);
@@ -1130,7 +1102,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 
 .personagem-img-wrapper {
     width: 100%;
-    height: 300px; /* Alto para focar no rosto/corpo */
+    height: 300px; 
     overflow: hidden;
     border-bottom: 2px solid rgba(212, 175, 55, 0.3);
     position: relative;
@@ -1140,7 +1112,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top; /* Foca no rosto do personagem caso a imagem seja longa */
+    object-position: top; 
     transition: transform 0.6s ease, filter 0.6s ease;
     filter: contrast(1.1) brightness(0.9);
 }
@@ -1150,7 +1122,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     filter: contrast(1.2) brightness(1.1);
 }
 
-/* Película escura na base da imagem para o texto não sumir */
 .personagem-img-wrapper::after {
     content: '';
     position: absolute;
@@ -1170,10 +1141,9 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     font-size: 1.3rem;
     letter-spacing: 1px;
     margin-top: 0;
-    margin-bottom: 5px; /* Espaço pequeno antes da Casa */
+    margin-bottom: 5px; 
 }
 
-/* Container da Casa para dar um espacinho antes do Título */
 .personagem-info > div {
     margin-bottom: 8px;
 }
@@ -1191,7 +1161,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     font-weight: 600;
 }
 
-/* Estilo unificado e COLADO para Título e Status */
 .personagem-titulo, .personagem-status {
     color: #aaa;
     font-size: 0.85rem;
@@ -1203,8 +1172,8 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 
 .personagem-status {
     font-weight: 600;
-    margin-top: -2px; /* Puxa ligeiramente para cima para colar de vez no título */
-    margin-bottom: 15px; /* Espaço maior apenas DEPOIS do status, antes da descrição */
+    margin-top: -2px; 
+    margin-bottom: 15px; 
 }
 
 .personagem-descricao {
@@ -1231,7 +1200,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 .guerras-container {
     display: flex;
     flex-direction: column;
-    gap: 60px; /* Grande espaço entre um conflito e outro */
+    gap: 60px; 
 }
 
 .guerra-card {
@@ -1251,12 +1220,10 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 20px rgba(212, 175, 55, 0.15);
 }
 
-/* Inverte a ordem no zigue-zague via flex-direction */
 .guerra-card.guerra-inversa {
     flex-direction: row-reverse;
 }
 
-/* A imagem domina 45% do card */
 .guerra-img-box {
     width: 45%;
     position: relative;
@@ -1273,10 +1240,9 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 
 .guerra-card:hover .guerra-img-box img {
     filter: brightness(1) contrast(1.2);
-    transform: scale(1.05); /* Leve zoom épico ao passar o mouse */
+    transform: scale(1.05); 
 }
 
-/* Informações ocupam os 55% restantes */
 .guerra-info {
     width: 55%;
     padding: 40px;
@@ -1309,7 +1275,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 .guerra-baixas {
     margin-top: 10px;
     font-size: 1rem;
-    color: #ff4d4d; /* Vermelho vibrante para impacto */
+    color: #ff4d4d; 
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -1327,7 +1293,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     letter-spacing: 1px;
 }
 
-/* Efeito no Hover para o card brilhar em vermelho quando focado na morte */
 .guerra-card:hover .guerra-baixas {
     background: rgba(255, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
@@ -1354,7 +1319,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 }
 
 .guerra-card.guerra-inversa .divisor-guerra {
-    background: linear-gradient(270deg, var(--gold), transparent); /* Inverte o brilho do traço */
+    background: linear-gradient(270deg, var(--gold), transparent); 
 }
 
 .guerra-descricao {
@@ -1365,7 +1330,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     text-transform: none;
 }
 
-/* Responsividade Mágica para Celulares: no celular ele fica em coluna como um card normal */
 @media (max-width: 900px) {
     .guerra-card, .guerra-card.guerra-inversa {
         flex-direction: column;
@@ -1420,7 +1384,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     margin-bottom: 0;
 }
 
-/* A Letra Gigante no início do texto (Drop Cap) */
 .letra-capitular {
     float: left;
     font-family: 'Cinzel', serif;
@@ -1433,7 +1396,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     font-style: normal;
 }
 
-/* Ajuste para celulares */
 @media (max-width: 768px) {
     .intro-guerras {
         padding: 25px 20px;
@@ -1453,14 +1415,12 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     margin: 0 auto;
 }
 
-/* O contêiner da linha do tempo */
 .timeline-container {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* A Linha Dourada Central */
 .timeline-container::after {
     content: '';
     position: absolute;
@@ -1472,7 +1432,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     margin-left: -2px;
 }
 
-/* Cada Item da linha do tempo */
 .timeline-item {
     padding: 10px 40px;
     position: relative;
@@ -1480,7 +1439,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     width: 50%;
 }
 
-/* Os Círculos (Marcadores na linha) */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -1501,7 +1459,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     transform: scale(1.3);
 }
 
-/* Esquerda e Direita */
 .left {
     left: 0;
 }
@@ -1536,7 +1493,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     left: -10px;
 }
 
-/* A Caixa de Conteúdo do Evento */
 .timeline-content {
     padding: 25px;
     background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(5, 5, 5, 0.95));
@@ -1615,7 +1571,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     text-align: justify;
 }
 
-/* Responsividade (Celulares) - A linha vai para a esquerda e todos os cards ocupam 100% */
 @media screen and (max-width: 800px) {
     .timeline-container::after {
         left: 31px;
@@ -1666,7 +1621,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
-/* Classe que o JS vai adicionar quando rolar a página */
 .btn-voltar-topo.mostrar {
     opacity: 1;
     visibility: visible;
@@ -1691,7 +1645,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 
 .bestiario-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Um pouco mais largas que as de personagens */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
     gap: 40px;
 }
 
@@ -1733,7 +1687,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     filter: brightness(1.1) contrast(1.2);
 }
 
-/* Película escura na base da imagem */
 .besta-img-box::after {
     content: '';
     position: absolute;
@@ -1744,13 +1697,12 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
 }
 
-/* Selo com o Tamanho da criatura */
 .besta-tamanho {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(120, 10, 10, 0.85); /* Fundo vermelho sangue escuro */
-    color: #fca5a5; /* Vermelho claro */
+    background: rgba(120, 10, 10, 0.85); 
+    color: #fca5a5; 
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -1798,7 +1750,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     color: #ccc;
     font-size: 1.05rem;
     line-height: 1.6;
-    margin-top: auto; /* Empurra o texto para organizar os cards */
+    margin-top: auto; 
 }
 
 /* =========================================
@@ -1825,7 +1777,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     min-height: 300px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8), inset 0 0 40px rgba(0,0,0,0.8);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; 
 }
 
 .religiao-card:hover {
@@ -1885,7 +1837,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
 }
 
 .religiao-lema {
-    color: #a38d59; /* Dourado mais escuro e apagado */
+    color: #a38d59; 
     font-size: 1.1rem;
     font-style: italic;
     margin-bottom: 25px;
@@ -1930,7 +1882,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     text-align: justify;
 }
 
-/* Alternar os lados no desktop para um design de zigue-zague elegante */
 .religiao-card:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -1942,7 +1893,6 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     background: linear-gradient(270deg, var(--gold), transparent);
 }
 
-/* Responsividade Mágica para Celulares */
 @media (max-width: 900px) {
     .religiao-card, .religiao-card:nth-child(even) {
         flex-direction: column;
@@ -2004,16 +1954,15 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         font-size: 1.1rem;
     }
     
-    /* --- 3. Medalhões das Casas na Home (CORREÇÃO FORÇADA DE Z-INDEX) --- */
+    /* --- 3. Medalhões das Casas na Home --- */
     .sigil-container {
         gap: 15px; 
         padding: 20px 0;
-        row-gap: 25px; /* Leve respiro vertical entre as linhas */
+        row-gap: 25px; 
     }
     .casa-sigil {
         width: 75px; 
     }
-    /* O Segredo Mágico: Força absoluta para o telemóvel trazer a casa para a FRENTE de tudo */
     .casa-sigil:hover, .casa-sigil:active, .casa-sigil:focus {
         z-index: 9999 !important; 
     }
@@ -2026,7 +1975,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         width: 180px;
         top: 85px; 
         padding: 10px;
-        z-index: 10000 !important; /* Garante que a caixa de texto nunca fique atrás da linha de baixo */
+        z-index: 10000 !important; 
     }
     .casa-info h4 {
         font-size: 0.95rem;
@@ -2050,7 +1999,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         padding: 25px 15px;
     }
     
-    /* --- 5. Crônicas em Destaque (CARROSSEL COM PROPORÇÃO DE CINEMA) --- */
+    /* --- 5. Crônicas em Destaque --- */
     .carrossel-secao {
         padding: 15px 0; 
     }
@@ -2060,11 +2009,9 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         border-right: none;
     }
     .carrossel-slides {
-        /* ALTURA DRASTICAMENTE REDUZIDA: Impede a imagem horizontal de ser cortada nas laterais */
         height: 240px !important; 
     }
     .carrossel-slide::after {
-        /* Película apenas na base, para que a imagem superior fique 100% visível */
         background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
     }
     .carrossel-conteudo-box,
@@ -2078,7 +2025,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         width: auto;
     }
     .carrossel-conteudo-box .destaque-titulo {
-        font-size: 1.2rem !important; /* Reduzido para caber no novo espaço menor */
+        font-size: 1.2rem !important; 
         margin-bottom: 4px !important;
         text-shadow: 2px 2px 5px #000000, 0 0 15px #000000 !important;
     }
@@ -2090,7 +2037,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     }
     .carrossel-btn {
         top: 35% !important; 
-        padding: 6px 12px !important; /* Setas muito mais discretas e menores */
+        padding: 6px 12px !important;
         background: rgba(0,0,0,0.6);
         border-color: rgba(212, 175, 55, 0.4);
         font-size: 0.9rem !important;

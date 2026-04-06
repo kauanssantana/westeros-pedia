@@ -153,7 +153,6 @@ guerras_westeros = [
     }
 ]
 
-# Volta uma pasta para salvar na raiz do projeto!
 with open('../guerras.json', 'w', encoding='utf-8') as f:
     json.dump(guerras_westeros, f, ensure_ascii=False, indent=4)
 

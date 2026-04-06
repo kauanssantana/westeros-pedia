@@ -129,7 +129,7 @@ function mudarTema(nomeDoTema) {
 }
 
 /* =========================================================
-   5. SISTEMA DE CARROSSEL ÉPICO (HOME)
+   5. SISTEMA DE CARROSSEL 
    ========================================================= */
 function mudarSlide(n) {
     const slidesWrapper = document.getElementById("carrosselSlides");
@@ -169,7 +169,7 @@ function showSlide(wrapper, slides, pontos) {
 }
 
 /* =========================================================
-   6. EFEITO: O INVERNO CHEGOU (NEVE NO HERO)
+   6. EFEITO DE NEVE (ANIMAÇÃO DE FLOCOS CAINDO)
    ========================================================= */
 function conjurarNeve() {
     const snowContainer = document.getElementById('snow-container');
@@ -266,16 +266,16 @@ function inicializarSussurros() {
    9. BOTÃO VOLTAR AO TOPO (MAGIA GLOBAL)
    ========================================================= */
 function iniciarBotaoTopo() {
-    // 1. Cria o botão via JavaScript para não precisar editar o HTML de cada página
+
     const btnTopo = document.createElement('button');
-    btnTopo.innerHTML = '&#8679;'; // Seta para cima elegante (⇧)
+    btnTopo.innerHTML = '&#8679;'; 
     btnTopo.className = 'btn-voltar-topo';
     btnTopo.title = "Voltar ao topo da página";
     document.body.appendChild(btnTopo);
 
-    // 2. Evento para mostrar/esconder o botão ao rolar a página
+   
     window.addEventListener('scroll', () => {
-        // Se desceu mais de 300 pixels, o botão aparece
+        
         if (window.scrollY > 300) {
             btnTopo.classList.add('mostrar');
         } else {
@@ -283,11 +283,11 @@ function iniciarBotaoTopo() {
         }
     });
 
-    // 3. Evento de clique para rolar para cima suavemente
+    
     btnTopo.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Deslize suave de mestre
+            behavior: 'smooth' 
         });
     });
 }

@@ -1,13 +1,12 @@
 import json
 
-# Lista de dicionários com os dados de cada local no mapa
 locais_westeros = [
     {
         "id": "castle-black",
         "nome": "Castelo Negro",
         "regiao": "A Muralha",
         "casa": "Patrulha da Noite",
-        "top": "8.5%",   # Subiu (estava 18.5%). Agora deve cravar na Muralha.
+        "top": "8.5%",   
         "left": "52.5%", 
         "descricao": "Castle Black é uma fortaleza antiga e isolada localizada aos pés da Muralha, no extremo norte de Westeros, servindo como base principal da Patrulha da Noite, uma ordem formada por guerreiros, criminosos perdoados e exilados que dedicam suas vidas a vigiar e proteger o reino contra ameaças vindas das terras selvagens e geladas além da Muralha, sendo um lugar marcado pelo frio extremo, disciplina rígida, vida difícil e constante sensação de perigo iminente.",
         "imagem": "img/castle_black.jpg"

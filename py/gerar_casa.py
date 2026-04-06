@@ -213,7 +213,6 @@ casas_westeros = [
     }
 ]
 
-# O "../" avisa o Python para voltar uma pasta e salvar na raiz do projeto!
 with open('../casas.json', 'w', encoding='utf-8') as f:
     json.dump(casas_westeros, f, ensure_ascii=False, indent=4)
 

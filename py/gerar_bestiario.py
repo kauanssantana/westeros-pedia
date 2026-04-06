@@ -1,7 +1,6 @@
 import json
 
 bestiario_westeros = [
-    # ================= OS DRAGÕES DA CONQUISTA E DE GOT =================
     {
         "id": "balerion",
         "nome": "Balerion, o Terror Negro",
