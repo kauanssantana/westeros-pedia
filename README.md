@@ -55,8 +55,7 @@ O projeto foi desenvolvido dominando as tecnologias base da web, focando em lóg
 Como o projeto faz o uso da Fetch API do JavaScript para carregar os arquivos .json, por questões de segurança dos navegadores modernos (CORS), o arquivo index.html não pode ser aberto simplesmente com um duplo-clique. É necessário rodar um servidor local.
 
 1. Faça o clone deste repositório:
-   ```bash
-git clone https://github.com/kauanssantana/westerospedia.git
+   ```bash git clone https://github.com/kauanssantana/westerospedia.git
 
 2. Abra a pasta do projeto no VS Code (ou no seu editor favorito).
 
