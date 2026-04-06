@@ -14,7 +14,7 @@
 
 ## 📖 Sobre o Projeto
 
-A WesterosPedia é uma aplicação web imersiva desenvolvida inteiramente com Vanilla JavaScript (sem frameworks) que consome bancos de dados customizados em formato JSON. O projeto foi meticulosamente desenhado para catalogar o vasto universo de Game of Thrones / As Crônicas de Gelo e Fogo.
+A WesterosPedia é uma aplicação web imersiva desenvolvida inteiramente com Vanilla JavaScript (sem frameworks) que consome bancos de dados customizados em formato JSON. O projeto foi desenhado para catalogar o vasto universo de Game of Thrones / As Crônicas de Gelo e Fogo.
 
 Com uma interface sombria, elegante e de alta performance, a enciclopédia oferece uma navegação rica através da história, grandes casas, personagens memoráveis e criaturas lendárias. Tudo isso envelopado em um design 100% responsivo, adaptando-se perfeitamente de grandes monitores de desktop até as telas dos celulares.
 
