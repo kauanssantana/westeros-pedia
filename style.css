@@ -1977,20 +1977,20 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     .header {
         flex-direction: column;
         padding: 20px;
-        gap: 20px;
+        gap: 15px;
     }
     .header-logo-img {
         height: auto;
-        width: 240px; /* Aumentado drasticamente para dar destaque ao logo */
+        width: 220px; 
         max-width: 100%;
     }
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
     }
     nav a {
-        font-size: 1.1rem; /* Retornado para um tamanho de leitura decente */
+        font-size: 1.05rem; 
     }
     
     /* --- 2. Seção Hero --- */
@@ -1998,93 +1998,110 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
         padding: 120px 20px 80px;
     }
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .hero-content p {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
     }
     
     /* --- 3. Medalhões das Casas na Home --- */
     .sigil-container {
-        gap: 15px; /* Reduz o espaço para caberem melhor */
+        gap: 15px; 
         padding: 20px 0;
     }
     .casa-sigil {
-        width: 80px; /* Fica menor e mais alinhado em telas estreitas */
+        width: 75px; 
     }
     .sigil-wrapper {
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
         border-width: 2px;
     }
+    /* Ajuste crucial: Caixa de info menor para não vazar da tela no clique/hover */
     .casa-info {
-        width: 200px;
-        top: 95px; /* Sobe um pouquinho a caixa de info */
-        font-size: 0.85rem;
+        width: 160px;
+        top: 85px; 
+        padding: 10px;
+    }
+    .casa-info h4 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+    .casa-info p {
+        font-size: 0.8rem;
     }
 
     /* --- 4. Arquivos da Cidadela (Cards da Home) --- */
     .guia-grid {
-        flex-direction: column; /* Força os cards a empilharem em coluna (1 por linha) */
-        align-items: center;
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
     }
     .guia-card {
         width: 100%;
-        max-width: 350px; /* Permite que fiquem grandes e preencham a tela do celular */
+        max-width: 100%; /* Ocupa a tela de ponta a ponta respeitando o padding */
+        flex: none; /* Anula a magia de "amassar" do Flexbox do desktop */
+        padding: 25px 15px;
     }
     
     /* --- 5. Crônicas em Destaque (Carrossel) --- */
     .carrossel-secao {
-        padding: 40px 10px;
+        padding: 30px 10px;
     }
     .carrossel-slides {
-        height: 500px; /* Mais altura para a imagem respirar */
+        height: 480px; 
     }
-    /* No celular a película escurece a parte de BAIXO para ler melhor */
+    /* Escurece a base da imagem para ler o texto */
     .carrossel-slide::after {
-        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
     }
-    .carrossel-conteudo-box {
-        top: auto; 
-        bottom: 30px; /* Joga o texto para a parte inferior do banner */
-        left: 5%;
-        right: 5%;
-        transform: none; /* Remove a centralização do desktop */
-        text-align: center; /* Centraliza o texto */
-    }
+    /* Força o texto ir para o rodapé e anula a centralização do Desktop */
+    .carrossel-conteudo-box,
     .carrossel-slide.active .carrossel-conteudo-box {
-        transform: none;
+        top: auto !important; 
+        bottom: 20px !important; 
+        left: 10px !important;
+        right: 10px !important;
+        transform: none !important; 
+        text-align: center;
+        width: auto;
     }
     .carrossel-conteudo-box .destaque-titulo {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
+        font-size: 1.5rem; /* Letra menor para caber perfeitamente */
+        margin-bottom: 8px;
     }
+    .carrossel-conteudo-box p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    /* Sobe os botões de avançar/voltar para não pisarem no texto */
     .carrossel-btn {
-        top: 35%; /* Sobe as setinhas para não ficarem em cima do texto */
-        padding: 10px 12px;
+        top: 35% !important; 
+        padding: 12px 15px !important;
+        background: rgba(0,0,0,0.7);
     }
     
     /* --- 6. Citação e Sussurros --- */
     .citacao-epica {
-        padding: 40px 20px;
-        margin: 40px 10px;
+        padding: 30px 15px;
+        margin: 30px 10px;
     }
     .citacao-conteudo blockquote {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .sussurros-container {
-        padding: 25px 20px;
+        padding: 20px 15px;
     }
     .sussurros-header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         text-align: center;
     }
     
     /* --- 7. Filtros e Grids Gerais (Para as outras abas) --- */
     .btn-filtro {
-        font-size: 0.85rem;
-        padding: 8px 14px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
     }
     
     .bestiario-grid, .casas-grid {
@@ -2103,7 +2120,7 @@ body.tema-martell { --dark-bg: #3b1404; --gold: #f97316; background-image: radia
     }
     
     .casas-titulo {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .btn-voltar-topo {
