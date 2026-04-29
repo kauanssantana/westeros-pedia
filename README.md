@@ -63,3 +63,10 @@ Como o projeto faz o uso da Fetch API do JavaScript para carregar os arquivos .j
 3. Utilize a extensão Live Server (ou rode um servidor simples em Python via terminal: python -m http.server 8000).
 
 4. Abra o endereço correspondente no seu navegador e declare a sua lealdade ao Trono de Ferro!
+
+---
+
+🛡️ Licença & Copyright
+Copyright (c) 2026 Kauan Santana Almeida. Todos os direitos reservados.
+
+A cópia, distribuição, modificação ou uso comercial deste código, seja parcial ou integral, é estritamente proibida sem a autorização prévia e expressa do autor. O uso não autorizado deste software está sujeito às penalidades previstas na lei de direitos autorais.
